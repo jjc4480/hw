@@ -1,0 +1,26 @@
+@layer components {
+  .landing {
+    @apply min-h-screen
+  }
+
+  .infomation {
+    background: url('/img/michal-matlon-zx7VUt9txos-unsplash.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .featured {
+    background: url('/img/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .capabilities {
+    background: url('/img/sven-mieke-fteR0e2BzKo-unsplash.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .commitments {
+    background: url('/img/augustine-wong-li0iC0rjvvg-unsplash.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .careers {
+    background: url('/img/geran-de-klerk-qzgN45hseN0-unsplash.jpg') center center no-repeat;
+    background-size: cover;
+  }
+}

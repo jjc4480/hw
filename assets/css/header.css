@@ -1,0 +1,23 @@
+@layer components {
+  /* 상단 header */
+  .gnb {
+    background:
+    linear-gradient(to right, #ffffff 352px, transparent 0%),
+    linear-gradient(to bottom, #15818b 50%, transparent 0%);
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+  }
+  /* 오픈시에 동작 */
+  .gnb.open {
+    background-position: 0% 0%;
+  }
+
+  /* gnb 내부 리스트 */
+  .gnb-list {
+    /* @apply delay-300 duration-150 */
+  }
+  /* 오픈시 */
+  .gnb.open .gnb-list {
+    @apply delay-300 duration-150
+  }
+}

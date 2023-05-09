@@ -1,0 +1,17 @@
+@import './preflight.css';
+@import './header.css';
+@import './landing.css';
+
+
+.header-enter-active {
+  transition: opacity 1s ease;
+}
+
+.header-leave-active {
+  opacity: 0;
+}
+
+.header-enter-from,
+.header-leave-to{
+  opacity: 0;
+}
