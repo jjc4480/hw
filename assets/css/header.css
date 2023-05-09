@@ -12,12 +12,24 @@
     background-position: 0% 0%;
   }
 
-  /* gnb 내부 리스트 */
-  .gnb-list {
-    /* @apply delay-300 duration-150 */
-  }
-  /* 오픈시 */
+  /* gnb 내부 리스트 오픈시 */
   .gnb.open .gnb-list {
     @apply delay-300 duration-150
   }
+}
+
+/* header의 logo transition에 사용됨 */
+.header-enter-active {
+  transition: opacity 1s ease;
+}
+
+.header-leave-active {
+  opacity: 0;
+}
+
+.header-enter-from,
+.header-leave-to{
+  opacity: 0;
+  position: absolute;
+  left: 0;
 }

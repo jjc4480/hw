@@ -24,7 +24,7 @@ const pathList = { // header의 메뉴 리스트
   Careers : ['Recruit'],
 }
 
-const open = ref(true) // header의 메뉴가 열려있는지 여부
+const open = ref(false) // header의 메뉴가 열려있는지 여부
 
 </script>
 
@@ -33,9 +33,9 @@ const open = ref(true) // header의 메뉴가 열려있는지 여부
     class="gnb w-full fixed top-0 left-0 z-10 duration-300"
     :class="{'open': open}"
   >
-    <div class="flex gap-20 relative">
+    <div class="flex pb-3 gap-20 relative">
       <NuxtLink
-        class="flex"
+        class="flex w-96"
         href="/"
       >
         <figure
@@ -72,12 +72,12 @@ const open = ref(true) // header의 메뉴가 열려있는지 여부
         </Transition>
       </NuxtLink>
       <section
-        class="flex px-10 py-8"
+        class="flex mt-8"
+        @mouseover="open = true"
+        @mouseleave="open = false"
       >
         <div
           v-for="(list, title) in pathList"
-          @mouseover="open = true"
-          @mouseleave="open = false"
         >
           <NuxtLink
             class="block pb-12 px-8 text-2xl font-bold duration-300 text-white hover:text-black"

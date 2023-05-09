@@ -8,5 +8,8 @@ export default defineNuxtConfig({
   ],
   auth: {
     enableGlobalAppMiddleware: true,
+  },
+  tailwindcss: {
+    cssPath: false,
   }
 })
