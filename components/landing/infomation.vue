@@ -15,38 +15,40 @@ const contents = [
 
 <template>
   <div class="relative overflow-hidden">
-    <div
-      class="absolute top-[30vh] left-[10vw] z-10"
-    >
-      <section
-        class="grid text-6xl text-white font-black leading-snug"
+    <div class="container mx-auto relative">
+      <div
+        class="absolute top-[30vh] left-0 z-10"
       >
-        <h2
-          class="char-animation flex overflow-hidden"
-          v-for="text in heading"
+        <section
+          class="grid text-6xl text-white font-black leading-snug"
         >
-          <span
-            class="block"
-            v-for="(word, index) in text.split('')"
-            :style="`animation-delay: ${index * 0.05}s`"
-          >{{ word }}</span>
-        </h2>
-      </section>
+          <h2
+            class="infomation-char flex overflow-hidden"
+            v-for="text in heading"
+          >
+            <span
+              class="block"
+              v-for="(word, index) in text.split('')"
+              :style="`animation-delay: ${index * 0.05}s`"
+            >{{ word }}</span>
+          </h2>
+        </section>
 
-      <article
-        class="mt-16 text-3xl text-white leading-tight"
-      >
-        <p
-          class="char-animation flex overflow-hidden"
-          v-for="text in contents"
+        <article
+          class="mt-16 text-3xl text-white leading-tight"
         >
-          <span
-            class="block"
-            v-for="(word, index) in text.split('')"
-            :style="`animation-delay: ${1 + (index * 0.05)}s`"
-          >{{ word }}</span>
-        </p>
-      </article>
+          <p
+            class="infomation-char flex overflow-hidden"
+            v-for="text in contents"
+          >
+            <span
+              class="block"
+              v-for="(word, index) in text.split('')"
+              :style="`animation-delay: ${1 + (index * 0.05)}s`"
+            >{{ word }}</span>
+          </p>
+        </article>
+      </div>
     </div>
   </div>
 </template>

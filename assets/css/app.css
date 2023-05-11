@@ -1,3 +1,8 @@
 @import './preflight.css';
 @import './header.css';
 @import './landing.css';
+@import './sitemap.css';
+
+:root {
+  --primary-hw: #15818b;
+}

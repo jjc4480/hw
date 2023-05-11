@@ -1,0 +1,22 @@
+@layer components {
+  .careers-container .container {
+    @apply translate-y-10 opacity-0;
+  }
+  
+  .careers-container.open .container {
+    @apply translate-y-0 opacity-100;
+  }
+
+  .careers-contact-image {
+    background: url('/img/geran-de-klerk-qzgN45hseN0-unsplash.jpg') center bottom no-repeat;
+    @apply bg-cover;
+  }
+
+  .careers-container .careers-contact-us {
+    @apply translate-y-10 opacity-0;
+  }
+  
+  .careers-container.open .careers-contact-us {
+    @apply translate-y-0 opacity-100;
+  }
+}
