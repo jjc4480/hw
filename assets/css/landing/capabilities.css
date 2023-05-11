@@ -1,0 +1,22 @@
+@layer components {
+  .capabilities .capabilities-active{
+    @apply relative;
+    box-shadow: 9px 15px 24px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--primary-hw);
+  }
+}
+
+.capabilities-leave-active,
+.capabilities-enter-active {
+  transition: all 1s ease;
+}
+
+.capabilities-enter-from,
+.capabilities-leave-to {
+  opacity: 0;
+}
+
+.capabilities-enter-to,
+.capabilities-leave-from {
+  opacity: 1;
+}

@@ -1,0 +1,69 @@
+@layer components {
+  .sitemap {
+    background: linear-gradient(to left, var(--primary-hw) 50%, transparent 0%);
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+  }
+
+  .sitemap:not(.open):not(.animate) {
+    @apply -z-20;
+  }
+
+  /* animate 클래스가 있으면 opacity 동작 components/header/sitemap.vue의 setTimeout도 조절해야함 */
+  .sitemap.animate {
+    animation: sitemap-fade-out 1.5s ease;
+    animation-fill-mode: forwards;
+  }
+
+  /* 오픈시 옆에서 치고들어오는 애니메이션 */
+  .sitemap.open {
+    @apply z-20;
+    animation: sitemap-grdiaent 0.5s ease both;
+    animation-fill-mode: forwards;
+  }
+
+  .sitemap .container {
+    @apply opacity-0 delay-500 duration-500;
+  }
+
+  .sitemap.open .container {
+    @apply opacity-100;
+  }
+
+  .sitemap.open h1 span,
+  .sitemap.open h2 span,
+  .sitemap.open li a {
+    transform: translateY(50%);
+    animation: sitemap-char 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes sitemap-fade-out {
+    from {
+      opacity: 1;
+      background-position: 100% 0%;
+    }
+    to {
+      opacity: 0;
+      background-position: 100% 0%;
+    }
+  }
+  
+  @keyframes sitemap-grdiaent {
+    from {
+      background-position: 0% 0%;
+    }
+    to {
+      background-position: 100% 0%;
+    }
+  }
+
+  @keyframes sitemap-char {
+    from {
+      transform: translateY(50%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+}

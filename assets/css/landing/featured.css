@@ -1,0 +1,21 @@
+@layer components {
+  .featured {
+    background: url('/img/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  /* swiper hover시 shadow 구현용 */
+  .swiper.featured-swiper {
+    @apply pb-8;
+  }
+
+  /* swiper slide가 모두 같은 높이를 갖도록 함 */
+  .featured-swiper .swiper-slide {
+    @apply h-auto;
+  }
+
+  /* 슬라이더 내부 a tag hover용 */
+  .featured-swiper .swiper-slide a:hover {
+    box-shadow:6px 10px 18px 0px rgba(0, 0, 0, 0.3);
+  }
+}

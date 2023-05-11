@@ -16,6 +16,9 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "next-auth": "^4.18.8"
+    "@pinia/nuxt": "^0.4.10",
+    "next-auth": "^4.18.8",
+    "nuxt-swiper": "^1.1.0",
+    "pinia": "^2.0.36"
   }
 }

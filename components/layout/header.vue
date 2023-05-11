@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { useUiStore } from '@/stores/ui'
 import { useRoute } from 'nuxt/app'
-import { VNode } from 'nuxt/dist/app/compat/capi'
 
+import Pc from '@/components/header/pc.vue'
 const route = useRoute()
 
 const whiteList = ['/'] // header의 로고 이미지가 흰색인 페이지들
@@ -15,51 +15,46 @@ const color = computed(() => { // header의 로고 이미지 색상
   return 'white'
 })
 
-const pathList = { // header의 메뉴 리스트
-  About: ['Greetings', 'Profile', 'History', 'Structure'],
-  Projects: ['Portfolio'],
-  Capabilities: ['Pipe', 'Fire System', 'Blueprint', 'HVAC'],
-  Commitments: [],
-  Media: ['News'],
-  Careers : ['Recruit'],
-}
-
-const open = ref(false) // header의 메뉴가 열려있는지 여부
+const store = useUiStore() // ui store
 
 </script>
 
 <template>
   <header
-    class="gnb w-full fixed top-0 left-0 z-10 duration-300"
-    :class="{'open': open}"
+    class="gnb w-full fixed top-0 left-0 z-50 duration-300"
+    :class="{'open': store.nav}"
   >
-    <div class="flex pb-3 gap-20 relative">
+    <div class="container flex mx-auto gap-20 justify-between relative">
       <NuxtLink
         class="flex w-96"
         href="/"
       >
-        <figure
-          v-show="!open"
-          class="py-6 px-8 cursor-pointer"
-        >
-          <ClientOnly>
-            <img
-              v-show="color == 'white'"
-              class="w-72"
-              src="/img/KakaoTalk_20230509_103704206_01.png"
-            />
-            <img
-              v-show="color == 'black'"
-              class="w-72"
-              src="/img/KakaoTalk_20230509_103704206_01_b.png"
-            />
-          </ClientOnly>
-        </figure>
         <Transition
-          name="header"
+          name="header-small"
         >
           <figure
-            v-if="open"
+            v-show="!store.nav"
+            class="py-6 px-8 cursor-pointer"
+          >
+              <ClientOnly>
+                <img
+                  v-show="color == 'white'"
+                  class="w-72"
+                  src="/img/KakaoTalk_20230509_103704206_01.png"
+                />
+                <img
+                  v-show="color == 'black'"
+                  class="w-72"
+                  src="/img/KakaoTalk_20230509_103704206_01_b.png"
+                />
+              </ClientOnly>
+          </figure>
+        </Transition>
+        <Transition
+          name="header-large"
+        >
+          <figure
+            v-show="store.nav"
             class="flex py-12 px-8 items-center"
           >
             <ClientOnly>
@@ -71,42 +66,20 @@ const open = ref(false) // header의 메뉴가 열려있는지 여부
           </figure>
         </Transition>
       </NuxtLink>
-      <section
-        class="flex mt-8"
-        @mouseover="open = true"
-        @mouseleave="open = false"
+
+      <Pc
+        class="2xl:flex hidden"
+      ></Pc>
+    
+      <button
+        class="nav-icon"
+        :class="{'open': store.siteMap}"
+        @click="store.siteMap = true"
       >
-        <div
-          v-for="(list, title) in pathList"
-        >
-          <NuxtLink
-            class="block pb-12 px-8 text-2xl font-bold duration-300 text-white hover:text-black"
-            href="/test"
-          >
-            {{ title }}
-          </NuxtLink>
-          <ul
-            class="gnb-list grid text-center"
-            :class="open ? 'opacity-100' : 'opacity-0'"
-          >
-            <li
-              v-for="path in list"
-            >
-              <NuxtLink
-                class="block py-1 text-white hover:text-black hover:font-block"
-                href="/test"
-              >
-                {{ path }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <svg
-        class="ml-auto cursor-pointer"
-        width="27" height="20" viewBox="0 0 27 20">
-        <path d="M0.611328 1.53436H26.1846M10.2113 9.85437H26.4646M0.611328 18.4943H26.1846" stroke="white" stroke-width="1.28" stroke-miterlimit="0"/>
-      </svg>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 </template>
