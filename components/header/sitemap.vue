@@ -9,10 +9,12 @@ const { siteMap } = storeToRefs(store)
 const animation = ref(false) // 애니메이션 구현용
 
 watch(siteMap, (n, o) => {
+  // 열릴때는 배경이 오른쪽에서 들어오고 삭제될때는 opacity로 구현하기위해
   if (o == true && n == false) {
-    // 켜졌다 꺼질때만
+    // 켜졌다 꺼질때만 opacity 애니메이션 적용
     animation.value = true
     setTimeout(() => {
+      // 1.5초에 걸쳐실행 수정시에 assets/css/sitemap.css 도 조절해야함
       animation.value = false
     }, 1500)
   }
@@ -52,24 +54,25 @@ watch(siteMap, (n, o) => {
       >
         <article
           class="w-full px-5 lg:py-0 py-2 lg:first:border-l lg:border-r lg:border-b-0 border-b border-gray-400/50"
-          v-for="(list, title) in pathList"
+          v-for="list in pathList"
         >
           <h2
             class="text-white text-3xl font-bold overflow-hidden"
           >
-            <span class="block">{{ title }}</span>
+            <span class="block">{{ list.title }}</span>
           </h2>
           <ul
             class="lg:mt-20 mt-5 text-white hover:text-gray-400/50"
           >
             <li
               class="overflow-hidden"
-              v-for="path in list"
+              v-for="path in list.items"
             >
               <NuxtLink
                 class="block py-3 hover:text-white hover:font-block duration-300"
                 href="/test"
               >
+              <!-- TODO 상세페이지 href -->
                 {{ path }}
               </NuxtLink>
             </li>

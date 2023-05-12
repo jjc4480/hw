@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@/assets/css/app.css',
   ],
   auth: {
-    enableGlobalAppMiddleware: true,
+    enableGlobalAppMiddleware: false,
   },
   tailwindcss: {
     cssPath: false,

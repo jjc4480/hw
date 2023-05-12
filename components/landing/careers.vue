@@ -11,21 +11,21 @@ const store = useUiStore() // ui store
       class="pt-[20vh]"
     >
       <NuxtLink
-        class="flex container mx-auto group duration-300"
+        class="flex container lg:h-auto h-80 mx-auto group duration-700 translate-y-10 opacity-0 delay-500 relative"
         href="/test"
       >
         <section
-          class="w-4/6 pl-16 py-16 bg-hw"
+          class="lg:w-4/6 w-full lg:h-auto h-full lg:pl-16 pl-0 py-16 top-0 left-0 lg:static absolute lg:bg-hw bg-black/50 z-10"
         >
           <h2
-            class="text-6xl text-white font-black leading-snug"
+            class="2xl:text-6xl text-4xl text-white font-black leading-snug lg:text-left text-center"
           >Careers</h2>
           <p
-            class="mt-10 text-2xl text-white leading-tight"
+            class="mt-10 2xl:ext-2xl text-lg text-white leading-tight lg:text-left text-center"
           >We embrace people of all backgrounds, experiences,<br>
             culture, styles and talents. Join us!</p>
-          <div class="flex mt-8">
-            <span class="text-white text-2xl">View More</span>
+          <div class="lg:flex hidden mt-8">
+            <span class="text-white 2xl:text-2xl lg:text-lg">View More</span>
             <svg
               class="w-8 h-8 ml-10 group-hover:ml-16 fill-white duration-150"
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
@@ -35,39 +35,35 @@ const store = useUiStore() // ui store
           </div>
         </section>
         <figure
-          class="w-2/6 overflow-hidden"
+          class="lg:w-2/6 w-full overflow-hidden"
         >
           <img
-            class="group-hover:scale-110 duration-500 object-cover object-center"
+            class="w-full h-full group-hover:scale-110 duration-500 object-cover object-center"
             src="/img/helena-hertz-wWZzXlDpMog-unsplash.jpg"
           >
         </figure>
       </NuxtLink>
     </div>
     <div
-      class="careers-contact flex flex-auto items-center justify-center mt-20 overflow-hidden relative group"
+      class="careers-contact flex flex-auto items-center justify-center lg:mt-20 mt-0 overflow-hidden relative group"
     >
       <div class="careers-contact-image absolute inset-0 group-hover:scale-105 duration-500 -z-10"></div>
       <section
-        class="careers-contact-us text-center text-white duration-300"
+        class="careers-contact-us text-center text-white duration-700 translate-y-10 opacity-0 delay-500"
       >
         <h2
-          class="text-6xl font-black leading-snug"
+          class="2xl:text-6xl text-4xl font-black leading-snug"
         >Contact Us</h2>
         <p
           class="mt-4 text-xl leading-tight"
         >Address</p>
-        <ul class="flex gap-10 mt-10 text-xl">
+        <ul class="lg:flex block gap-10 mt-10 text-xl">
           <li>Tel : 888-888-8888</li>
           <li>Fax : 888-888-8888</li>
           <li>Email : sadfa@asdfasdf.com</li>
         </ul>
       </section>
     </div>
-    <button
-      class="p-5 fixed left-0 bottom-16 border z-50"
-      @click="store.careers = !store.careers"
-    >OPEN!</button>
   </div>
 
 </template>

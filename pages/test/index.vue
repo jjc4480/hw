@@ -2,6 +2,7 @@
 const { data, signOut, getCsrfToken } = useAuth()
 
 const test = getCsrfToken()
+
 </script>
 
 <template>

@@ -1,89 +1,119 @@
 <script setup lang="ts">
+import { useUiStore } from '@/stores/ui'
+
 import Infomation from '@/components/landing/infomation.vue'
 import Featured from '@/components/landing/featured.vue'
 import Capabilities from '@/components/landing/capabilities.vue'
 import Commitments from '@/components/landing/commitments.vue'
 import Careers from '@/components/landing/careers.vue'
 
-definePageMeta({
-  auth: false
-})
-
-const components = {
+const components = { // 사용될 컴포넌틑 리스트 v-for로 배치한다
   infomation: Infomation,
   featured: Featured,
   capabilities: Capabilities,
   commitments: Commitments,
   careers: Careers
 }
+
+const store = useUiStore() // ui store
 const offset = Object.values(components) // 컴포넌트 갯수
 
 const trigger = ref(false) // 스크롤 이벤트여부
 const screen = ref(0) // 스크린 크기
-const scrollIndex = ref(0) // 현재위치
+const position = ref(0) // 현재위치
+
+let timer:null|number = null // 트리거 강제종료 타이머
 
 function handler (e: WheelEvent) {
   // 스크롤 이벤트 핸들링
-  const max = screen.value * (offset.length - 1) // 최대 스크롤 높이
-  if (!trigger.value && window.scrollY < max) {
-    // 트리거가 동작중이 아니면서 최대높이를 넘지 않은경우만
+  if (!trigger.value) {
+    // 트리거가 동작중이 아닐때만 실행
     trigger.value = true // 트리거 동작중으로 설정
 
     if (e.deltaY > 0) {
       // 아래로 스크롤
-      scrollIndex.value = scrollIndex.value + 1
+      store.updateLandingScrolling(store.landing.scrollIndex + 1)
     } else {
       // 위로 스크롤
-      if (scrollIndex.value == 0) {
-        // 이미 맨 아래에 있으면 아무것도 하지 않음
+      if (store.landing.scrollIndex == 0) {
+        // 이미 맨 위에 있으면 아무것도 하지 않음
         trigger.value = false
       } else {
-        scrollIndex.value = scrollIndex.value - 1
+        store.updateLandingScrolling(store.landing.scrollIndex - 1)
       }
     }
 
-    // index가 0보다 작거나 offset.length보다 크면 0 또는 offset.length - 1로 고정
-    scrollIndex.value < 0 ? scrollIndex.value = 0 : scrollIndex.value > offset.length ? offset.length - 1 : scrollIndex.value
+    if (store.landing.scrollIndex < 0) {
+      // index가 0보다 작거나 offset.length보다 크면 0
+      store.updateLandingScrolling(0)
+    }
 
     window.scrollTo({ // 스크롤 이동
-      top: scrollIndex.value * screen.value,
+      top: store.landing.scrollIndex * screen.value,
       behavior: 'smooth'
     })
+  }
+
+  if (store.landing.scrollIndex >= offset.length) {
+    // 만약 최대를 넘어간다면
+    if (!timer) {
+      // 타이머가 없을때만 동작
+      timer = window.setTimeout(() => {
+        // 지연시간 후 초기화
+        store.updateLandingScrolling(offset.length)
+        trigger.value = false
+        timer = null
+      }, 500)
+    }
   }
 }
 
 function scrollCheck () {
   // 스크롤 감지
-  if (window.scrollY == scrollIndex.value * screen.value) {
+  position.value = window.scrollY // 현재 스크롤 높이 저장
+  if (position.value == store.landing.scrollIndex * screen.value) {
     // 현재높이와 목표높이가 같아지면 트리거를 종료해준다
     trigger.value = false
+  }
+  
+  if (screen.value && position.value > screen.value * 3) {
+    // 높이설정이 된 이후 3번째 컴포넌트보다 높아진경우
+    store.careers = true
   }
 }
 
 function resizer () {
   // 리사이즈시 높이값 변경
   screen.value = window.innerHeight
+  window.scrollTo({ // 스크롤 이동
+    top: store.landing.scrollIndex * screen.value,
+  })
 }
 
+const wheelOption: AddEventListenerOptions = { passive: false } // wheel 이벤트 옵션
 onMounted(() => {
-  // window.addEventListener('wheel', (e: WheelEvent) => {
-  //   // 휠 이벤트 정지후 핸들러 실행
-  //   console.log(window.scrollY)
-  //   e.preventDefault()
-  //   handler(e)
-  // }, {passive: false})
-  // window.addEventListener('scroll', scrollCheck)
-  // // 리사이즈시 높이값 변경
-  // window.addEventListener('resize', resizer)
+  window.addEventListener('wheel', (e: WheelEvent) => {
+    // 휠 이벤트 정지후 핸들러 실행
+    e.preventDefault()
+    handler(e)
+  }, wheelOption)
+  window.addEventListener('scroll', scrollCheck)
+  // 리사이즈시 높이값 변경
+  window.addEventListener('resize', resizer)
 
-  // setTimeout(() => {
-  //   screen.value = window.innerHeight // 마운트시 높이값을 저장
-  //   scrollIndex.value = Math.floor(window.scrollY / screen.value) // index 재설정
-  // }, 1)
+  setTimeout(() => {
+    screen.value = window.innerHeight // 마운트시 높이값을 저장
+    store.updateLandingScrolling(Math.round(window.scrollY / screen.value)) // index 재설정
+  }, 1)
 })
 
 onUnmounted(() => {
-  console.log('foooooo')
+  window.removeEventListener('wheel', (e: WheelEvent) => {
+    e.preventDefault()
+    handler(e)
+  }, wheelOption)
+  window.removeEventListener('scroll', scrollCheck)
+  window.removeEventListener('resize', resizer)
 })
 
 </script>
@@ -97,17 +127,5 @@ onUnmounted(() => {
       :is="component"
       :key="key"
     ></component>
-    <NuxtLink
-      href="/test"
-    >
-      인증하기
-    </NuxtLink>
-    <pre
-      class="fixed right-0 bottom-0 bg-white text-hw"
-    >
-      {{trigger}}
-      {{screen}}
-      {{scrollIndex}}
-    </pre>
   </div>
 </template>
