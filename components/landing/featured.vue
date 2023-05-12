@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const slideList = [
+const slideList = [ // 슬라이드 아이템
   { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
   { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
   { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
@@ -18,16 +18,16 @@ const slideList = [
       class="container mx-auto pt-[20vh]"
     >
       <h2
-        class="text-6xl text-black font-black leading-snug"
+        class="2xl:px-0 px-5 2xl:text-6xl text-4xl text-black font-black leading-snug"
       >Featured Projects</h2>
       <p
-        class="mt-12 text-2xl text-black leading-tight"
+        class="2xl:px-0 px-5 mt-12 2xl:text-2xl text-lg text-black leading-tight"
       >We have a strong portfolio of projects in semiconductor, display 어쩌구 저쩌구~~  2줄 정도로 깔끔 컷</p>
     </section>
     <div
-      class="container mt-48 mx-auto relative"
+      class="container 2xl:px-0 px-5 mt-48 mx-auto relative"
     >
-      <fieldset class="flex gap-10 absolute -top-36 right-0">
+      <fieldset class="flex gap-10 absolute -top-36 2xl:right-0 right-5">
         <button
           class="featured-swiper-prev group"
           type="button"
@@ -63,11 +63,15 @@ const slideList = [
           clickable: true,
         }"
         :breakpoints="{
-          '425': {
+          '320': {
             slidesPerView: 2,
             spaceBetween: 20,
           },
           '768': {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          '1024': {
             slidesPerView: 4,
             spaceBetween: 40,
           },

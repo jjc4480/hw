@@ -1,21 +1,17 @@
 @layer components {
-  .careers-container .container {
-    @apply translate-y-10 opacity-0;
-  }
-  
+
+  /* careers상단 나타나는 애니메이션 구현용 */
   .careers-container.open .container {
     @apply translate-y-0 opacity-100;
   }
 
+  /* careers 하단에 생성되는 배경이미지 */
   .careers-contact-image {
     background: url('/img/geran-de-klerk-qzgN45hseN0-unsplash.jpg') center bottom no-repeat;
     @apply bg-cover;
   }
 
-  .careers-container .careers-contact-us {
-    @apply translate-y-10 opacity-0;
-  }
-  
+  /* careers하단에 나타나는 애니메이션 구현용 */
   .careers-container.open .careers-contact-us {
     @apply translate-y-0 opacity-100;
   }

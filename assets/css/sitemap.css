@@ -17,7 +17,7 @@
 
   /* 오픈시 옆에서 치고들어오는 애니메이션 */
   .sitemap.open {
-    @apply z-20;
+    @apply z-50;
     animation: sitemap-grdiaent 0.5s ease both;
     animation-fill-mode: forwards;
   }

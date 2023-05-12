@@ -1,9 +1,5 @@
 import { defineStore } from 'pinia'
 
-interface BodyLock {
-  isLock: boolean
-}
-
 interface Toggle {
   open: boolean
 }
@@ -11,23 +7,27 @@ interface Toggle {
 // ui를 컨트롤하는 store
 export const useUiStore = defineStore('ui', {
   state: () => ({
-    bodyLock: false, // body 스크롤 제한
+    landing: {
+      scrollIndex: 0, // 스크롤 index
+    },
+    header: {
+      nav: false, // 네비게이션
+    },
     siteMap: false, // 사이트맵
-    nav: false, // 네비게이션
     careers: false, // 경력 애니메이션
   }),
   actions: {
-    bodyLocker({isLock}: BodyLock) {
-      // body 스크롤 제한 상태를 변경
-      this.bodyLock = isLock
+    updateLandingScrolling(index: number) {
+      // 스크롤 index를 변경
+      this.landing.scrollIndex = index
     },
     siteMapToggle({open}: Toggle) {
       // 사이트맵 상태를 변경
       this.siteMap = open
     },
-    navToggle({open}: Toggle) {
+    headerNavToggle({open}: Toggle) {
       // 네비게이션 상태를 변경
-      this.nav = open
+      this.header.nav = open
     }
   },
 })
