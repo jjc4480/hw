@@ -3,6 +3,18 @@
 @import './landing.css';
 @import './sitemap.css';
 
+@import './pages/about.css';
+
 :root {
   --primary-hw: #15818b;
+}
+
+/* app에서 배경을 어둡게할때 쓰자! */
+.app-bg-enter-active,
+.app-bg-leave-active {
+  transition: opacity 0.2s ease;
+}
+.app-bg-enter-from,
+.app-bg-leave-to{
+  opacity: 0;
 }

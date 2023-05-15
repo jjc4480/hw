@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import PagesLayout from '@/components/layout/pages.vue'
 </script>
 
 <template>
-  careers
+  <div>
+    <PagesLayout
+      label="Careers"
+    ></PagesLayout>
+  </div>
 </template>
