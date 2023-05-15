@@ -3,6 +3,7 @@ import { useUiStore } from '@/stores/ui'
 import { useRoute } from 'nuxt/app'
 
 import Pc from '@/components/header/pc.vue'
+// TODO: mobile과 siteMap 해야됩
 import Mobile from '@/components/header/mobile.vue'
 
 const store = useUiStore() // ui store
@@ -77,9 +78,9 @@ const color = computed(() => { // header의 로고 이미지 색상
         :color="color"
       ></Pc>
 
-      <Mobile
+      <!-- <Mobile
         class="2xl:hidden flex"
-      ></Mobile>
+      ></Mobile> -->
     </div>
   </header>
 </template>

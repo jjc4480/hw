@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const pathList = useNavPath() // nav의 path 리스트
+const pathList = useNav() // nav의 path 리스트
 const menuOpen = ref(false) // 메뉴 오픈여부
 
 const accordionTarget = ref('') // 아코디언 대상

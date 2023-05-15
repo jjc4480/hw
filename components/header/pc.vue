@@ -8,7 +8,7 @@ defineProps({
   },
 })
 
-const pathList = useNavPath() // nav의 path 리스트
+const pathList = useNav() // nav의 path 리스트
 const store = useUiStore() // ui store
 
 </script>
@@ -23,30 +23,31 @@ const store = useUiStore() // ui store
       @mouseleave="store.headerNavToggle({open: false})"
     >
       <nav
-        v-for="list in pathList"
+        v-for="(list, key) in pathList"
+        :key="key"
       >
-        <NuxtLink
+        <a
           class="block pb-12 px-8 text-2xl font-bold duration-300"
           :class="[color == 'white' ? 'text-white hover:text-black' : 'text-black hover:text-white']"
-          :href="`/${list.title.toLowerCase()}`"
+          :href="`/${useLowcase(key)}`"
         >
-          {{ list.title }}
-        </NuxtLink>
+          {{ key }}
+        </a>
         <ul
           class="gnb-list grid text-center"
           :class="store.header.nav ? 'opacity-100' : 'opacity-0'"
         >
           <li
-            v-for="path in list.items"
+            v-for="child in list"
+            :key="child.name"
           >
-            <NuxtLink
+            <a
               class="block py-1 hover:font-block"
               :class="[color == 'white' ? 'text-white hover:text-black' : 'text-black hover:text-white']"
-              href="/test"
+              :href="`/${useLowcase(key)}/${child.path}`"
             >
-            <!-- TODO: 상세페이지 href -->
-              {{ path }}
-            </NuxtLink>
+              {{ child.name }}
+            </a>
           </li>
         </ul>
       </nav>
@@ -55,9 +56,18 @@ const store = useUiStore() // ui store
       class="nav-icon w-14 h-11 rotate-0 relative duration-500 cursor-pointer"
       @click="store.siteMap = true"
     >
-      <div class="w-full bg-white top-0"></div>
-      <div class="w-4/6 bg-white top-5"></div>
-      <div class="w-full bg-white top-10"></div>
+      <div
+        class="w-full top-0"
+        :class="[color == 'white' ? 'bg-white' : 'bg-black']"
+      ></div>
+      <div
+        class="w-4/6 top-5"
+        :class="[color == 'white' ? 'bg-white' : 'bg-black']"
+      ></div>
+      <div
+        class="w-full top-10"
+        :class="[color == 'white' ? 'bg-white' : 'bg-black']"
+      ></div>
     </button>
   </div>
 </template>

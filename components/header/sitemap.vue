@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { useUiStore } from '@/stores/ui'
-const pathList = useNavPath() // nav의 path 리스트
+const pathList = useNav() // nav의 path 리스트
 const store = useUiStore() // ui store
 
 const { siteMap } = storeToRefs(store)

@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import PagesLayout from '@/components/layout/pages.vue'
 </script>
 
 <template>
-  capabilities
+  <div>
+    <PagesLayout
+      label="Capabilities"
+    ></PagesLayout>
+  </div>
 </template>
