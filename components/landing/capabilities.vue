@@ -54,12 +54,12 @@ onMounted(() => {
             v-for="list in items"
             @mouseover="changeActive(list.title)"
           >
-            <NuxtLink
+            <a
               class="flex w-full h-full text-3xl text-white/60 items-center justify-center"
               href="/"
             >
               {{ list.title }}
-            </NuxtLink>
+            </a>
           </li>
         </ul>
       </section>

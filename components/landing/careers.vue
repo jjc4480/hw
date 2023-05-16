@@ -10,7 +10,7 @@ const store = useUiStore() // ui store
     <div
       class="pt-[20vh]"
     >
-      <NuxtLink
+      <a
         class="flex container lg:h-auto h-80 mx-auto group duration-700 translate-y-10 opacity-0 delay-500 relative"
         href="/test"
       >
@@ -42,7 +42,7 @@ const store = useUiStore() // ui store
             src="/img/helena-hertz-wWZzXlDpMog-unsplash.jpg"
           >
         </figure>
-      </NuxtLink>
+      </a>
     </div>
     <div
       class="careers-contact flex flex-auto items-center justify-center lg:mt-20 mt-0 overflow-hidden relative group"

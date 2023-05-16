@@ -1,13 +1,4 @@
 import type { Nav, NavTitle } from '@/types/nav'
-// const nav = [ // header의 메뉴 리스트
-//   { title: 'About', items: ['Greetings', 'Profile', 'History', 'Structure'] },
-//   { title: 'Projects', items: ['Portfolio'] },
-//   { title: 'Capabilities', items: ['Pipe', 'Fire System', 'Blueprint', 'HVAC'] },
-//   { title: 'Commitments', items: [] },
-//   { title: 'Media', items: ['News'] },
-//   { title: 'Careers ', items: ['Recruit'] },
-// ]
-
 const nav = {
   About: [
     { name: 'Greetings', path: 'greetings' },
@@ -25,6 +16,7 @@ const nav = {
     { name: 'HVAC', path: 'hvac' },
   ],
   Commitments: [
+    { name: 'Test', path: 'test' },
   ],
   Media: [
     { name: 'News', path: 'news' },

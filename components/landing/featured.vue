@@ -86,7 +86,7 @@ const slideList = [ // 슬라이드 아이템
           v-for="slide in slideList"
           class="h-auto"
         >
-          <NuxtLink
+          <a
             class="block h-full group transition-all duration-500 ease-in-out"
             href="/"
           >
@@ -101,7 +101,7 @@ const slideList = [ // 슬라이드 아이템
                 class="flex flex-auto p-3 text-2xl items-end justify-center border-b-2 border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
               >{{ slide.title }}</figcaption>
             </figure>
-          </NuxtLink>
+          </a>
         </SwiperSlide>
       </Swiper>
     </div>
