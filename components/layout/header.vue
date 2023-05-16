@@ -31,7 +31,7 @@ const color = computed(() => { // header의 로고 이미지 색상
     }"
   >
     <div class="2xl:container flex mx-auto gap-5 relative 2xl:items-start items-center 2xl:justify-start justify-between">
-      <NuxtLink
+      <a
         class="flex w-96"
         href="/"
       >
@@ -71,16 +71,16 @@ const color = computed(() => { // header의 로고 이미지 색상
             </ClientOnly>
           </figure>
         </Transition>
-      </NuxtLink>
+      </a>
 
       <Pc
         class="2xl:flex hidden"
         :color="color"
       ></Pc>
 
-      <!-- <Mobile
+      <Mobile
         class="2xl:hidden flex"
-      ></Mobile> -->
+      ></Mobile>
     </div>
   </header>
 </template>

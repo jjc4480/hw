@@ -1,0 +1,80 @@
+/* about page background image */
+.about-navigation {
+  background: url('/img/noah-buscher-x8ZStukS2PM-unsplash.jpg') center center no-repeat;
+}
+
+.projects-navigation {
+  background: url('/img/diyar-al-maamouri-i7myDM7EN-E-unsplash.jpg') center center no-repeat;
+}
+
+.capabilities-navigation {
+  background: url('/img/jakub-pabis-vOtSZd_8Af4-unsplash.jpg') center center no-repeat;
+}
+
+.commitments-navigation {
+  background: url('/img/dean-brierley-yTyXzvRJCUQ-unsplash.jpg') center center no-repeat;
+}
+
+.media-navigation {
+  background: url('/img/absolutvision-WYd_PkCa1BY-unsplash.jpg') center center no-repeat;
+}
+
+.careers-navigation {
+  background: url('/img/hunters-race-MYbhN8KaaEc-unsplash.jpg') center center no-repeat;
+}
+
+/* 공통으로 사용되는 pages 컴포넌트의 nav active시 효과 */
+.pages-layout {
+  @apply bg-cover;
+}
+.pages-layout a.active {
+  @apply text-white after:absolute after:top-0 after:left-0 after:w-full after:h-1 after:bg-white;
+}
+.pages-layout a span {
+  @apply hidden;
+}
+.pages-layout a.active span {
+  @apply block;
+}
+
+/* pages in fade event! */
+/*
+  page의 fade애니메이션 작성법
+  1. html element에 ref="[name]"을 추가한다
+  2. script에 const [name] = ref()을 추가한다 (마운트시 해당 ref가 입력된 html을 참조할 수 있게 된다)
+  3. html에 class="pages-fade"를 추가한다
+  4. :class="[name]?.offsetTop < scrollTrigger ? 'pages-fade-done' : 'pages-fade-[position]'"을 추가한다
+  5. right를 사용시 wrap에 overflow hidden을 넣는게 좋음
+  5. 잘 모르겠으면 hw/pages/about/greetings.vue 참조
+ */
+
+
+/* 애니메이션의 duration과 time-in-function 조절용 */
+.pages-fade {
+  @apply transition-all duration-1000 ease-in-out;
+}
+
+/* fade done! */
+.pages-fade-done {
+  @apply translate-x-0 translate-y-0 opacity-100;
+}
+
+/* left */
+.pages-fade-left {
+  @apply -translate-x-10 opacity-0;
+}
+
+/* right */
+.pages-fade-right {
+  @apply translate-x-10 opacity-0;
+}
+
+/* top */
+.pages-fade-top {
+  @apply -translate-y-10 opacity-0;
+}
+
+/* bottom */
+.pages-fade-bottom {
+  @apply translate-y-10 opacity-0;
+}

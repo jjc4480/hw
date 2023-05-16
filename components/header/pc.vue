@@ -2,7 +2,7 @@
 import { useUiStore } from '@/stores/ui'
 
 defineProps({
-  color: {
+  color: { // white면 header의 nav를 흰색으로 아니면 검은색으로
     type: String,
     default: 'white'
   },
@@ -29,7 +29,7 @@ const store = useUiStore() // ui store
         <a
           class="block pb-12 px-8 text-2xl font-bold duration-300"
           :class="[color == 'white' ? 'text-white hover:text-black' : 'text-black hover:text-white']"
-          :href="`/${useLowcase(key)}`"
+          :href="`/${useLowcase(key)}/${list[0].path}`"
         >
           {{ key }}
         </a>

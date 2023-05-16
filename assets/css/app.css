@@ -3,7 +3,10 @@
 @import './landing.css';
 @import './sitemap.css';
 
-@import './pages/about.css';
+@import './layout/pages.css';
+
+/* parallax 구현용 임시파일 */
+@import './parallax.css';
 
 :root {
   --primary-hw: #15818b;
