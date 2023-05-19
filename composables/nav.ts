@@ -10,10 +10,10 @@ const nav = {
     { name: 'Portfolio', path: 'portfolio' },
   ],
   Capabilities: [
-    { name: 'Pipe', path: 'pipe' },
-    { name: 'Fire System', path: 'fire-system' },
-    { name: 'Blueprint', path: 'blueprint' },
-    { name: 'HVAC', path: 'hvac' },
+    { name: 'Mechanical', path: 'mechanical' },
+    { name: 'Fire Protection', path: 'fireProtection' },
+    { name: 'Technology Design', path: 'technologyDesign' },
+    { name: 'Plumbing', path: 'plumbing' },
   ],
   Commitments: [
     { name: 'Test', path: 'test' },

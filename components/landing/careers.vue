@@ -21,7 +21,7 @@ const store = useUiStore() // ui store
             class="2xl:text-6xl text-4xl text-white font-black leading-snug lg:text-left text-center"
           >Careers</h2>
           <p
-            class="mt-10 2xl:ext-2xl text-lg text-white leading-tight lg:text-left text-center"
+            class="mt-10 2xl:text-2xl text-lg text-white leading-tight lg:text-left text-center"
           >We embrace people of all backgrounds, experiences,<br>
             culture, styles and talents. Join us!</p>
           <div class="lg:flex hidden mt-8">
@@ -45,19 +45,19 @@ const store = useUiStore() // ui store
       </a>
     </div>
     <div
-      class="careers-contact flex flex-auto items-center justify-center lg:mt-20 mt-0 overflow-hidden relative group"
+      class="careers-contact flex flex-auto items-center justify-center mt-20 overflow-hidden relative group"
     >
       <div class="careers-contact-image absolute inset-0 group-hover:scale-105 duration-500 -z-10"></div>
       <section
         class="careers-contact-us text-center text-white duration-700 translate-y-10 opacity-0 delay-500"
       >
         <h2
-          class="2xl:text-6xl text-4xl font-black leading-snug"
+          class="text-6xl font-black leading-snug"
         >Contact Us</h2>
         <p
           class="mt-4 text-xl leading-tight"
         >Address</p>
-        <ul class="lg:flex block gap-10 mt-10 text-xl">
+        <ul class="block gap-10 mt-10 text-xl">
           <li>Tel : 888-888-8888</li>
           <li>Fax : 888-888-8888</li>
           <li>Email : sadfa@asdfasdf.com</li>

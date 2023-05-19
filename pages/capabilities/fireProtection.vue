@@ -3,6 +3,6 @@
 
 <template>
   <div>
-    capabilities/hvac
+    capabilities/fireProtection
   </div>
 </template>

@@ -68,10 +68,10 @@ const footerPath = [
             <ul
               class="mt-5"
             >
-              <li>Pipe</li>
-              <li>Fire System</li>
-              <li>Blueprint</li>
-              <li>~~~</li>
+              <li>Mechanical</li>
+              <li>Plumbing</li>
+              <li>Fire Protection</li>
+              <li>Technology Design</li>
               <li>~~~</li>
               <li>~~~</li>
             </ul>
@@ -85,7 +85,7 @@ const footerPath = [
               OFFICES
             </h2>
             <p>Address ~~~~~ Houston, TX (HQ)</p>
-            <p>Address ~~~~~ Atlanata, GA (Branch)</p>
+            <!-- <p>Address ~~~~~ Atlanata, GA (Branch)</p> -->
           </section>
         </div>
         <div class="flex gap-10 justify-end">

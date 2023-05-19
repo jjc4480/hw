@@ -13,5 +13,11 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     cssPath: false,
+  },
+  app : {
+    head : {
+      titleTemplate: '%s - ' + 'HYOUNGWON USA',
+    }
   }
+
 })

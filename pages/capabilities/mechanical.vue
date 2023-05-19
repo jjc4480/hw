@@ -3,6 +3,6 @@
 
 <template>
   <div>
-    capabilities/pipe
+    capabilities/mechanical
   </div>
 </template>

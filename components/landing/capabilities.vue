@@ -1,16 +1,16 @@
 <script setup lang="ts">
 
 const items = [ // 박스 리스트
-  { title: 'Pipe', image: '/img/tolu-olubode-PlBsJ5MybGc-unsplash.jpg' },
-  { title: 'Fire', image: '/img/max-larochelle-tD-SDlQxfsY-unsplash.jpg' },
-  { title: 'Design', image: '/img/luca-bravo-9l_326FISzk-unsplash.jpg' },
-  { title: 'Test', image: '/img/sven-mieke-fteR0e2BzKo-unsplash.jpg' },
-  { title: 'Foo', image: '/img/sven-mieke-fteR0e2BzKo-unsplash.jpg' },
-  { title: 'Bar', image: '/img/sven-mieke-fteR0e2BzKo-unsplash.jpg' },
+  { title: 'Mechanical', image: '/img/tolu-olubode-PlBsJ5MybGc-unsplash.jpg' },
+  { title: 'Fire Protection', image: '/img/max-larochelle-tD-SDlQxfsY-unsplash.jpg' },
+  { title: 'Technology Design', image: '/img/luca-bravo-9l_326FISzk-unsplash.jpg' },
+  { title: 'Plumbing', image: '/img/sven-mieke-fteR0e2BzKo-unsplash.jpg' },
+  { title: 'Comming soon', image: '/img/sven-mieke-fteR0e2BzKo-unsplash.jpg' },
+  { title: 'LOGO', image: '/img/sven-mieke-fteR0e2BzKo-unsplash.jpg' },
 ]
 
 const timer = ref<null|number>(null) // auto change active
-const active = ref('Pipe') // 선택될 박스
+const active = ref('Mechanical') // 선택될 박스
 
 function changeActive (title: string) {
   // hover시 활성화된 박스를 바꾼다
@@ -47,15 +47,15 @@ onMounted(() => {
     <div class="flex 2xl:w-[50vw] w-full h-screen ml-auto items-center justify-center bg-black bg-opacity-50 absolute top-0 right-0 z-20">
       <section class="w-4/5">
         <h2 class="text-6xl text-white font-black leading-snug 2xl:text-right">Capabilities</h2>
-        <ul class="grid grid-cols-3 2xl:w-[55.8rem] w-full mt-16 ml-auto gap-[1px]">
+        <ul class="grid grid-cols-3 2xl:w-[45rem] w-full mt-16 ml-auto gap-[1px]">
           <li
-            class="lg:h-80 md:h-52 h-36 bg-gray-600 duration-500"
+            class="lg:h-60 md:h-52 h-36 bg-gray-600 duration-500"
             :class="{'capabilities-active': active == list.title}"
             v-for="list in items"
             @mouseover="changeActive(list.title)"
           >
             <a
-              class="flex w-full h-full text-3xl text-white/60 items-center justify-center"
+              class="flex w-full h-full text-3xl text-center  text-white/60 items-center justify-center"
               href="/"
             >
               {{ list.title }}

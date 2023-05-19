@@ -3,6 +3,6 @@
 
 <template>
   <div>
-    capabilities/blueprint
+    capabilities/plumbing
   </div>
 </template>

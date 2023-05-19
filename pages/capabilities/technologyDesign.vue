@@ -3,6 +3,6 @@
 
 <template>
   <div>
-    capabilities/fireSystem
+    capabilities/technologyDesign
   </div>
 </template>
