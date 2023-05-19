@@ -39,7 +39,7 @@ const store = useUiStore() // ui store
         >
           <img
             class="w-full h-full group-hover:scale-110 duration-500 object-cover object-center"
-            src="/img/helena-hertz-wWZzXlDpMog-unsplash.jpg"
+            src="/img/helena-hertz-wWZzXlDpMog-unsplash.png"
           >
         </figure>
       </a>
