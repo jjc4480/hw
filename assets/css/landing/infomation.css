@@ -1,7 +1,6 @@
 @layer components {
   .infomation {
-    background: url('/img/michal-matlon-zx7VUt9txos-unsplash.jpg') center center no-repeat;
-    background-size: cover;
+    background-color: transparent;
   }
 
   /* infomation background zoomin animation */

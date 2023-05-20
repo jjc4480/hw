@@ -14,6 +14,7 @@ const active = ref('Mechanical') // 선택될 박스
 
 function changeActive (title: string) {
   // hover시 활성화된 박스를 바꾼다
+  if(title == "LOGO") return;
   if (timer.value) {
     // 기존 타이머 삭제
     window.clearInterval(timer.value)
@@ -47,15 +48,15 @@ onMounted(() => {
     <div class="flex 2xl:w-[50vw] w-full h-screen ml-auto items-center justify-center bg-black bg-opacity-50 absolute top-0 right-0 z-20">
       <section class="w-4/5">
         <h2 class="text-6xl text-white font-black leading-snug 2xl:text-right">Capabilities</h2>
-        <ul class="grid grid-cols-3 2xl:w-[45rem] w-full mt-16 ml-auto gap-[1px]">
+        <ul class="grid grid-cols-3 2xl:w-[30rem] w-full mt-16 ml-auto gap-[2px]">
           <li
-            class="lg:h-60 md:h-52 h-36 bg-gray-600 duration-500"
+            class="lg:h-44 md:h-40 h-36 bg-gray-600 duration-500"
             :class="{'capabilities-active': active == list.title}"
             v-for="list in items"
             @mouseover="changeActive(list.title)"
           >
             <a
-              class="flex w-full h-full text-3xl text-center  text-white/60 items-center justify-center"
+              class="flex w-full h-full text-xl text-center  text-white/60 items-center justify-center"
               href="/"
             >
               {{ list.title }}
