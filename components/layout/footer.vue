@@ -32,7 +32,7 @@ const footerPath = [
           class="2xl:flex grid grid-cols-4 gap-10 justify-between"
         >
           <figure
-            class="md:border-r border-white pr-10 md:col-span-1 col-span-2"
+            class="md:border-r border-white pr-10 md:col-span-1 col-span-2 min-h-full"
           >
             <img
               class="lg:w-72 w-32 mx-auto"
@@ -40,12 +40,12 @@ const footerPath = [
             />
           </figure>
           <h2
-            class="lg:text-4xl text-xl font-black leading-snug md:col-span-1 col-span-2"
+            class="lg:text-4xl relative text-xl font-black leading-6 md:col-span-1 col-span-2 2xl:-left-20 space-y-3"
           >
-            Building<br>
-            Bright<br>
-            Future<br>
-            With Us
+           <div> Building</div>
+            <div> Bright</div>
+            <div> Future</div>
+            <div> With Us</div>
           </h2>
           <nav
             class="grid md:col-span-1 col-span-2"

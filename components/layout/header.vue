@@ -30,7 +30,7 @@ const color = computed(() => { // header의 로고 이미지 색상
 
 <template>
   <header
-    class="gnb w-full flex justify-center fixed top-0 left-0 z-40 duration-300"
+    class="gnb w-full flex justify-center fixed top-0 left-0 z-40 duration-500"
     :class="{
       'open': store.header.nav,
       'opacity-0': store.landing.scrollIndex > 4,

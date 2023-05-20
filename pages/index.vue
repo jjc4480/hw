@@ -49,7 +49,7 @@ function handler (e: WheelEvent) {
     }
 
     window.scrollTo({ // 스크롤 이동
-      top: store.landing.scrollIndex * screen.value,
+      top: store.landing.scrollIndex * screen.value + 9,
       behavior: 'smooth'
     })
   }

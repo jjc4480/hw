@@ -34,7 +34,7 @@ watch(menuOpen, () => {
     class="relative"
   > 
     <button
-      class="nav-icon w-14 h-11 rotate-0 duration-500 cursor-pointer absolute -top-3 right-5 z-10"
+      class="nav-icon w-8 h-11 rotate-0 duration-500 cursor-pointer absolute -top-3 right-5 z-10"
       :class="{'open': menuOpen}"
       @click="menuOpen = !menuOpen"
     >
@@ -43,11 +43,11 @@ watch(menuOpen, () => {
         :class="[!menuOpen ? 'bg-white' : 'bg-black']"
       ></div>
       <div
-        class="w-4/6 top-5"
+        class="w-4/6 top-3"
         :class="[!menuOpen ? 'bg-white' : 'bg-black']"
       ></div>
       <div
-        class="w-full top-10"
+        class="w-full top-6"
         :class="[!menuOpen ? 'bg-white' : 'bg-black']"
       ></div>
     </button>

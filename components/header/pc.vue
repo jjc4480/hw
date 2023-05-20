@@ -53,7 +53,7 @@ const store = useUiStore() // ui store
       </nav>
     </section>
     <button
-      class="nav-icon w-14 h-11 rotate-0 relative duration-500 cursor-pointer"
+      class="nav-icon w-8 h-11 rotate-0 relative duration-500 cursor-pointer"
       @click="store.siteMap = true"
     >
       <div
@@ -61,11 +61,11 @@ const store = useUiStore() // ui store
         :class="[color == 'white' ? 'bg-white' : 'bg-black']"
       ></div>
       <div
-        class="w-4/6 top-5"
+        class="w-4/6 top-3"
         :class="[color == 'white' ? 'bg-white' : 'bg-black']"
       ></div>
       <div
-        class="w-full top-10"
+        class="w-full top-6"
         :class="[color == 'white' ? 'bg-white' : 'bg-black']"
       ></div>
     </button>
