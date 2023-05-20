@@ -71,7 +71,7 @@ function handler (e: WheelEvent) {
 function scrollCheck () {
   // 스크롤 감지
   position.value = window.scrollY // 현재 스크롤 높이 저장
-  if (position.value == store.landing.scrollIndex * screen.value) {
+  if (Math.abs(position.value - store.landing.scrollIndex * screen.value) < 10) {
     // 현재높이와 목표높이가 같아지면 트리거를 종료해준다
     trigger.value = false
   }
@@ -127,5 +127,6 @@ onUnmounted(() => {
       :is="component"
       :key="key"
     ></component>
+
   </div>
 </template>
