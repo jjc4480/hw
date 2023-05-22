@@ -12,6 +12,10 @@
   --primary-hw: #15818b;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /* app에서 배경을 어둡게할때 쓰자! */
 .app-bg-enter-active,
 .app-bg-leave-active {
