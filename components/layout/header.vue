@@ -36,7 +36,7 @@ const color = computed(() => { // header의 로고 이미지 색상
       'opacity-0': store.landing.scrollIndex > 4,
     }"
   >
-    <div class="2xl:container flex mx-32 gap-5 relative 2xl:items-start items-center 2xl:justify-start justify-between">
+    <div class="container flex gap-5 relative 2xl:items-start items-center 2xl:justify-start justify-between">
       <a
         class="flex w-96"
         href="/"

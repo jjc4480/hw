@@ -14,7 +14,7 @@ const store = useUiStore() // ui store
 </script>
 <template>
   <div
-    class="flex-auto items-baseline justify-between duration-300"
+    class="flex-auto items-baseline justify-end duration-300 gap-5"
   >
     <section
       class="flex mt-8"
