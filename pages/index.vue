@@ -21,16 +21,34 @@ const offset = Object.values(components) // 컴포넌트 갯수
 const trigger = ref(false) // 스크롤 이벤트여부
 const screen = ref(0) // 스크린 크기
 const position = ref(0) // 현재위치
+const startY = ref(0) // 터치 시작위치
 
 let timer:null|number = null // 트리거 강제종료 타이머
 
-function handler (e: WheelEvent) {
+function wheelEvent (e: WheelEvent) {
+  // 휠 이벤트 감지
+  handler(e.deltaY)
+}
+
+function touchstartEvent (e: TouchEvent) {
+  // 터치 이벤트 시작여부 감지
+  startY.value = e.touches[0].clientY
+}
+
+function touchendEvent (e: TouchEvent) {
+  // 터치 이벤트 종료여부 감지
+  const deltaY = e.changedTouches[0].clientY - startY.value;
+  // 터치 종료시 시작위치와 종료위치의 차이를 계산하여 스크롤 이벤트 핸들링
+  handler(deltaY)
+}
+
+function handler (y: number) {
   // 스크롤 이벤트 핸들링
   if (!trigger.value) {
     // 트리거가 동작중이 아닐때만 실행
     trigger.value = true // 트리거 동작중으로 설정
 
-    if (e.deltaY > 0) {
+    if (y > 0) {
       // 아래로 스크롤
       store.updateLandingScrolling(store.landing.scrollIndex + 1)
     } else {
@@ -95,8 +113,20 @@ onMounted(() => {
   window.addEventListener('wheel', (e: WheelEvent) => {
     // 휠 이벤트 정지후 핸들러 실행
     e.preventDefault()
-    handler(e)
+    wheelEvent(e)
   }, wheelOption)
+
+  window.addEventListener('touchstart', (e: TouchEvent) => {
+    e.preventDefault()
+    touchstartEvent(e)
+  }, wheelOption)
+  window.addEventListener('touchend', (e: TouchEvent) => {
+    // 휠 이벤트 정지후 핸들러 실행
+    e.preventDefault()
+    touchendEvent(e)
+  }, wheelOption)
+
+
   window.addEventListener('scroll', scrollCheck)
   // 리사이즈시 높이값 변경
   window.addEventListener('resize', resizer)
@@ -110,7 +140,16 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('wheel', (e: WheelEvent) => {
     e.preventDefault()
-    handler(e)
+    wheelEvent(e)
+  }, wheelOption)
+  window.removeEventListener('touchstart', (e: TouchEvent) => {
+    e.preventDefault()
+    touchstartEvent(e)
+  }, wheelOption)
+  window.removeEventListener('touchend', (e: TouchEvent) => {
+    // 휠 이벤트 정지후 핸들러 실행
+    e.preventDefault()
+    touchendEvent(e)
   }, wheelOption)
   window.removeEventListener('scroll', scrollCheck)
   window.removeEventListener('resize', resizer)
