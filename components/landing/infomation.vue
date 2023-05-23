@@ -1,15 +1,15 @@
 <script setup lang="ts">
 
 const heading = [ // head 애니메이션 요소들 배열 item마다 newline으로 처리
-  'Your Trusted Partner For',
-  'Manufacturing and Process',
-  'Piping Solutions~~~~~'
+  'Your Loyal Companion for',
+  'Building a bright future',
 ]
 
 const contents = [ // content 애니메이션 요소들 배열 item마다 newline으로 처리
-  'Built on a foundation of trust, we provide our clients with unmatched value,',
-  'our employees with a safe work environment and entrepreneurial culture,',
-  'and the communities we serve with innovation and excellence.~~~~~~~'
+  'Built on a foundation of trust, we have experience in delivering engineering design, ',
+  'project management in the semiconductor and display industries.',
+  'We provide unmatched value to our clients, safe work environment to our employees, ',
+  'and excellence to our communities.'
 ]
 </script>
 
@@ -32,6 +32,7 @@ const contents = [ // content 애니메이션 요소들 배열 item마다 newlin
             >
               <span
                 class="block drop-shadow-lg"
+                :class="word === ' ' ? 'w-5' : ''"
                 v-for="(word, index) in text.split('')"
                 :style="`animation-delay: ${index * 0.05}s`"
               >{{ word }}</span>
@@ -40,7 +41,7 @@ const contents = [ // content 애니메이션 요소들 배열 item마다 newlin
           </section>
 
           <article
-            class="mt-16 2xl:px-0 px-5 2xl:text-3xl text-xl text-white leading-tight"
+            class="mt-16 2xl:px-0 px-5 2xl:text-3xl/[3rem] text-xl text-white leading-tight"
           >
             <p
               class="infomation-char flex overflow-hidden"
@@ -48,6 +49,7 @@ const contents = [ // content 애니메이션 요소들 배열 item마다 newlin
             >
               <span
                 class="block drop-shadow-lg"
+                :class="word === ' ' ? 'w-3' : ''"
                 v-for="(word, index) in text.split('')"
                 :style="`animation-delay: ${1 + (index * 0.05)}s`"
               >{{ word }}</span>
