@@ -1,10 +1,10 @@
 <script setup lang="ts">
 
 const items = [ // 박스 리스트
-  { title: 'Mechanical', image: '/img/tolu-olubode-PlBsJ5MybGc-unsplash.jpg' },
-  { title: 'Fire Protection', image: '/img/max-larochelle-tD-SDlQxfsY-unsplash.jpg' },
-  { title: 'Technology Design', image: '/img/luca-bravo-9l_326FISzk-unsplash.jpg' },
-  { title: 'Plumbing', image: '/img/sven-mieke-fteR0e2BzKo-unsplash.jpg' },
+  { title: 'Mechanical', image: '/img/Mechanical.jpg' },
+  { title: 'Fire Protection', image: '/img/FireProtection.jpg' },
+  { title: 'Technology Design', image: '/img/TechnologyDesign.jpg' },
+  { title: 'Plumbing', image: '/img/Plumbing.jpg' },
   { title: 'Comming soon', image: '/img/sven-mieke-fteR0e2BzKo-unsplash.jpg' },
   { title: 'LOGO', image: '/img/sven-mieke-fteR0e2BzKo-unsplash.jpg' },
 ]
@@ -24,15 +24,18 @@ function changeActive (title: string) {
 }
 
 function activeStep () {
+  // items의 마지막 아이템은 삭제
+  const targetItems = items.slice(0, items.length - 1);
+
   timer.value = window.setInterval(() => {
     // 3초마다 박스를 변경한다
-    const index = items.findIndex((item) => item.title === active.value)
-    if (index === items.length - 1) {
+    const index = targetItems.findIndex((item) => item.title === active.value)
+    if (index === targetItems.length - 1) {
       // 마지막 박스일 경우 첫번째 박스로 이동
-      active.value = items[0].title
+      active.value = targetItems[0].title
     } else {
       // 그외는 다음 박스로 이동
-      active.value = items[index + 1].title
+      active.value = targetItems[index + 1].title
     }
   }, 3000)
 }
@@ -50,13 +53,14 @@ onMounted(() => {
         <h2 class="text-6xl text-white font-black leading-snug 2xl:text-right">Capabilities</h2>
         <ul class="grid grid-cols-3 2xl:w-[30rem] w-full mt-16 gap-[2px]">
           <li
-            class="lg:h-44 md:h-40 h-36 bg-gray-600 duration-500"
+            class="lg:h-44 md:h-40 h-36 bg-gray-600 duration-500 "
             :class="{'capabilities-active': active == list.title}"
             v-for="list in items"
             @mouseover="changeActive(list.title)"
           >
             <a
               class="flex w-full h-full text-xl text-center  text-white/60 items-center justify-center"
+              :class="list.title == 'LOGO' ? 'cursor-default' : 'cursor-pointer'"
               href="/"
             >
               {{ list.title }}
