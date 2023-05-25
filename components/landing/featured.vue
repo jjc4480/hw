@@ -1,13 +1,24 @@
 <script setup lang="ts">
 const slideList = [ // 슬라이드 아이템
-  { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
-  { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
-  { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
-  { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
-  { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
-  { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
-  { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
-  { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
+  // { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
+  // { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
+  // { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
+  // { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
+  // { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
+  // { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
+  // { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
+  // { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
+  // 여기부터 진짜 나와야 하는 Items들. 해외 우선, 이후 최근년도순
+  { title : 'LG Display – Vietnam', src : '/img/featured_1.jpg'},
+  { title : 'LG Household & Health Care – South Korea', src : '/img/featured_2.png'},
+  { title : 'LG Household & Health Care – South Korea', src : '/img/featured_3.png'},
+  { title : 'LG Electronics', src : '/img/featured_4.jpg'},
+  { title : 'LG Display – Vietnam', src : '/img/featured_5.jpg'},
+  { title : 'LG Display – Vietnam', src : '/img/featured_6.jpg'},
+  { title : 'LG Display – Vietnam', src : '/img/featured_7.jpg'},
+  { title : 'LG Display – Vietnam', src : '/img/featured_8.jpg'},
+  { title : 'LG Display – Vietnam', src : '/img/featured_9.jpg'},
+  { title : 'LG Display – Vietnam', src : '/img/featured_10.jpg'},
 ]
 
 </script>
@@ -22,7 +33,9 @@ const slideList = [ // 슬라이드 아이템
       >Featured Projects</h2>
       <p
         class="2xl:px-0 px-5 mt-12 2xl:text-2xl text-lg text-black leading-tight"
-      >We have a strong portfolio of projects in semiconductor, display 어쩌구 저쩌구~~  2줄 정도로 깔끔 컷</p>
+      >We have a strong portfolio of projects in semiconductor and display in South Korea. <br />
+We have a strong connection with clients to this day, and we are maintaining a relationship with clients based on our honest and precise work. 
+</p>
     </section>
     <div
       class="container 2xl:px-0 px-5 mt-48 mx-auto relative"

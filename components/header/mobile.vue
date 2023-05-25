@@ -125,7 +125,7 @@ watch(menuOpen, () => {
                 :href="`/${useLowcase(key)}/${child.path}`"
               >
               <!-- TODO: 상세페이지 href -->
-              {{ child.path }}
+              {{ child.name }}
               </a>
             </li>
           </ul>

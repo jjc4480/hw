@@ -27,7 +27,7 @@ const store = useUiStore() // ui store
         :key="key"
       >
         <a
-          class="block pb-12 px-8 text-2xl font-bold duration-300"
+          class="block pb-12 px-8 text-xl font-bold duration-300"
           :class="[color == 'white' ? 'text-white hover:text-black' : 'text-black hover:text-white']"
           :href="`/${useLowcase(key)}/${list[0].path}`"
         >

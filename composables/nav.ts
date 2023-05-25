@@ -2,7 +2,7 @@ import type { Nav, NavTitle } from '@/types/nav'
 const nav = {
   About: [
     { name: 'Greetings', path: 'greetings' },
-    { name: 'Profile', path: 'profile' },
+    { name: 'Philosophy', path: 'philosophy' },
     { name: 'History', path: 'history' },
     { name: 'Structure', path: 'structure' },
   ],
