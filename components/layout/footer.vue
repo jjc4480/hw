@@ -42,10 +42,10 @@ const footerPath = [
           <h2
             class="lg:text-4xl relative text-xl font-black leading-6 md:col-span-1 col-span-2 2xl:-left-20 space-y-3"
           >
-           <div> Build</div>
-            <div> Bright</div>
-            <div> Future</div>
-            <div> With Us</div>
+            <div>Build</div>
+            <div>Bright</div>
+            <div>Future</div>
+            <div>With Us</div>
           </h2>
           <nav
             class="grid md:col-span-1 col-span-2"
@@ -68,10 +68,10 @@ const footerPath = [
             <ul
               class="mt-5"
             >
-              <li>Mechanical</li>
-              <li>Plumbing</li>
-              <li>Fire Protection</li>
-              <li>Technology Design</li>
+              <li><a href="/capabilities/mechanical">Mechanical</a></li>
+              <li><a href="/capabilities/fireProtection">Fire Protection</a></li>
+              <li><a href="/capabilities/technologyDesign">Technology Design</a></li>
+              <li><a href="/capabilities/plumbing">Plumbing</a></li>
             </ul>
           </section>
           <section

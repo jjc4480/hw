@@ -32,7 +32,7 @@ const contents = [ // content 애니메이션 요소들 배열 item마다 newlin
             >
               <span
                 class="block drop-shadow-lg"
-                :class="word === ' ' ? 'w-5' : ''"
+                :class="word === ' ' ? 'mx-2' : ''"
                 v-for="(word, index) in text.split('')"
                 :style="`animation-delay: ${index * 0.05}s`"
               >{{ word }}</span>
@@ -41,7 +41,7 @@ const contents = [ // content 애니메이션 요소들 배열 item마다 newlin
           </section>
 
           <article
-            class="mt-16 2xl:px-0 px-5 2xl:text-3xl/[3rem] text-xl text-white leading-tight"
+            class="mt-16 2xl:px-0 px-5 2xl:text-3xl/[2.5rem] text-xl text-white leading-tight"
           >
             <p
               class="infomation-char flex overflow-hidden"
@@ -49,7 +49,7 @@ const contents = [ // content 애니메이션 요소들 배열 item마다 newlin
             >
               <span
                 class="block drop-shadow-lg"
-                :class="word === ' ' ? 'w-3' : ''"
+                :class="word === ' ' ? 'mx-1' : ''"
                 v-for="(word, index) in text.split('')"
                 :style="`animation-delay: ${1 + (index * 0.05)}s`"
               >{{ word }}</span>

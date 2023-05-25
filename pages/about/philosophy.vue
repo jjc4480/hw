@@ -18,7 +18,7 @@ const infomation = ref() // 소개영역
       <h2
         class="text-6xl mb-40 text-center"
       >
-        Profile
+        Philosophy
       </h2>
       <figure class="flex gap-20">
         <img
