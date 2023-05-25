@@ -2,7 +2,7 @@
 
 const heading = [ // head 애니메이션 요소들 배열 item마다 newline으로 처리
   'Your Loyal Companion for',
-  'Building a bright future',
+  'Building a Bright Future',
 ]
 
 const contents = [ // content 애니메이션 요소들 배열 item마다 newline으로 처리
