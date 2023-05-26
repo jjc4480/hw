@@ -67,7 +67,7 @@ function handler (y: number) {
     }
 
     window.scrollTo({ // 스크롤 이동
-      top: store.landing.scrollIndex * screen.value + 9,
+      top: store.landing.scrollIndex * screen.value,
       behavior: 'smooth'
     })
   }
@@ -89,7 +89,7 @@ function handler (y: number) {
 function scrollCheck () {
   // 스크롤 감지
   position.value = window.scrollY // 현재 스크롤 높이 저장
-  if (Math.abs(position.value - store.landing.scrollIndex * screen.value) < 10) {
+  if (Math.abs(position.value - store.landing.scrollIndex * screen.value) < 1) {
     // 현재높이와 목표높이가 같아지면 트리거를 종료해준다
     trigger.value = false
   }
