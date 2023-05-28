@@ -1,9 +1,13 @@
 @layer components {
-  .capabilities .capabilities-active{
+  .capabilities .capabilities-active {
     @apply relative;
     box-shadow: 9px 15px 24px 0px rgba(0, 0, 0, 0.5);
     background-color: var(--primary-hw);
   }
+}
+
+.capabilities-active img {
+  filter: invert(80%);
 }
 
 .capabilities-leave-active,
@@ -19,4 +23,9 @@
 .capabilities-enter-to,
 .capabilities-leave-from {
   opacity: 1;
+}
+
+/* careers하단에 나타나는 애니메이션 구현용 */
+.capabilities-container.open {
+  @apply translate-y-0 opacity-100;
 }

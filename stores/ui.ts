@@ -1,11 +1,11 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
 interface Toggle {
-  open: boolean
+  open: boolean;
 }
 
 // ui를 컨트롤하는 store
-export const useUiStore = defineStore('ui', {
+export const useUiStore = defineStore("ui", {
   state: () => ({
     landing: {
       scrollIndex: 0, // 스크롤 index
@@ -15,19 +15,20 @@ export const useUiStore = defineStore('ui', {
     },
     siteMap: false, // 사이트맵
     careers: false, // 경력 애니메이션
+    capabilities: false,
   }),
   actions: {
     updateLandingScrolling(index: number) {
       // 스크롤 index를 변경
-      this.landing.scrollIndex = index
+      this.landing.scrollIndex = index;
     },
-    siteMapToggle({open}: Toggle) {
+    siteMapToggle({ open }: Toggle) {
       // 사이트맵 상태를 변경
-      this.siteMap = open
+      this.siteMap = open;
     },
-    headerNavToggle({open}: Toggle) {
+    headerNavToggle({ open }: Toggle) {
       // 네비게이션 상태를 변경
-      this.header.nav = open
-    }
+      this.header.nav = open;
+    },
   },
-})
+});
