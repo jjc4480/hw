@@ -1,15 +1,23 @@
-@import './preflight.css';
-@import './header.css';
-@import './landing.css';
-@import './sitemap.css';
+@import "./preflight.css";
+@import "./header.css";
+@import "./landing.css";
+@import "./sitemap.css";
 
-@import './layout/pages.css';
+@import "./layout/pages.css";
 
 /* parallax 구현용 임시파일 */
-@import './parallax.css';
+@import "./parallax.css";
+
+@import url("https://fonts.cdnfonts.com/css/inter");
 
 :root {
   --primary-hw: #15818b;
+  font-family: "Inter", sans-serif;
+}
+
+body::selection {
+  background-color: #15818b;
+  color: white;
 }
 
 body::-webkit-scrollbar {
@@ -22,6 +30,6 @@ body::-webkit-scrollbar {
   transition: opacity 0.2s ease;
 }
 .app-bg-enter-from,
-.app-bg-leave-to{
+.app-bg-leave-to {
   opacity: 0;
 }
