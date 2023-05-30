@@ -27,7 +27,6 @@ const infomation = ref(); // 소개영역
               ? 'pages-fade-done'
               : 'pages-fade-left'
           "
-          ref="image1"
         >
           <h3 class="mt-10 text-6xl font-black space-y-2">Quality</h3>
           <p class="mt-16 text-xl">
@@ -75,7 +74,6 @@ const infomation = ref(); // 소개영역
               ? 'pages-fade-done'
               : 'pages-fade-left'
           "
-          ref="image3"
         >
           <h3 class="mt-10 text-6xl font-black space-y-2">Health & Safety</h3>
           <p class="mt-16 text-xl">
@@ -102,7 +100,6 @@ const infomation = ref(); // 소개영역
               ? 'pages-fade-done'
               : 'pages-fade-left'
           "
-          ref="image3"
         >
           <h3 class="mt-10 text-6xl font-black space-y-2">Environmental</h3>
           <p class="mt-16 text-xl">
