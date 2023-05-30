@@ -8,7 +8,6 @@ const store = useUiStore(); // ui store
   <div class="flex min-h-screen flex-col selection:bg-hw selection:text-white">
     <LayoutHeader />
     <NuxtPage />
-    <LayoutFooter class="mt-auto" />
     <SiteMap></SiteMap>
     <Transition name="app-bg">
       <div

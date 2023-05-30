@@ -74,7 +74,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative">
+  <div>
     <div
       class="flex 2xl:w-[50vw] w-full h-screen ml-auto items-center 2xl:justify-start justify-center bg-black bg-opacity-50 absolute top-0 right-0 xl:pl-56 z-20"
     >
