@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useUiStore } from '@/stores/ui'
-import SiteMap from '@/components/header/sitemap.vue'
+import { useUiStore } from "@/stores/ui";
+import SiteMap from "@/components/header/sitemap.vue";
 
-const store = useUiStore() // ui store
+const store = useUiStore(); // ui store
 </script>
 <template>
-  <div class="flex min-h-screen flex-col">
+  <div class="flex min-h-screen flex-col selection:bg-hw selection:text-white">
     <LayoutHeader />
     <NuxtPage />
     <SiteMap></SiteMap>

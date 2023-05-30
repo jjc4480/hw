@@ -13,7 +13,7 @@ const store = useUiStore() // ui store
     >
       <a
         class="flex container lg:h-auto h-80 mx-auto group duration-700 translate-y-10 opacity-0 delay-500 relative"
-        href="/test"
+        href="/careers/recruit"
       >
         <section
           class="lg:w-4/6 w-full lg:h-auto h-full lg:pl-16 pl-0 py-16 top-0 left-0 lg:static absolute lg:bg-hw bg-black/50 z-10"

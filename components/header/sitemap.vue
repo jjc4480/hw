@@ -72,7 +72,7 @@ watch(siteMap, (n, o) => {
                 class="block py-3 hover:text-white hover:font-block duration-300"
                 :href="`/${useLowcase(key)}/${child.path}`"
               >
-                {{ child.path }}
+                {{ (child.path[0].toUpperCase() + child.path.slice(1, child.path.length))}}
               </a>
             </li>
           </ul>

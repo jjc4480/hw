@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useUiStore } from '@/stores/ui'
+import { useUiStore } from "@/stores/ui";
 
-import Infomation from '@/components/landing/infomation.vue'
-import Featured from '@/components/landing/featured.vue'
-import Capabilities from '@/components/landing/capabilities.vue'
-import Commitments from '@/components/landing/commitments.vue'
-import Careers from '@/components/landing/careers.vue'
+import Infomation from "@/components/landing/infomation.vue";
+import Featured from "@/components/landing/featured.vue";
+import Capabilities from "@/components/landing/capabilities.vue";
+import Commitments from "@/components/landing/commitments.vue";
+import Careers from "@/components/landing/careers.vue";
 
 import type { ScrollTarget } from '@/types/fullpage'
 
@@ -16,8 +16,8 @@ const components = { // 사용될 컴포넌틑 리스트 v-for로 배치한다
   featured: Featured,
   capabilities: Capabilities,
   commitments: Commitments,
-  careers: Careers
-}
+  careers: Careers,
+};
 
 const options = { // fullpage.js 옵션
   licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
