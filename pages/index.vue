@@ -40,7 +40,7 @@ function afterLoad (_: ScrollTarget, to: ScrollTarget) {
 
 <template>
   <div>
-    <fullPage id="fullpage" ref="fullpage" :options="options">
+    <full-page id="fullpage" ref="fullpage" :options="options">
       <div
         v-for="(component, key) in components"
         class="section"
@@ -49,6 +49,6 @@ function afterLoad (_: ScrollTarget, to: ScrollTarget) {
       >
         <component :is="component"></component>
       </div>
-    </fullPage>
+    </full-page>
   </div>
 </template>
