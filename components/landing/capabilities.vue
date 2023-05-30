@@ -16,7 +16,7 @@ const items = [
     icon: "img/icon-FireProtection.png",
   },
   {
-    title: "Technology Design",
+    title: "Design",
     image: "/img/TechnologyDesign.jpg",
     icon: "img/icon-TechnologyDesign.png",
   },
@@ -76,7 +76,7 @@ onMounted(() => {
 <template>
   <div>
     <div
-      class="flex 2xl:w-[50vw] w-full h-screen ml-auto items-center 2xl:justify-start justify-center bg-black bg-opacity-50 absolute top-0 right-0 xl:pl-56 z-20"
+      class="flex 2xl:w-[50vw] w-full h-screen ml-auto items-center 2xl:justify-start justify-center bg-black bg-opacity-50 absolute top-0 right-0 xl:pl-20 z-20"
     >
       <section class="2xl:ml-40">
         <h2 class="text-6xl text-white font-black leading-snug 2xl:text-right">
@@ -91,7 +91,7 @@ onMounted(() => {
           class="pages-fade grid grid-cols-3 2xl:w-[30rem] w-full mt-16 gap-[2px] delay-500"
         >
           <li
-            class="flex space-y-6 flex-col items-center justify-center lg:h-44 md:h-40 h-36 bg-gray-600 duration-500"
+            class="flex space-y-6 flex-col items-center justify-center lg:h-36 md:h-36 h-36 bg-gray-600 duration-500"
             :class="{ 'capabilities-active': active == list.title }"
             v-for="list in items"
             @mouseover="changeActive(list.title)"
@@ -101,10 +101,14 @@ onMounted(() => {
               v-if="list.icon != ''"
               class="flex w-full items-center justify-center"
             >
-              <img :src="list.icon" class="w-16 h-16" />
+              <img
+                :src="list.icon"
+                class="w-auto h-14"
+                :class="list.title == 'LOGO' ? '' : 'invert-[80%]'"
+              />
             </div>
             <a
-              class="flex w-full text-xl text-center text-white/60 items-center justify-center"
+              class="flex w-full text- text-center text-white/60 items-center justify-center"
               :class="
                 list.title == 'LOGO'
                   ? 'cursor-default hidden'

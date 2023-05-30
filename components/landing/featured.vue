@@ -12,22 +12,66 @@ const slideList = [
   // { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
   // { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
   // 여기부터 진짜 나와야 하는 Items들. 해외 우선, 이후 최근년도순
-  { title: "LG Display – Vietnam", src: "/img/featured_1.jpg" },
   {
-    title: "LG Household & Health Care – South Korea",
+    title: "LG Display – H1,2 Project",
+    src: "/img/featured_1.jpg",
+    content:
+      "<span>Classification: EPC</span> <span>Location: Haiphong, Vietnam</span>  <span>Construction Period: 2018~2019</span>",
+  },
+  {
+    title: "LG Electronics",
+    src: "/img/featured_4.jpg",
+    content:
+      "<span>Classification: EPC</span> <span>Location: Incheon, South Korea</span> <span>Construction Period: 2017~2023</span>",
+  },
+  {
+    title: "LG Display - P8 & 9 Project",
+    src: "/img/featured_9.jpg",
+    content:
+      "<span>Classification: EPC</span> <span>Location: Paju, South Korea</span> <span>Construction Period: 2016~2022</span>",
+  },
+  {
+    title: "LG Display - P10 Project",
+    src: "/img/featured_10.jpg",
+    content:
+      "<span>Classification: EPC</span> <span>Location: Paju, South Korea</span> <span>Construction Period: 2017~2021</span>",
+  },
+  {
+    title: "LG Household & Health Care",
     src: "/img/featured_2.png",
+    content:
+      "<span>Classification: EPC</span> <span>Location: Buyeo, South Korea</span> <span>Construction Period: 2018~2020</span>",
   },
   {
-    title: "LG Household & Health Care – South Korea",
+    title: "LG Household & Health Care",
     src: "/img/featured_3.png",
+    content:
+      "<span>Classification: EPC</span> <span>Location: Cheongju, South Korea</span> <span>Construction Period: 2017~2020</span>",
   },
-  { title: "LG Electronics", src: "/img/featured_4.jpg" },
-  { title: "LG Display – Vietnam", src: "/img/featured_5.jpg" },
-  { title: "LG Display – Vietnam", src: "/img/featured_6.jpg" },
-  { title: "LG Display – Vietnam", src: "/img/featured_7.jpg" },
-  { title: "LG Display – Vietnam", src: "/img/featured_8.jpg" },
-  { title: "LG Display – Vietnam", src: "/img/featured_9.jpg" },
-  { title: "LG Display – Vietnam", src: "/img/featured_10.jpg" },
+  {
+    title: "LG Display - M2 Project",
+    src: "/img/featured_8.jpg",
+    content:
+      "<span>Classification: EPC</span> <span>Location: Paju, South Korea</span> <span>Construction Period: 2013, 2016~2017</span>",
+  },
+  {
+    title: "LG Innotek",
+    src: "/img/featured_5.jpg",
+    content:
+      "<span>Classification: EPC</span> <span>Location: Gumi, South Korea</span> <span>Construction Period: 2012~2014</span>",
+  },
+  {
+    title: "LG Display - CAPA UP Project",
+    src: "/img/featured_7.jpg",
+    content:
+      "<span>Classification: EPC</span> <span>Location: Gumi, South Korea</span> <span>Construction Period: 2012~2013</span>",
+  },
+  {
+    title: "LG Display - M5 Project",
+    src: "/img/featured_6.jpg",
+    content:
+      "<span>Classification: EPC</span> <span>Location: Gumi, South Korea</span> <span>Construction Period: 2011~2012</span>",
+  },
 ];
 </script>
 
@@ -35,21 +79,19 @@ const slideList = [
   <div>
     <section class="container mx-auto pt-[20vh]">
       <h2
-        class="2xl:px-0 px-5 2xl:text-6xl text-4xl text-black font-black leading-snug"
+        class="2xl:px-0 2xl:text-6xl text-4xl text-black font-black leading-snug"
       >
         Featured Projects
       </h2>
       <p
         class="2xl:px-0 px-5 mt-12 2xl:text-2xl text-lg text-black leading-tight"
       >
-        We have a strong portfolio of projects in semiconductor and display in
-        South Korea. <br />
         We have a strong connection with clients to this day, and we are
         maintaining a relationship with clients based on our honest and precise
         work.
       </p>
     </section>
-    <div class="container 2xl:px-0 px-5 mt-48 mx-auto relative">
+    <div class="container 2xl:px-0 px-5 mt-20 mx-auto relative">
       <!-- <fieldset class="flex gap-10 absolute -top-36 2xl:right-0 right-5">
         <button
           class="featured-swiper-prev group"
@@ -77,7 +119,7 @@ const slideList = [
       <Swiper
         class="featured-swiper"
         :setWrapperSize="true"
-        :slidesPerView="4"
+        :slidesPerView="3"
         :autoplay="{
           delay: 8000,
           disableOnInteraction: true,
@@ -116,13 +158,16 @@ const slideList = [
           >
             <figure class="flex flex-col h-full overflow-hidden">
               <img
-                class="object-cover group-hover:transform group-hover:scale-105 transition-all duration-500 ease-in-out"
+                class="object-fill group-hover:transform group-hover:scale-105 transition-all duration-500 ease-in-out"
                 :src="slide.src"
               />
               <figcaption
-                class="flex flex-auto p-3 text-2xl items-end justify-center border-b-2 border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
+                class="flex flex-auto py-8 items-end pl-4 border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
               >
-                {{ slide.title }}
+                <div class="flex flex-col items-start space-y-8">
+                  <div class="text-xl">{{ slide.title }}</div>
+                  <div class="project_content" v-html="slide.content"></div>
+                </div>
               </figcaption>
             </figure>
           </a>

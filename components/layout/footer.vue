@@ -24,17 +24,17 @@ const footerPath = [
   <footer>
     <div class="bg-gray-600 text-white">
       <div class="p-8 container mx-auto">
-        <div class="2xl:flex grid grid-cols-4 gap-10 justify-between">
+        <div class="2xl:flex grid grid-cols-4 gap-6 justify-between">
           <figure
-            class="md:border-r border-white pr-10 md:col-span-1 col-span-2 min-h-full"
+            class="flex md:border-r border-white pr-10 md:col-span-1 col-span-2 min-h-full"
           >
             <img
-              class="lg:w-72 w-32 mx-auto"
+              class="lg:w-72 w-32 mx-auto my-auto relative"
               src="/img/KakaoTalk_20230509_103704206.png"
             />
           </figure>
           <h2
-            class="lg:text-5xl relative text-xl font-black leading-6 md:col-span-1 col-span-2 2xl:-left-20 space-y-3"
+            class="lg:text-4xl relative text-[1rem] font-black pl-6 md:col-span-1 col-span-2 2xl:-left-20 space-y-3"
           >
             <div>Build</div>
             <div>Bright</div>
@@ -48,25 +48,27 @@ const footerPath = [
             </a>
           </nav>
           <section>
+            <h2 class="text-xl md:col-span-1 col-span-2 mb-5">PROJECTS</h2>
             <h2 class="text-xl md:col-span-1 col-span-2">CAPABILITIES</h2>
-            <ul class="mt-5">
+            <ul class="mt-3">
               <li><a href="/capabilities/mechanical">Mechanical</a></li>
               <li>
                 <a href="/capabilities/fireProtection">Fire Protection</a>
               </li>
               <li>
-                <a href="/capabilities/technologyDesign">Technology Design</a>
+                <a href="/capabilities/design">Design</a>
               </li>
               <li><a href="/capabilities/plumbing">Plumbing</a></li>
             </ul>
           </section>
-          <section class="col-span-4">
+          <div class="col-span-2"></div>
+          <section class="col-span-4 md:col-span-2">
             <h2 class="text-xl mb-5">OFFICES</h2>
             <p>Address ~~~~~ Houston, TX (HQ)</p>
             <!-- <p>Address ~~~~~ Atlanata, GA (Branch)</p> -->
           </section>
         </div>
-        <div class="flex gap-10 justify-end">
+        <div class="flex gap-10 mt-4 justify-end">
           <a href="/test">
             <!-- TODO 인스타주소 추가 -->
             <svg
@@ -110,7 +112,7 @@ const footerPath = [
       <div
         class="container lg:flex block mx-auto p-8 items-center justify-between text-lg text-white"
       >
-        <p>Copyright © 2023 Hyoungwon ENG USA, Inc. All Rights Reserved.</p>
+        <p>Copyright © 2023 Hyoungwon USA, Inc. All Rights Reserved.</p>
         <div class="flex gap-10">
           <a class="" href="/test" target="_blank">
             <!-- TODO: 약관추가 -->

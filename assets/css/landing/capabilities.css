@@ -6,10 +6,6 @@
   }
 }
 
-.capabilities-active img {
-  filter: invert(80%);
-}
-
 .capabilities-leave-active,
 .capabilities-enter-active {
   transition: all 1s ease;
