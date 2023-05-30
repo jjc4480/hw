@@ -1,26 +1,30 @@
 /* about page background image */
 .about-navigation {
-  background: url('/img/noah-buscher-x8ZStukS2PM-unsplash.jpg') center center no-repeat;
+  background: url("/img/noah-buscher-x8ZStukS2PM-unsplash.jpg") center center
+    no-repeat;
 }
 
 .projects-navigation {
-  background: url('/img/diyar-al-maamouri-i7myDM7EN-E-unsplash.jpg') center center no-repeat;
+  background: url("/img/projects.jpg") center center no-repeat;
 }
 
 .capabilities-navigation {
-  background: url('/img/jakub-pabis-vOtSZd_8Af4-unsplash.jpg') center center no-repeat;
+  background: url("/img/jakub-pabis-vOtSZd_8Af4-unsplash.jpg") center center
+    no-repeat;
 }
 
 .commitments-navigation {
-  background: url('/img/dean-brierley-yTyXzvRJCUQ-unsplash.jpg') center center no-repeat;
+  background: url("/img/dean-brierley-yTyXzvRJCUQ-unsplash.jpg") center center
+    no-repeat;
 }
 
 .media-navigation {
-  background: url('/img/media.jpg') center center no-repeat;
+  background: url("/img/media.jpg") center center no-repeat;
 }
 
 .careers-navigation {
-  background: url('/img/hunters-race-MYbhN8KaaEc-unsplash.jpg') center center no-repeat;
+  background: url("/img/hunters-race-MYbhN8KaaEc-unsplash.jpg") center center
+    no-repeat;
 }
 
 /* 공통으로 사용되는 pages 컴포넌트의 nav active시 효과 */
@@ -47,7 +51,6 @@
   5. right를 사용시 wrap에 overflow hidden을 넣는게 좋음
   5. 잘 모르겠으면 hw/pages/about/greetings.vue 참조
  */
-
 
 /* 애니메이션의 duration과 time-in-function 조절용 */
 .pages-fade {

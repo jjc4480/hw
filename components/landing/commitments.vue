@@ -6,9 +6,6 @@ const slideList = [
   { title: "ISO 14001", src: "https://placehold.co/1920x1080" },
   { title: "ISO 9001", src: "https://placehold.co/1440x900" },
   { title: "ISO 45001", src: "https://placehold.co/1280x1024" },
-  { title: "ISO 14001", src: "https://placehold.co/1920x1080" },
-  { title: "ISO 9001", src: "https://placehold.co/1440x900" },
-  { title: "ISO 45001", src: "https://placehold.co/1280x1024" },
 ];
 </script>
 
@@ -58,7 +55,7 @@ const slideList = [
       <Swiper
         class="commitments-swiper"
         :setWrapperSize="true"
-        :slidesPerView="4"
+        :slidesPerView="3"
         :autoplay="{
           delay: 8000,
           disableOnInteraction: true,
@@ -76,7 +73,7 @@ const slideList = [
             spaceBetween: 20,
           },
           '1024': {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 40,
           },
         }"
@@ -85,10 +82,6 @@ const slideList = [
           prevEl: '.commitments-swiper-prev',
         }"
         :modules="[SwiperAutoplay, SwiperNavigation, Scrollbar]"
-        :scrollbar="{
-          draggable: true,
-          el: '.swiper-scrollbar',
-        }"
       >
         <SwiperSlide v-for="slide in slideList" class="h-auto mb-10">
           <a
@@ -101,14 +94,13 @@ const slideList = [
                 :src="slide.src"
               />
               <figcaption
-                class="flex flex-auto p-3 text-2xl items-end justify-center border-b-2 border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
+                class="flex flex-auto p-3 text-2xl items-end justify-center border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
               >
                 {{ slide.title }}
               </figcaption>
             </figure>
           </a>
         </SwiperSlide>
-        <div class="swiper-scrollbar" />
       </Swiper>
     </div>
   </div>

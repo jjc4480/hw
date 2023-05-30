@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const heading = [
   // head 애니메이션 요소들 배열 item마다 newline으로 처리
-  "Your Loyal Companion for",
+  "Your Trusted Companion for",
   "Building a Bright Future",
 ];
 
@@ -23,7 +23,7 @@ const contents = [
         loop
         muted
       >
-        <source src="/media/intro.mp4" type="video/mp4" />
+        <!-- <source src="/media/intro.mp4" type="video/mp4" /> -->
       </video>
       <div class="container mx-auto pt-80 relative">
         <div class="pl-8">

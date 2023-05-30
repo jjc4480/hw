@@ -1,50 +1,52 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
-import { useUiStore } from '@/stores/ui'
-const pathList = useNav() // nav의 path 리스트
-const store = useUiStore() // ui store
+import { storeToRefs } from "pinia";
+import { useUiStore } from "@/stores/ui";
+const pathList = useNav(); // nav의 path 리스트
+const store = useUiStore(); // ui store
 
-const { siteMap } = storeToRefs(store)
+const { siteMap } = storeToRefs(store);
 
-const animation = ref(false) // 애니메이션 구현용
+const animation = ref(false); // 애니메이션 구현용
 
 watch(siteMap, (n, o) => {
   // 열릴때는 배경이 오른쪽에서 들어오고 삭제될때는 opacity로 구현하기위해
   if (o == true && n == false) {
     // 켜졌다 꺼질때만 opacity 애니메이션 적용
-    animation.value = true
+    animation.value = true;
     setTimeout(() => {
       // 1.5초에 걸쳐실행 수정시에 assets/css/sitemap.css 도 조절해야함
-      animation.value = false
-    }, 1500)
+      animation.value = false;
+    }, 1500);
   }
-})
+});
 </script>
 
 <template>
-  <div class="sitemap flex w-screen h-screen items-center justify-center fixed duration-500"
+  <div
+    class="sitemap flex w-screen h-screen items-center justify-center fixed duration-500"
     :class="{
-      'open': store.siteMap,
-      'animate': animation
+      open: store.siteMap,
+      animate: animation,
     }"
   >
     <div class="container mx-auto">
-      <section
-        class="flex items-center justify-between"
-      >
+      <section class="flex items-center justify-between">
         <h1 class="text-7xl font-black text-white overflow-hidden">
           <span class="block">SITEMAP</span>
         </h1>
         <button
           class="flex w-10 h-10 items-center justify-center bg-white rounded-full group"
           type="button"
-          @click="store.siteMapToggle({open: false})"
+          @click="store.siteMapToggle({ open: false })"
         >
           <svg
             class="w-4 h-4 group-hover:rotate-180 transition-all duration-300"
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
           >
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
           </svg>
         </button>
       </section>
@@ -56,23 +58,16 @@ watch(siteMap, (n, o) => {
           class="w-full px-5 lg:py-0 py-2 lg:first:border-l lg:border-r lg:border-b-0 border-b border-gray-400/50"
           v-for="(list, key) in pathList"
         >
-          <h2
-            class="text-white text-3xl font-bold overflow-hidden"
-          >
+          <h2 class="text-white text-3xl font-bold overflow-hidden">
             <span class="block">{{ key }}</span>
           </h2>
-          <ul
-            class="lg:mt-20 mt-5 text-white hover:text-gray-400/50"
-          >
-            <li
-              class="overflow-hidden"
-              v-for="child in list"
-            >
+          <ul class="lg:mt-20 mt-5 text-white hover:text-gray-400/50">
+            <li class="overflow-hidden" v-for="child in list">
               <a
                 class="block py-3 hover:text-white hover:font-block duration-300"
                 :href="`/${useLowcase(key)}/${child.path}`"
               >
-                {{ (child.path[0].toUpperCase() + child.path.slice(1, child.path.length))}}
+                {{ child.name }}
               </a>
             </li>
           </ul>
