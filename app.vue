@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import { useUiStore } from "@/stores/ui";
-import SiteMap from "@/components/header/sitemap.vue";
+import { useUiStore } from "@/stores/ui"
+import { useRoute } from 'nuxt/app'
+
+const route = useRoute() // 라우트 감지용
+
+import SiteMap from "@/components/header/sitemap.vue"
 
 const store = useUiStore(); // ui store
 </script>
@@ -8,7 +12,10 @@ const store = useUiStore(); // ui store
   <div class="flex min-h-screen flex-col selection:bg-hw selection:text-white">
     <LayoutHeader />
     <NuxtPage />
-    <LayoutFooter class="mt-auto" />
+    <LayoutFooter
+      v-show="route.path != '/'"
+      class="mt-auto"
+    />
     <SiteMap></SiteMap>
     <Transition name="app-bg">
       <div

@@ -64,5 +64,6 @@ const store = useUiStore(); // ui store
         </ul>
       </section>
     </div>
+    <LayoutFooter class="fp-auto-height"/>
   </div>
 </template>
