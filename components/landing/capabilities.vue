@@ -44,8 +44,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative">
-    <div class="flex 2xl:w-[50vw] w-full h-screen ml-auto items-center 2xl:justify-start justify-center bg-black bg-opacity-50 absolute top-0 right-0 z-20">
+  <div>
+    <div class="flex 2xl:w-[50vw] w-full h-screen ml-auto items-center 2xl:justify-start justify-center bg-black bg-opacity-50 absolute top-0 right-0 xl:pl-56 z-20">
       <section class="2xl:ml-40">
         <h2 class="text-6xl text-white font-black leading-snug 2xl:text-right">Capabilities</h2>
         <ul class="grid grid-cols-3 2xl:w-[30rem] w-full mt-16 gap-[2px]">

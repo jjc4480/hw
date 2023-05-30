@@ -4,7 +4,8 @@ const store = useUiStore() // ui store
 </script>
 
 <template>
-  <div class="careers-container flex flex-col"
+  <div
+    class="careers-container flex flex-col"
     :class="{'open': store.careers}"
   >
     <div
@@ -64,6 +65,6 @@ const store = useUiStore() // ui store
         </ul>
       </section>
     </div>
+    <LayoutFooter class="fp-auto-height"/>
   </div>
-
 </template>

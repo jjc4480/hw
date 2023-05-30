@@ -1,13 +1,24 @@
 <script setup lang="ts">
 const slideList = [ // 슬라이드 아이템
-  { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
-  { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
-  { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
-  { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
-  { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
-  { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
-  { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
-  { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
+  // { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
+  // { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
+  // { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
+  // { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
+  // { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
+  // { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
+  // { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
+  // { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
+  // 여기부터 진짜 나와야 하는 Items들. 해외 우선, 이후 최근년도순
+  { title : 'LG Display - Vietnam', src : '/img/featured_1.jpg'},
+  { title : 'LG Household & Health Care - South Korea', src : '/img/featured_2.png'},
+  { title : 'LG Household & Health Care - South Korea', src : '/img/featured_3.png'},
+  { title : 'LG Electronics', src : '/img/featured_4.jpg'},
+  { title : 'LG Display - Vietnam', src : '/img/featured_5.jpg'},
+  { title : 'LG Display - Vietnam', src : '/img/featured_6.jpg'},
+  { title : 'LG Display - Vietnam', src : '/img/featured_7.jpg'},
+  { title : 'LG Display - Vietnam', src : '/img/featured_8.jpg'},
+  { title : 'LG Display - Vietnam', src : '/img/featured_9.jpg'},
+  { title : 'LG Display - Vietnam', src : '/img/featured_10.jpg'},
 ]
 
 </script>

@@ -13,7 +13,7 @@ const slideList = [ // 슬라이드 아이템
 <template>
   <div>
     <section
-      class="container mx-auto pt-[20vh]"
+      class="container mx-auto pt-[15vh]"
     >
       <h2
         class="2xl:px-0 px-5 2xl:text-6xl text-4xl text-black font-black leading-snug"

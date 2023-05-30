@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     'nuxt-swiper',
+    '@fullpage/nuxt-fullpage',
   ],
   css: [
     '@/assets/css/app.css',

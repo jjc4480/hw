@@ -7,8 +7,7 @@ import Pc from '@/components/header/pc.vue'
 import Mobile from '@/components/header/mobile.vue'
 
 const store = useUiStore() // ui store
-const route = useRoute() // 라우트 감지용
-
+const route = useRoute() // 라우트 감지용\
 
 useHeadSafe({
   // '/' 라면 HOME을 반환하고, 아니라면 / 앞의 문자열만 대문자로 반환
