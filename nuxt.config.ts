@@ -24,9 +24,4 @@ export default defineNuxtConfig({
       ],
     }
   },
-  vue: {
-    compilerOptions: {
-      isCustomElement: (tag) => ['full-page'].includes(tag),
-    }
-  }
 })
