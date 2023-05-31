@@ -23,7 +23,7 @@ const contents = [
         loop
         muted
       >
-        <!-- <source src="/media/intro.mp4" type="video/mp4" /> -->
+        <source src="/media/intro.mp4" type="video/mp4" />
       </video>
       <div class="container mx-auto pt-80 relative">
         <div class="pl-8">
