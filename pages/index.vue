@@ -8,7 +8,6 @@ import Commitments from "@/components/landing/commitments.vue";
 import Careers from "@/components/landing/careers.vue";
 
 import type { ScrollTarget } from "@/types/fullpage";
-import { dir } from "console";
 
 const store = useUiStore(); // ui store
 
