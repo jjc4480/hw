@@ -3,9 +3,9 @@ import { Scrollbar } from "swiper";
 
 const slideList = [
   // 슬라이드 아이템
-  { title: "ISO 14001", src: "https://placehold.co/1920x1080" },
-  { title: "ISO 9001", src: "https://placehold.co/1440x900" },
-  { title: "ISO 45001", src: "https://placehold.co/1280x1024" },
+  { title: "Quality", src: "/img/Qhse1.jpg" },
+  { title: "Health & Safety", src: "/img/Qhse2.jpg" },
+  { title: "Environmental", src: "/img/Qhse3.jpg" },
 ];
 </script>
 
@@ -25,7 +25,7 @@ const slideList = [
         Environmental 에 대해서 작성. IMPESS 참고.
       </p>
     </section>
-    <div class="container 2xl:px-0 px-5 mt-48 mx-auto relative">
+    <div class="container 2xl:px-0 px-5 mt-10 mx-auto relative">
       <!-- <fieldset class="flex gap-10 absolute -top-36 right-0">
         <button class="commitments-swiper-prev group" type="button">
           <svg

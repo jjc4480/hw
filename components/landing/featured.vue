@@ -91,7 +91,7 @@ const slideList = [
         work.
       </p>
     </section>
-    <div class="container 2xl:px-0 px-5 mt-20 mx-auto relative">
+    <div class="container 2xl:px-0 px-5 mt-2 mx-auto relative">
       <!-- <fieldset class="flex gap-10 absolute -top-36 2xl:right-0 right-5">
         <button
           class="featured-swiper-prev group"

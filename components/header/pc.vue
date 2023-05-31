@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useUiStore } from "@/stores/ui";
+import scrollTrigger from "@/components/scrollTrigger.vue";
 
 defineProps({
   color: {
@@ -16,7 +17,7 @@ const store = useUiStore(); // ui store
   <div class="flex-auto items-baseline justify-end duration-300 gap-5">
     <section
       class="flex mt-8"
-      :class="{ 'opacity-0': store.landing.scrollIndex > 4 }"
+      :class="{ 'opacity-0': store.header.hidden }"
       @mouseover="store.headerNavToggle({ open: true })"
       @mouseleave="store.headerNavToggle({ open: false })"
     >
