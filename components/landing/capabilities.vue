@@ -88,10 +88,10 @@ onMounted(() => {
               ? 'pages-fade-done'
               : 'pages-fade-top'
           "
-          class="pages-fade grid grid-cols-3 2xl:w-[30rem] w-full mt-16 gap-[2px] delay-500"
+          class="pages-fade grid grid-cols-3 2xl:w-[30rem] w-full mt-16 gap-[2px] delay-200"
         >
           <li
-            class="flex space-y-6 flex-col items-center justify-center lg:h-36 md:h-36 h-36 bg-gray-600 duration-500"
+            class="flex space-y-6 flex-col items-center justify-center lg:h-36 md:h-36 h-36 bg-gray-600 duration-300"
             :class="{ 'capabilities-active': active == list.title }"
             v-for="list in items"
             @mouseover="changeActive(list.title)"

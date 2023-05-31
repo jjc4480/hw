@@ -33,7 +33,7 @@ const color = computed(() => {
     :class="[
       {
         open: store.header.nav,
-        'opacity-0': store.landing.scrollIndex > 4,
+        'opacity-0': store.header.hidden,
       },
       route.path == '/' ? 'fixed' : 'absolute',
     ]"

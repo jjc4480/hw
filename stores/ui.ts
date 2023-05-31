@@ -11,6 +11,7 @@ export const useUiStore = defineStore("ui", {
       scrollIndex: 0, // 스크롤 index
     },
     header: {
+      hidden: false,
       nav: false, // 네비게이션
     },
     siteMap: false, // 사이트맵
@@ -29,6 +30,9 @@ export const useUiStore = defineStore("ui", {
     headerNavToggle({ open }: Toggle) {
       // 네비게이션 상태를 변경
       this.header.nav = open;
+    },
+    headerHiddenToggle({ open }: Toggle) {
+      this.header.hidden = open;
     },
   },
 });
