@@ -5,13 +5,13 @@ const store = useUiStore(); // ui store
 
 <template>
   <div class="careers-container flex flex-col" :class="{ open: store.careers }">
-    <div class="pt-[25vh]">
+    <div class="pt-[30vh]">
       <a
-        class="flex container lg:max-w-[90%] lg:h-auto h-40 mx-auto group duration-700 translate-y-10 opacity-0 delay-500 relative"
+        class="flex container lg:max-w-[90%] lg:h-auto h-20 mx-auto group duration-700 translate-y-10 opacity-0 delay-500 relative"
         href="/careers/recruit"
       >
         <section
-          class="lg:w-4/6 flex flex-col justify-center w-full lg:h-auto h-full lg:pl-16 pl-0 py-12 top-0 left-0 lg:static absolute lg:bg-hw bg-black/50 z-10 text-center"
+          class="lg:w-[75%] flex flex-col justify-center w-full lg:h-auto h-full lg:pl-16 pl-0 top-0 left-0 lg:static absolute lg:bg-hw bg-black/50 z-10 text-center"
         >
           <h2
             class="2xl:text-6xl text-4xl text-white font-black leading-snug lg:text-left text-center"
@@ -38,7 +38,7 @@ const store = useUiStore(); // ui store
             </svg>
           </div>
         </section>
-        <figure class="lg:w-2/6 w-full overflow-hidden">
+        <figure class="lg:w-[25%] w-full overflow-hidden">
           <img
             class="w-full h-full group-hover:scale-110 duration-500 object-cover object-center"
             src="/img/helena-hertz-wWZzXlDpMog-unsplash.png"
@@ -47,10 +47,10 @@ const store = useUiStore(); // ui store
       </a>
     </div>
     <div
-      class="careers-contact flex flex-auto items-center justify-center mt-20 overflow-hidden relative group"
+      class="careers-contact flex flex-auto items-center justify-center mt-20 py-20 overflow-hidden relative group"
     >
       <div
-        class="careers-contact-image py-20 absolute inset-0 group-hover:scale-105 duration-500 -z-10"
+        class="careers-contact-image absolute inset-0 group-hover:scale-105 duration-500 -z-10"
       ></div>
       <section
         class="careers-contact-us text-center text-white duration-700 translate-y-10 opacity-0 delay-500"
@@ -64,6 +64,6 @@ const store = useUiStore(); // ui store
         </ul>
       </section>
     </div>
-    <LayoutFooter class="fp-auto-height"/>
+    <LayoutFooter class="fp-auto-height" />
   </div>
 </template>
