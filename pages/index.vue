@@ -10,10 +10,10 @@ import Careers from "@/components/landing/careers.vue";
 import type { ScrollTarget } from "@/types/fullpage";
 
 const store = useUiStore(); // ui store
-
+const fullpageKey = useRuntimeConfig().public.fullpageKey;
 const options = {
   // fullpage.js 옵션
-  licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
+  licenseKey: fullpageKey,
   anchors: ["infomation", "featured", "capabilities", "commitments", "careers"],
   afterLoad: afterLoad,
   onScrollOverflow: onScrollOverflow,

@@ -48,8 +48,12 @@ const footerPath = [
             </a>
           </nav>
           <section>
-            <h2 class="text-xl md:col-span-1 col-span-2 mb-5">PROJECTS</h2>
-            <h2 class="text-xl md:col-span-1 col-span-2">CAPABILITIES</h2>
+            <h2 class="text-xl md:col-span-1 col-span-2 mb-5">
+              <a href="/projects/portfolio">PROJECTS</a>
+            </h2>
+            <h2 class="text-xl md:col-span-1 col-span-2">
+              <a href="/capabilities/mechanical">CAPABILITIES</a>
+            </h2>
             <ul class="mt-3">
               <li><a href="/capabilities/mechanical">Mechanical</a></li>
               <li>

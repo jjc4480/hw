@@ -4,22 +4,25 @@ const store = useUiStore(); // ui store
 </script>
 
 <template>
-  <div class="careers-container flex flex-col flex-auto" :class="{ open: store.careers }">
+  <div
+    class="careers-container flex flex-col flex-auto"
+    :class="{ open: store.careers }"
+  >
     <div class="pt-[20vh]">
       <a
-        class="flex container lg:max-w-[90%] lg:h-auto h-20 mx-auto group duration-700 translate-y-10 opacity-0 delay-500 relative"
+        class="flex container justify-center lg:max-w-[90%] lg:h-auto h-20 mx-auto group duration-700 translate-y-10 opacity-0 delay-500 relative"
         href="/careers/recruit"
       >
         <section
-          class="lg:w-[75%] flex flex-col justify-center w-full lg:h-auto h-full lg:pl-16 pl-0 top-0 left-0 lg:static absolute lg:bg-hw bg-black/50 z-10 text-center"
+          class="lg:w-[55%] flex flex-col justify-center w-full lg:h-auto h-full lg:pl-16 pl-0 top-0 left-0 lg:static absolute lg:bg-hw bg-black/50 z-10 text-center"
         >
           <h2
-            class="2xl:text-6xl text-4xl text-white font-black leading-snug lg:text-left text-center"
+            class="2xl:text-5xl text-3xl text-white font-black leading-snug lg:text-left text-center"
           >
             Careers
           </h2>
           <p
-            class="mt-10 2xl:text-2xl text-lg text-white leading-tight lg:text-left text-center"
+            class="mt-10 2xl:text-xl text-lg text-white leading-tight lg:text-left text-center"
           >
             We embrace people of all backgrounds, experiences,<br />
             culture, styles and talents. Join us!

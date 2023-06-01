@@ -90,11 +90,11 @@ const slideList = [
           >
             <figure class="flex flex-col h-full overflow-hidden">
               <img
-                class="object-cover group-hover:transform group-hover:scale-105 transition-all duration-500 ease-in-out"
+                class="h-full group-hover:transform group-hover:scale-105 transition-all duration-500 ease-in-out"
                 :src="slide.src"
               />
               <figcaption
-                class="flex flex-auto p-3 text-2xl items-end justify-center border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
+                class="flex flex-auto p-5 text-2xl items-end justify-center border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
               >
                 {{ slide.title }}
               </figcaption>
