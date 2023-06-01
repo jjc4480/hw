@@ -16,23 +16,19 @@ const options = {
   licenseKey: fullpageKey,
   anchors: ["infomation", "featured", "capabilities", "commitments", "careers"],
   afterLoad: afterLoad,
-  onScrollOverflow: onScrollOverflow,
+  beforeLeave: beforeLeave,
   scrollOverflow: true,
   scrollBar: false,
 };
 
-// landing 에서 Careers 를 지나쳐 밑으로 내려갈 경우 헤더 안보이게 숨김
-function onScrollOverflow(
-  _: ScrollTarget,
-  slide: any,
-  position: number,
+function beforeLeave(
+  origin: ScrollTarget,
+  destination: ScrollTarget,
   direction: string
 ) {
-  if (position > 0 && direction == "down") {
-    // header 숨김
+  if (direction == "down" && origin.index == 4) {
     store.headerHiddenToggle({ open: true });
-  } else if (position < 10 && direction == "up") {
-    // header 보임
+  } else if (direction == "up" && origin.index == 5) {
     store.headerHiddenToggle({ open: false });
   }
 }
@@ -43,6 +39,8 @@ function afterLoad(_: ScrollTarget, to: ScrollTarget) {
   if (to.index == 4) {
     // 스크롤이 마지막 컴포넌트로 이동했을때 careers 컴포넌트의 애니메이션을 실행한다
     store.careers = true;
+  }
+  if (to.index == 5) {
   }
 }
 </script>
