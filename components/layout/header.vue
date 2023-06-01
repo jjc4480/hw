@@ -18,7 +18,7 @@ const color = computed(() => {
   // header의 로고 이미지 색상
   if (route.path == "/") {
     // index 페이지만 변경
-    const checkIndex = [1, 3, 4];
+    const checkIndex = [1, 3, 4, 5];
     if (checkIndex.includes(store.landing.scrollIndex)) {
       return "black";
     }
