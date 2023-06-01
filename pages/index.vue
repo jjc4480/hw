@@ -19,6 +19,11 @@ const options = {
   beforeLeave: beforeLeave,
   scrollOverflow: true,
   scrollBar: false,
+  credits: {
+    enabled: false,
+    label: "Made with fullPage.js",
+    position: "right",
+  },
 };
 
 function beforeLeave(
