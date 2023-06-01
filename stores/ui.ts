@@ -7,6 +7,9 @@ interface Toggle {
 // ui를 컨트롤하는 store
 export const useUiStore = defineStore("ui", {
   state: () => ({
+    app: {
+      loaded: false, // app 마운트 구현용
+    },
     landing: {
       scrollIndex: 0, // 스크롤 index
     },
