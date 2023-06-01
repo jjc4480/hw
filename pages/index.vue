@@ -11,15 +11,6 @@ import type { ScrollTarget } from "@/types/fullpage";
 
 const store = useUiStore(); // ui store
 
-const components = {
-  // 사용될 컴포넌틑 리스트 v-for로 배치한다
-  infomation: Infomation,
-  featured: Featured,
-  capabilities: Capabilities,
-  commitments: Commitments,
-  careers: Careers,
-};
-
 const options = {
   // fullpage.js 옵션
   licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
@@ -59,13 +50,23 @@ function afterLoad(_: ScrollTarget, to: ScrollTarget) {
 <template>
   <div>
     <full-page id="fullpage" ref="fullpage" :options="options">
-      <div
-        v-for="(component, key) in components"
-        class="section"
-        :class="key"
-        :key="key"
-      >
-        <component :is="component"></component>
+      <div class="section">
+        <Infomation></Infomation>
+      </div>
+      <div class="section">
+        <Featured></Featured>
+      </div>
+      <div class="section">
+        <Capabilities></Capabilities>
+      </div>
+      <div class="section">
+        <Commitments></Commitments>
+      </div>
+      <div class="section careers-section">
+        <Careers></Careers>
+      </div>
+      <div class="section fp-auto-height">
+        <LayoutFooter />
       </div>
     </full-page>
   </div>

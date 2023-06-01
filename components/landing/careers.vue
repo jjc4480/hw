@@ -4,8 +4,8 @@ const store = useUiStore(); // ui store
 </script>
 
 <template>
-  <div class="careers-container flex flex-col" :class="{ open: store.careers }">
-    <div class="pt-[30vh]">
+  <div class="careers-container flex flex-col flex-auto" :class="{ open: store.careers }">
+    <div class="pt-[20vh]">
       <a
         class="flex container lg:max-w-[90%] lg:h-auto h-20 mx-auto group duration-700 translate-y-10 opacity-0 delay-500 relative"
         href="/careers/recruit"
@@ -64,6 +64,5 @@ const store = useUiStore(); // ui store
         </ul>
       </section>
     </div>
-    <LayoutFooter class="fp-auto-height" />
   </div>
 </template>
