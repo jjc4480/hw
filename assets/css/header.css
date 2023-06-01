@@ -1,11 +1,7 @@
 @layer components {
   /* 상단 header */
   .gnb {
-    background: linear-gradient(
-        to right,
-        #ffffff calc(25% - 25rem),
-        transparent 0%
-      ),
+    background: linear-gradient(to right, #ffffff calc(30rem), transparent 0%),
       linear-gradient(to bottom, var(--primary-hw) 50%, transparent 0%);
     background-size: 200% 200%;
     background-position: 100% 100%;

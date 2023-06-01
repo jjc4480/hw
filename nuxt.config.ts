@@ -13,6 +13,11 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: false,
   },
+  runtimeConfig: {
+    public: {
+      fullpageKey: "LEVU6-M35JH-1FLK9-56J28-FROUN",
+    },
+  },
   app: {
     head: {
       titleTemplate: "%s - " + "HYOUNGWON USA",

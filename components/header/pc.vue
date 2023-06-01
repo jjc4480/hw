@@ -13,7 +13,7 @@ const pathList = useNav(); // nav의 path 리스트
 const store = useUiStore(); // ui store
 </script>
 <template>
-  <div class="flex-auto items-baseline justify-end duration-300 gap-5">
+  <div class="flex-auto items-baseline justify-between duration-300 gap-5">
     <section
       class="flex mt-8"
       :class="{ 'opacity-0': store.header.hidden }"
