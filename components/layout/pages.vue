@@ -39,8 +39,8 @@ onMounted(() => {
     >
       <section class="flex flex-auto items-center pt-24">
         <h2
+          class="pages-fade text-5xl text-white font-black delay-300 duration-700"
           :class="isMount ? 'pages-fade-done' : 'pages-fade-bottom'"
-          class="pages-fade text-5xl text-white font-black duration-700"
         >
           {{ label }}
         </h2>
