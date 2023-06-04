@@ -69,7 +69,7 @@ function activeStep() {
 }
 
 onMounted(() => {
-  // activeStep() // 마운트시 박스교체 준비
+  activeStep(); // 마운트시 박스교체 준비
 });
 </script>
 
@@ -88,15 +88,14 @@ onMounted(() => {
               ? 'pages-fade-done'
               : 'pages-fade-top'
           "
-          class="pages-fade grid grid-cols-3 2xl:w-[30rem] w-full mt-16 gap-[2px] delay-200"
+          class="capabilities pages-fade grid grid-cols-3 2xl:w-[30rem] w-full mt-16 gap-[2px] delay-75"
         >
           <li
-            class="flex space-y-6 flex-col items-center justify-center lg:h-36 md:h-36 h-36 bg-gray-600 duration-300"
+            class="flex space-y-6 flex-col items-center justify-center lg:h-36 md:h-36 h-36 bg-gray-600 duration-75"
             :class="{ 'capabilities-active': active == list.title }"
             v-for="list in items"
             @mouseover="changeActive(list.title)"
           >
-            <!-- TODO : svg 들어가야함  -->
             <div
               v-if="list.icon != ''"
               class="flex w-full items-center justify-center"

@@ -10,7 +10,7 @@ const store = useUiStore(); // ui store
   >
     <div class="pt-[20vh]">
       <a
-        class="flex container justify-center lg:max-w-[90%] lg:h-auto h-20 mx-auto group duration-700 translate-y-10 opacity-0 delay-500 relative"
+        class="flex container justify-center lg:max-w-[90%] lg:h-auto h-20 mx-auto group duration-700 translate-y-10 opacity-0 delay-75 relative"
         href="/careers/recruit"
       >
         <section
