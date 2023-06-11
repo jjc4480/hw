@@ -5,9 +5,9 @@ defineProps({
     type: Number,
     required: true,
   },
-});
-const image = ref(); // 이미지 영역
-const infomation = ref(); // 소개영역
+})
+const image = ref() // 이미지 영역
+const infomation = ref() // 소개영역
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const infomation = ref(); // 소개영역
     <div
       class="container flex items-center flex-col-reverse lg:flex-row mx-auto py-20 gap-20 justify-center overflow-hidden"
     >
-     <!-- mobile 일 경우, 이미지가 밑으로. -->
+      <!-- mobile 일 경우, 이미지가 밑으로. -->
       <figure
         class="pages-fade flex px-4 w-full lg:w-1/2"
         :class="
@@ -28,7 +28,7 @@ const infomation = ref(); // 소개영역
         <img class="w-full object-cover" src="https://placehold.co/512x765" />
       </figure>
       <section
-        class="pages-fade flex flex-col w-full  lg:w-1/2 lg:border-l lg:border-hw lg:pl-10"
+        class="pages-fade flex flex-col w-full lg:w-1/2 lg:border-l lg:border-hw lg:pl-10"
         :class="
           infomation?.offsetTop < scrollTrigger
             ? 'pages-fade-done'
@@ -58,9 +58,10 @@ const infomation = ref(); // 소개영역
           for our technology and business management capabilities. <br /><br />
           We pursue excellence for ourselves, for our company and for the
           community each day. We build with honesty because we are built on
-          honesty. Build a bright future with us. <br /><br />Sincerely,<br /> <br />
-          
-          <div class="text-4xl font-bold">Jeong Hwan Kim</div>
+          honesty. Build a bright future with us. <br /><br />Sincerely,<br />
+          <br />
+
+          <span class="text-4xl font-bold">Jeong Hwan Kim</span>
           <br /><br />Chief Executive Officer <br />Hyoungwon Eng Inc.
         </p>
       </section>

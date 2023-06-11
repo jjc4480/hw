@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { Scrollbar } from "swiper";
+import { Scrollbar } from "swiper"
+import { useUiStore } from "~/stores/ui"
+
+const store = useUiStore()
 
 const slideList = [
   // 슬라이드 아이템
@@ -72,11 +75,16 @@ const slideList = [
     content:
       "<span>Classification: EPC</span> <span>Location: Gumi, South Korea</span> <span>Construction Period: 2011~2012</span>",
   },
-];
+]
 </script>
 
 <template>
-  <div>
+  <div
+    class="pages-fade delay-75"
+    :class="
+      store.landing.scrollIndex == 1 ? 'pages-fade-done' : 'pages-fade-top'
+    "
+  >
     <section class="container mx-auto pt-[20vh]">
       <h2
         class="2xl:px-0 2xl:text-6xl text-4xl text-black font-black leading-snug"
