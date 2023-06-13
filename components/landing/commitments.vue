@@ -1,16 +1,24 @@
 <script setup lang="ts">
-import { Scrollbar } from "swiper";
+import { Scrollbar } from "swiper"
+import { useUiStore } from "~/stores/ui"
+
+const store = useUiStore()
 
 const slideList = [
   // 슬라이드 아이템
-  { title: "ISO 14001", src: "https://placehold.co/1920x1080" },
-  { title: "ISO 9001", src: "https://placehold.co/1440x900" },
-  { title: "ISO 45001", src: "https://placehold.co/1280x1024" },
-];
+  { title: "Quality", src: "/img/Qhse1.jpg" },
+  { title: "Health & Safety", src: "/img/Qhse2.jpg" },
+  { title: "Environmental", src: "/img/Qhse3.jpg" },
+]
 </script>
 
 <template>
-  <div>
+  <div
+    class="pages-fade delay-75"
+    :class="
+      store.landing.scrollIndex == 3 ? 'pages-fade-done' : 'pages-fade-top'
+    "
+  >
     <section class="container mx-auto pt-[20vh]">
       <h2
         class="2xl:px-0 px-5 2xl:text-6xl text-4xl text-black font-black leading-snug"
@@ -25,7 +33,7 @@ const slideList = [
         Environmental 에 대해서 작성. IMPESS 참고.
       </p>
     </section>
-    <div class="container 2xl:px-0 px-5 mt-48 mx-auto relative">
+    <div class="container 2xl:px-0 px-5 mt-10 mx-auto relative">
       <!-- <fieldset class="flex gap-10 absolute -top-36 right-0">
         <button class="commitments-swiper-prev group" type="button">
           <svg
@@ -90,11 +98,11 @@ const slideList = [
           >
             <figure class="flex flex-col h-full overflow-hidden">
               <img
-                class="object-cover group-hover:transform group-hover:scale-105 transition-all duration-500 ease-in-out"
+                class="h-full group-hover:transform group-hover:scale-105 transition-all duration-500 ease-in-out"
                 :src="slide.src"
               />
               <figcaption
-                class="flex flex-auto p-3 text-2xl items-end justify-center border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
+                class="flex flex-auto p-5 text-2xl items-end justify-center border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
               >
                 {{ slide.title }}
               </figcaption>

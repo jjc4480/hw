@@ -1,4 +1,7 @@
 @layer components {
+  .careers-section .fp-overflow{
+    @apply flex h-full;
+  }
 
   /* careers상단 나타나는 애니메이션 구현용 */
   .careers-container.open .container {

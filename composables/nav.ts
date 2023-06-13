@@ -1,10 +1,10 @@
-import type { Nav, NavTitle } from "@/types/nav";
+import type { Nav, NavTitle } from "@/types/nav"
 const nav = {
   About: [
     { name: "Greetings", path: "greetings" },
     { name: "Philosophy", path: "philosophy" },
     { name: "History", path: "history" },
-    { name: "Structure", path: "structure" },
+    { name: "BI", path: "bi" },
   ],
   Projects: [{ name: "Portfolio", path: "portfolio" }],
   Capabilities: [
@@ -16,12 +16,12 @@ const nav = {
   Commitments: [{ name: "QHSE", path: "qhse" }],
   Media: [{ name: "News", path: "news" }],
   Careers: [{ name: "Recruit", path: "recruit" }],
-} as Nav;
+} as Nav
 
 export const useNav = () => {
-  return nav;
-};
+  return nav
+}
 
 export const useNavFinder = (title: NavTitle) => {
-  return nav[title];
-};
+  return nav[title]
+}

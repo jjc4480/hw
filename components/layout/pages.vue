@@ -14,6 +14,8 @@ defineProps({
   },
 });
 
+let isMount = false;
+
 const scrollTrigger = ref(0); // 스크롤 트리거 높이값
 
 /**
@@ -23,6 +25,10 @@ function updateScroll(h: number) {
   // 이벤트시 업데이트해준다
   scrollTrigger.value = h;
 }
+
+onMounted(() => {
+  isMount = true;
+});
 </script>
 
 <template>
@@ -32,7 +38,12 @@ function updateScroll(h: number) {
       :class="`${label.toLowerCase()}-navigation`"
     >
       <section class="flex flex-auto items-center pt-24">
-        <h2 class="text-5xl text-white font-black">{{ label }}</h2>
+        <h2
+          class="pages-fade opacity-0 text-5xl text-white font-black delay-300 duration-700"
+          :class="isMount ? 'pages-fade-done' : 'pages-fade-bottom'"
+        >
+          {{ label }}
+        </h2>
       </section>
       <Pc class="2xl:flex hidden" :label="label"></Pc>
       <Mobile class="2xl:hidden block" :label="label"></Mobile>
