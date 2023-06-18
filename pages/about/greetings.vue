@@ -62,7 +62,7 @@ const infomation = ref() // 소개영역
           <br />
 
           <span class="text-4xl font-bold">Jeong Hwan Kim</span>
-          <br /><br />Chief Executive Officer <br />Hyoungwon Eng Inc.
+          <br /><br />Chief Executive Officer <br />Hyoungwon ENG Co., LTD
         </p>
       </section>
     </div>

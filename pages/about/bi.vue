@@ -24,20 +24,22 @@ const infomation = ref() // 소개영역
         Brand Identity
       </h2>
       <figure class="flex gap-20 pb-10">
-        <img class="w-full object-cover" src="https://placehold.co/512x765" />
+        <div class="flex w-full flex-col h-fit my-auto space-y-20 items-center">
+          <img class="w-4/5 flex" src="/img/logo_header_large_b.png" />
+          <img class="w-4/5 flex" src="/img/logo_header_b.png" />
+        </div>
         <figcaption>
-          <h3 class="text-4xl">test</h3>
+          <h3 class="text-4xl font-bold">
+            This is HYUNGWON BI with a firm philosophy and modern sensibility.
+          </h3>
           <p class="mt-20 text-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
-            tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem
-            ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa.
-            Commodo odio aenean sed adipiscing diam donec adipiscing tristique.
-            Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at
-            imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis.
-            Egestas integer eget aliquet nibh praesent. In hac habitasse platea
-            dictumst quisque sagittis purus. Pulvinar elementum integer enim
-            neque volutpat ac.
+            H, which expresses the shape of the chain, expresses technical
+            firmness and completeness. At the same time, it's about being safe,
+            trusting with customers, and continuing strong and lasting
+            relationships. <br />
+            <br />The color combination of Light Sea Green and Midnight Blue is
+            a brand image that can show customers trust, confidence, stability
+            and integrity.
           </p>
         </figcaption>
       </figure>

@@ -1,7 +1,7 @@
 @layer components {
   .featured {
-    background: url("/img/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg")
-      center center no-repeat;
+    background: url("/img/augustine-wong-li0iC0rjvvg-unsplash.jpg") center
+      center no-repeat;
     background-size: cover;
   }
 
