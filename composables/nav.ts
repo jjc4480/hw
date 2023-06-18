@@ -11,11 +11,14 @@ const nav = {
     { name: "Mechanical", path: "mechanical" },
     { name: "Fire Protection", path: "fireProtection" },
     { name: "Design", path: "design" },
-    { name: "PipeLine", path: "pipeLine" },
+    { name: "Pipeline", path: "pipeline" },
   ],
   Commitments: [{ name: "QHSE", path: "qhse" }],
   Media: [{ name: "News", path: "news" }],
-  Careers: [{ name: "Recruit", path: "recruit" }],
+  Careers: [
+    { name: "Recruit", path: "recruit" },
+    { name: "Talent", path: "talent" },
+  ],
 } as Nav
 
 export const useNav = () => {

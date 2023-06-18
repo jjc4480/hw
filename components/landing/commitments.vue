@@ -25,41 +25,8 @@ const slideList = [
       >
         Commitments
       </h2>
-      <p
-        class="2xl:px-0 px-5 mt-12 2xl:text-2xl text-lg text-black leading-tight"
-      >
-        Environmental, Quality, Safety 어쩌구 저쩌구~~~ 2줄 정도로 설명~~~ 대신,
-        국내 ISO 인증이기에 이 부분이 우려가 된다면, 그냥 Safety, Quality,
-        Environmental 에 대해서 작성. IMPESS 참고.
-      </p>
     </section>
     <div class="container 2xl:px-0 px-5 mt-10 mx-auto relative">
-      <!-- <fieldset class="flex gap-10 absolute -top-36 right-0">
-        <button class="commitments-swiper-prev group" type="button">
-          <svg
-            class="w-8 h-8 fill-black group-disabled:fill-gray-400"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
-            />
-          </svg>
-        </button>
-        <button class="commitments-swiper-next group" type="button">
-          <svg
-            class="w-8 h-8 fill-black group-disabled:fill-gray-400"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-            />
-          </svg>
-        </button>
-      </fieldset> -->
       <Swiper
         class="commitments-swiper"
         :setWrapperSize="true"
@@ -94,7 +61,7 @@ const slideList = [
         <SwiperSlide v-for="slide in slideList" class="h-auto mb-10">
           <a
             class="block h-full group transition-all duration-500 ease-in-out"
-            href="/"
+            href="/commitments/qhse"
           >
             <figure class="flex flex-col h-full overflow-hidden">
               <img
