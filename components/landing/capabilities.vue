@@ -24,16 +24,15 @@ const items = [
     href: "/capabilities/design",
   },
   {
-    title: "Plumbing",
+    title: "PipeLine",
     image: "/img/Plumbing.jpg",
     icon: "img/icon-Plumbing.png",
-    href: "/capabilities/plumbing",
+    href: "/capabilities/pipeLine",
   },
   {
     title: "Comming soon",
     image: "/img/sven-mieke-fteR0e2BzKo-unsplash.jpg",
     icon: "",
-    href: "/",
   },
   {
     title: "LOGO",
@@ -102,9 +101,11 @@ onMounted(() => {
             @mouseover="changeActive(list.title)"
           >
             <a
-              :href="list.title == ('LOGO' || 'Comming soon') ? '/' : list.href"
+              :href="list.href"
               :class="
-                list.title == 'LOGO' ? 'cursor-default' : 'cursor-pointer'
+                ['LOGO', 'Comming soon'].includes(list.title)
+                  ? 'cursor-default'
+                  : 'cursor-pointer'
               "
             >
               <div

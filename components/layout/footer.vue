@@ -16,7 +16,7 @@ const footerPath = [
     name: "MEDIA",
     path: "/media/news",
   },
-];
+]
 // TODO: header와 달라서 path를 새로함
 </script>
 
@@ -30,7 +30,7 @@ const footerPath = [
           >
             <img
               class="lg:w-72 w-32 mx-auto my-auto relative"
-              src="/img/KakaoTalk_20230509_103704206.png"
+              src="/img/logo_footer.png"
             />
           </figure>
           <h2
@@ -62,7 +62,7 @@ const footerPath = [
               <li>
                 <a href="/capabilities/design">Design</a>
               </li>
-              <li><a href="/capabilities/plumbing">Plumbing</a></li>
+              <li><a href="/capabilities/pipeLine">Pipe Line</a></li>
             </ul>
           </section>
           <div class="col-span-2"></div>

@@ -11,7 +11,7 @@ const nav = {
     { name: "Mechanical", path: "mechanical" },
     { name: "Fire Protection", path: "fireProtection" },
     { name: "Design", path: "design" },
-    { name: "Plumbing", path: "plumbing" },
+    { name: "PipeLine", path: "pipeLine" },
   ],
   Commitments: [{ name: "QHSE", path: "qhse" }],
   Media: [{ name: "News", path: "news" }],

@@ -1,5 +1,21 @@
 /* parallax 구현용으로 임시파일임 */
 
 .project-portfolio-image {
-  background-image: url('/img/riku-lu-wvJuYrM5iuw-unsplash.jpg');
+  background-image: url("/img/riku-lu-wvJuYrM5iuw-unsplash.jpg");
+}
+
+.capabilities-design {
+  background-image: url("/img/TechnologyDesign.jpg");
+}
+
+.capabilities-fireProtection {
+  background-image: url("/img/FireProtection.jpg");
+}
+
+.capabilities-pipeLine {
+  background-image: url("/img/Plumbing.jpg");
+}
+
+.capabilities-mechanical {
+  background-image: url("/img/Mechanical.jpg");
 }
