@@ -24,10 +24,10 @@ const items = [
     href: "/capabilities/design",
   },
   {
-    title: "PipeLine",
+    title: "Pipeline",
     image: "/img/Plumbing.jpg",
     icon: "img/icon-Plumbing.png",
-    href: "/capabilities/pipeLine",
+    href: "/capabilities/pipeline",
   },
   {
     title: "Comming soon",

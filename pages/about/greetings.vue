@@ -42,9 +42,9 @@ const infomation = ref() // 소개영역
           <div>Future With Us</div>
         </h3>
         <p class="mt-16 text-xl">
-          Dear Colleagues and Community Partners, <br /><br />Hyoungwon Eng Inc.
-          has a strong history of commitment to excellence and performance in
-          meeting our employee, customer, and investor expectations. We are
+          Dear Colleagues and Community Partners, <br /><br />Hyoungwon ENG Co.,
+          Ltd has a strong history of commitment to excellence and performance
+          in meeting our employee, customer, and investor expectations. We are
           committed to the highest ethical standards for safety, integrity,
           excellence, accountability, and respect in all our business dealings.
           <br /><br />
@@ -62,7 +62,7 @@ const infomation = ref() // 소개영역
           <br />
 
           <span class="text-4xl font-bold">Jeong Hwan Kim</span>
-          <br /><br />Chief Executive Officer <br />Hyoungwon ENG Co., LTD
+          <br /><br />Chief Executive Officer <br />Hyoungwon ENG Co., Ltd
         </p>
       </section>
     </div>

@@ -1,35 +1,94 @@
 <script setup lang="ts">
 defineProps({
-  scrollTrigger: { // 스크롤시 이벤트를 트리거해준다!
+  scrollTrigger: {
+    // 스크롤시 이벤트를 트리거해준다!
     type: Number,
-    required: true
+    required: true,
   },
 })
+
+const image1 = ref() // 이미지 영역
+const image2 = ref()
 const infomation = ref() // 소개영역
 </script>
 
 <template>
-  <div class="container mx-auto py-20 justify-center overflow-hidden">
-    <section
-      ref="infomation"
-      class="pages-fade mt-20"
-      :class="infomation?.offsetTop < scrollTrigger ? 'pages-fade-done' : 'pages-fade-top'"
+  <div>
+    <div
+      class="flex flex-col container items-center mx-auto py-20 gap-20 justify-center overflow-hidden"
     >
-      <h2
-        class="text-6xl mb-40 text-center"
-      >
-        Philosophy
-      </h2>
-      <figure class="flex gap-20">
-        <img
-          class="w-full object-cover"
-          src="https://placehold.co/512x765"
-        />
-        <figcaption>
-          <h3 class="text-4xl">test</h3>
-          <p class="mt-20 text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.</p>
-        </figcaption>
-      </figure>
-    </section>
+      <div class="flex gap-20">
+        <!-- mobile 일 경우, 이미지가 밑으로. -->
+
+        <section
+          class="pages-fade flex flex-col w-1/2"
+          :class="
+            image1?.offsetTop < scrollTrigger
+              ? 'pages-fade-done'
+              : 'pages-fade-left'
+          "
+        >
+          <h3 class="mt-10 text-6xl font-black space-y-2">Quality</h3>
+          <p class="mt-16 text-xl">
+            Hyoungwon will ensure that all project ts are executed in accordance
+            with contract specifications and drawings, within the contractual
+            time frame, and in compliance with all legal requirements thus
+            providing good value and satisfaction to our client. We do this by
+            employing the best qualified employees and seeking out and using
+            reputable, state of the art equipment's and products. This will
+            produce a service that conforms to specified standards of quality,
+            reliability, and performance.
+            <br />
+          </p>
+        </section>
+        <figure
+          class="pages-fade flex w-1/2"
+          :class="
+            image1?.offsetTop < scrollTrigger
+              ? 'pages-fade-done'
+              : 'pages-fade-right'
+          "
+          ref="image1"
+        >
+          <img class="w-full object-cover" src="/img/Qhse1.jpg" />
+        </figure>
+      </div>
+      <div class="flex gap-20">
+        <!-- mobile 일 경우, 이미지가 밑으로. -->
+        <figure
+          class="pages-fade flex w-1/2"
+          :class="
+            image2?.offsetTop < scrollTrigger
+              ? 'pages-fade-done'
+              : 'pages-fade-right'
+          "
+          ref="image2"
+        >
+          <img class="w-full object-cover" src="/img/Qhse2.jpg" />
+        </figure>
+        <section
+          class="pages-fade flex flex-col w-1/2"
+          :class="
+            image2?.offsetTop < scrollTrigger
+              ? 'pages-fade-done'
+              : 'pages-fade-left'
+          "
+        >
+          <h3 class="mt-10 text-6xl font-black space-y-2">Health & Safety</h3>
+          <p class="mt-16 text-xl">
+            Hyoungwon is fully committed to encouraging a culture of openness
+            within our workforce regarding health and safety. Our policy is to
+            do all that is reasonably practicable to prevent personal injury and
+            damage to property and to protect everyone from foreseeable risks,
+            including the public, insofar as they interface with the Company or
+            our activities.
+            <br />
+          </p>
+        </section>
+      </div>
+      <div class="flex gap-20">
+        <!-- mobile 일 경우, 이미지가 밑으로. -->
+      </div>
+    </div>
   </div>
 </template>

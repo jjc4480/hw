@@ -62,14 +62,14 @@ const footerPath = [
               <li>
                 <a href="/capabilities/design">Design</a>
               </li>
-              <li><a href="/capabilities/pipeLine">Pipe Line</a></li>
+              <li><a href="/capabilities/pipeline">Pipeline</a></li>
             </ul>
           </section>
           <div class="col-span-2"></div>
           <section class="col-span-4 md:col-span-2">
             <h2 class="text-xl mb-5">OFFICES</h2>
             <p>Address ~~~~~ Houston, TX (HQ)</p>
-            <!-- <p>Address ~~~~~ Atlanata, GA (Branch)</p> -->
+            <p>Address ~~~~~ Atlanata, GA (HQ)</p>
           </section>
         </div>
         <div class="flex gap-10 mt-4 justify-end">
