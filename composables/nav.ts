@@ -16,8 +16,8 @@ const nav = {
   Commitments: [{ name: "QHSE", path: "qhse" }],
   Media: [{ name: "News", path: "news" }],
   Careers: [
-    { name: "Recruit", path: "recruit" },
     { name: "Talent", path: "talent" },
+    { name: "Recruit", path: "recruit" },
   ],
 } as Nav
 

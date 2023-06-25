@@ -97,7 +97,7 @@ const footerPath = [
               />
             </svg>
           </a>
-          <a href="/test">
+          <a href="https://www.facebook.com/Hyoungwon.Inc/">
             <!-- TODO 페이스북 추가 -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
