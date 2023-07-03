@@ -182,7 +182,7 @@ const handleClick = (event: MouseEvent) => {
         <div
           v-for="(item, index) in currentTab.items"
           :dir="isMobile ? '' : index % 2 === 0 ? 'ltr' : 'rtl'"
-          class="flex flex-col space-y-5 md:space-y-0 justify-center py-3 pl-24 md:pl-0 md:items-center md:grid md:grid-cols-7"
+          class="flex flex-col space-y-5 md:space-y-0 mb-8 justify-center py-3 pl-24 md:pl-0 md:items-center md:grid md:grid-cols-7"
         >
           <div
             class="text-5xl md:text-3xl font-semibold md:col-start-2 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
@@ -197,7 +197,7 @@ const handleClick = (event: MouseEvent) => {
             v-for="content in item"
             class="flex space-x-2 md:col-start-5 md:col-end-7 md:justify-start md:items-center md:space-x-6 rtl:space-x-0 md:space-y-4 rtl:mr-5 ltr:ml-5"
           >
-            <div class="text-3xl min-w-[30px] rtl:ml-5">
+            <div class="text-3xl md:min-w-[30px] min-w-[50px] rtl:ml-5">
               {{ content.month }}
             </div>
             <div class="text-xl flex justify-center items-center text-gray-600">
