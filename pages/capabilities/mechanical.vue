@@ -61,7 +61,7 @@ const slideList = [
         work.
       </p>
     </section>
-    <div class="container 2xl:px-0 px-5 mt-2 mx-auto relative">
+    <div class="container mb-16 2xl:px-0 px-5 mt-2 mx-auto relative">
       <Swiper
         class="featured-swiper"
         :setWrapperSize="true"
