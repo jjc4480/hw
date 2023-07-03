@@ -20,19 +20,29 @@ onMounted(() => {
 // currentTab Value 를 바꿀 때 에러나서 일단 any 처리
 const historyList = {
   start: {
-    title: "start",
+    title: "Start",
     range: "2009 ~ 2020",
     items: {
-      "2009": [
+      "2020": [
         {
           month: "12",
-          content: `Established HYOUNGWON ENG Co., Ltd`,
+          content: `Enrolled LG Display Subcontractor Established Poland Corporation`,
         },
       ],
-      "2010": [
+      "2018": [
         {
-          month: "12",
-          content: `Acquired Mechanical Engineering Construction License`,
+          month: "7",
+          content: `Established Vietnam Corporation`,
+        },
+      ],
+      "2017": [
+        {
+          month: "3",
+          content: `Acquired ISO 9001 & 14001`,
+        },
+        {
+          month: "6",
+          content: `Acquired Tier 1 Gas Facilities Construction License`,
         },
       ],
       "2015": [
@@ -45,59 +55,25 @@ const historyList = {
           content: `Acquired Fire Protection Service Business Registration`,
         },
       ],
-
-      "2017": [
-        {
-          month: "3",
-          content: `Acquired ISO 9001 & 14001`,
-        },
-        {
-          month: "6",
-          content: `Acquired Tier 1 Gas Facilities Construction License`,
-        },
-      ],
-
-      "2018": [
-        {
-          month: "7",
-          content: `Established Vietnam Corporation`,
-        },
-      ],
-
-      "2020": [
+      "2010": [
         {
           month: "12",
-          content: `Enrolled LG Display Subcontractor Established Poland Corporation`,
+          content: `Acquired Mechanical Engineering Construction License`,
+        },
+      ],
+
+      "2009": [
+        {
+          month: "12",
+          content: `Established HYOUNGWON ENG Co., Ltd`,
         },
       ],
     },
   },
   present: {
-    title: "present",
+    title: "Present",
     range: "2021 ~",
     items: {
-      "2021": [
-        {
-          month: "11",
-          content: `Sap Flow Measurement System install for Korea Apple Research Institute`,
-        },
-        {
-          month: "12",
-          content: `Acquired R&D Department’s Certificate Received 58th Day of Export 3M USD Export Tower Awards`,
-        },
-      ],
-
-      "2022": [
-        {
-          month: "4",
-          content: `Acquired Business Innovation Small and Medium Business Certificate`,
-        },
-        {
-          month: "12",
-          content: `Awarded XI C&A’s outstanding(Mechanical) Subcontractor`,
-        },
-      ],
-
       "2023": [
         {
           month: "1",
@@ -112,15 +88,40 @@ const historyList = {
           content: `Established GA, US Corporation`,
         },
       ],
+      "2022": [
+        {
+          month: "4",
+          content: `Acquired Business Innovation Small and Medium Business Certificate`,
+        },
+        {
+          month: "12",
+          content: `Awarded XI C&A’s outstanding(Mechanical) Subcontractor`,
+        },
+      ],
+      "2021": [
+        {
+          month: "11",
+          content: `Sap Flow Measurement System install for Korea Apple Research Institute`,
+        },
+        {
+          month: "12",
+          content: `Acquired R&D Department’s Certificate Received 58th Day of Export 3M USD Export Tower Awards`,
+        },
+      ],
     },
   },
 } as any
 
 let currentTab = ref(historyList.start) // 현재 탭
+let isCurrentTabChange = ref(false)
 
 const handleClick = (event: MouseEvent) => {
+  isCurrentTabChange.value = true
   const target = event.target as HTMLButtonElement
-  currentTab.value = historyList[target.value]
+  setTimeout(() => {
+    currentTab.value = historyList[target.value]
+    isCurrentTabChange.value = false
+  }, 700)
 }
 </script>
 
@@ -138,9 +139,9 @@ const handleClick = (event: MouseEvent) => {
       <h2 class="text-6xl mb-40 text-center">History</h2>
 
       <div
-        class="tab-select relative text-center flex w-3/4 justify-around mx-auto"
+        class="tab-select relative text-center flex w-2/4 justify-around mx-auto"
       >
-        <span class="inline-block relative min-w-[100px my-12">
+        <span class="inline-block relative min-w-[100px] my-12">
           <button
             class="tab-button pt-14 leading-9 text-3xl inline-block"
             :class="
@@ -149,7 +150,7 @@ const handleClick = (event: MouseEvent) => {
             @click="handleClick"
             value="start"
           >
-            start
+            Start
           </button>
         </span>
         <span class="inline-block relative min-w-[100px] my-12">
@@ -161,47 +162,53 @@ const handleClick = (event: MouseEvent) => {
             @click="handleClick"
             value="present"
           >
-            present
+            Present
           </button>
         </span>
       </div>
 
       <div
-        class="bg-hw flex py-8 px-20 text-white flex-col items-center justify-center space-y-4"
+        class="bg-hw flex py-8 px-20 text-white flex-col items-center justify-center space-y-4 transition-all duration-700 ease-in-out shadow-md"
+        :class="isCurrentTabChange ? 'opacity-0' : 'opacity-100'"
       >
         <div class="text-3xl">{{ currentTab.title }}</div>
         <div class="text-4xl">{{ currentTab.range }}</div>
       </div>
 
       <div
-        class="history-container pl-2 md:p-0 container md:mx-auto mt-20 mb-2 w-14"
+        class="history-container transition-all duration-700 ease-in-out"
+        :class="isCurrentTabChange ? 'opacity-0' : 'opacity-100'"
       >
-        <img src="/img/logo.png" alt="" />
-      </div>
-      <div class="container">
-        <div
-          v-for="(item, index) in currentTab.items"
-          :dir="isMobile ? '' : index % 2 === 0 ? 'ltr' : 'rtl'"
-          class="flex flex-col space-y-5 md:space-y-0 mb-8 justify-center py-3 pl-24 md:pl-0 md:items-center md:grid md:grid-cols-7"
-        >
+        <div class="pl-2 md:p-0 container md:mx-auto mt-20 mb-2 w-14">
+          <img src="/img/logo.png" alt="" />
+        </div>
+        <div class="container">
           <div
-            class="text-5xl md:text-3xl font-semibold md:col-start-2 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
+            v-for="(item, index) in currentTab.items"
+            :dir="isMobile ? '' : index % 2 === 0 ? 'ltr' : 'rtl'"
+            class="flex-col space-y-5 md:space-y-0 mb-8 justify-center py-3 pl-24 md:pl-0 md:items-center md:grid md:grid-cols-7"
           >
-            {{ index }}
-          </div>
-          <div
-            class="hidden md:flex md:w-1/2 md:col-start-4 md:col-end-5 md:justify-center md:items-center bg-black h-[0.5px]"
-          ></div>
-
-          <div
-            v-for="content in item"
-            class="flex space-x-2 md:col-start-5 md:col-end-7 md:justify-start md:items-center md:space-x-6 rtl:space-x-0 md:space-y-4 rtl:mr-5 ltr:ml-5"
-          >
-            <div class="text-3xl md:min-w-[30px] min-w-[50px] rtl:ml-5">
-              {{ content.month }}
+            <div
+              class="text-5xl md:text-3xl font-semibold md:col-start-2 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
+            >
+              {{ index }}
             </div>
-            <div class="text-xl flex justify-center items-center text-gray-600">
-              {{ content.content }}
+            <div
+              class="hidden md:flex md:w-1/2 md:col-start-4 md:col-end-5 md:justify-center md:items-center bg-black h-[0.5px]"
+            ></div>
+
+            <div
+              v-for="content in item"
+              class="flex space-x-2 md:col-start-5 md:col-end-7 md:justify-start md:items-center md:space-x-6 rtl:space-x-0 py-3 rtl:mr-5 ltr:ml-5"
+            >
+              <div class="text-3xl md:min-w-[30px] min-w-[50px] rtl:ml-5">
+                {{ content.month }}
+              </div>
+              <div
+                class="text-xl flex justify-center items-center text-gray-600"
+              >
+                {{ content.content }}
+              </div>
             </div>
           </div>
         </div>
