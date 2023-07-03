@@ -1,34 +1,34 @@
 <script setup lang="ts">
-import { PropType } from "vue";
+import { PropType } from "vue"
 
-import type { NavTitle } from "@/types/nav";
+import type { NavTitle } from "@/types/nav"
 
-import ScrollTrigger from "@/components/scrollTrigger.vue";
-import Pc from "@/components/layout/pages/pc.vue";
-import Mobile from "@/components/layout/pages/mobile.vue";
+import ScrollTrigger from "@/components/scrollTrigger.vue"
+import Pc from "@/components/layout/pages/pc.vue"
+import Mobile from "@/components/layout/pages/mobile.vue"
 
 defineProps({
   label: {
     type: String as PropType<NavTitle>,
     required: true,
   },
-});
+})
 
-let isMount = false;
+let isMount = false
 
-const scrollTrigger = ref(0); // 스크롤 트리거 높이값
+const scrollTrigger = ref(0) // 스크롤 트리거 높이값
 
 /**
  * @param h 트리거 높이값
  */
 function updateScroll(h: number) {
   // 이벤트시 업데이트해준다
-  scrollTrigger.value = h;
+  scrollTrigger.value = h
 }
 
 onMounted(() => {
-  isMount = true;
-});
+  isMount = true
+})
 </script>
 
 <template>
@@ -51,7 +51,7 @@ onMounted(() => {
     <ScrollTrigger :rate="0.6" @update-scroll="updateScroll">
       <NuxtPage :scrollTrigger="scrollTrigger" />
     </ScrollTrigger>
-    <div class="fixed right-0 bottom-0 z-10">
+    <div class="fixed hidden right-0 bottom-0 z-10">
       {{ scrollTrigger }}
     </div>
   </div>
