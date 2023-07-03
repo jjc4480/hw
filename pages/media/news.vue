@@ -11,22 +11,31 @@ const article = ref() // 이미지 영역
 
 const newsList = [
   {
-    title: ` Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia sit
+    title: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia sit
           provident cum sint fugit laudantium ipsum nihil voluptatum sunt,
           expedita ipsam deserunt laboriosam nemo magnam quisquam nostrum
           obcaecati a cupiditate!`,
     imageSrc: "asdf",
   },
   {
-    title: `[매일경제] 루시아홀딩스, 국내 첫 수직숲 도시 '루시아 청담 514 더 테라스' 공급`,
+    title: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia sit
+          provident cum sint fugit laudantium ipsum nihil voluptatum sunt,
+          expedita ipsam deserunt laboriosam nemo magnam quisquam nostrum
+          obcaecati a cupiditate!`,
     imageSrc: "asdf",
   },
   {
-    title: `[매일경제] 루시아홀딩스, 국내 첫 수직숲 도시 '루시아 청담 514 더 테라스' 공급`,
+    title: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia sit
+          provident cum sint fugit laudantium ipsum nihil voluptatum sunt,
+          expedita ipsam deserunt laboriosam nemo magnam quisquam nostrum
+          obcaecati a cupiditate!`,
     imageSrc: "asdf",
   },
   {
-    title: `[매일경제] 루시아홀딩스, 국내 첫 수직숲 도시 '루시아 청담 514 더 테라스' 공급`,
+    title: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia sit
+          provident cum sint fugit laudantium ipsum nihil voluptatum sunt,
+          expedita ipsam deserunt laboriosam nemo magnam quisquam nostrum
+          obcaecati a cupiditate!`,
     imageSrc: "asdf",
   },
 ]
