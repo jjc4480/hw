@@ -4,14 +4,16 @@ const boardItems = [
     index: 1,
     tag: "공지사항",
     title: "[형원이엔지] 경영관리부 (세무회계) 경력직 채용",
-    regDate: "2022-09-19 ~ 2022-12-31",
+    regDate: "2022-09-19",
+    endDate: "2022-12-31",
     status: "마감",
   },
   {
     index: 2,
     tag: "공지사항",
     title: "[형원이엔지] 경영관리부 (세무회계) 경력직 채용",
-    regDate: "2022-09-19 ~ 2022-12-31",
+    regDate: "2022-09-19",
+    endDate: "2022-12-31",
     status: "마감",
   },
 ]
@@ -50,7 +52,6 @@ const boardItems = [
         <thead class="hidden">
           <tr>
             <th>tag</th>
-            <th>title</th>
             <th>regDate</th>
             <th>status</th>
           </tr>
@@ -61,18 +62,25 @@ const boardItems = [
             v-for="item in boardItems"
             :key="item.index"
           >
-            <td class="py-8 w-1/12 text-center p-4">
-              <div class="p-2 bg-black text-white">{{ item.tag }}</div>
-            </td>
-            <td class="py-8 w-8/12 text-lg">
-              {{ item.title }}
-            </td>
-            <td class="py-8 w-2/12 text-slate-600 text-center">
-              {{ item.regDate }}
-            </td>
-            <td class="py-8 w-1/12 p-4">
+            <td class="py-8 w-9/12 p-4">
               <div
-                class="p-2 w-16 text-center mx-auto bg-white text-slate-400 border border-slate-400"
+                class="flex flex-col md:items-center md:flex-row md:space-x-5"
+              >
+                <div class="p-2 min-w-max w-20 bg-black text-white">
+                  {{ item.tag }}
+                </div>
+                <div class="text-lg">{{ item.title }}</div>
+              </div>
+            </td>
+            <td class="py-8 w-3/12 text-slate-600 text-center">
+              <div class="flex flex-col lg:flex-row space-x-2">
+                <div>{{ item.regDate }} ~</div>
+                <div>{{ item.endDate }}</div>
+              </div>
+            </td>
+            <td class="py-8 w-2/12 p-4">
+              <div
+                class="p-2 min-w-max w-full text-center mx-auto bg-white text-slate-400 border border-slate-400"
               >
                 {{ item.status }}
               </div>

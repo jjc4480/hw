@@ -6,35 +6,23 @@ defineProps({
     required: true,
   },
 })
-const image = ref() // 이미지 영역
-const infomation = ref() // 소개영역
+const greetings = ref() // 이미지 영역
 </script>
 
 <template>
   <div>
     <div
-      class="container flex items-center flex-col-reverse lg:flex-row mx-auto py-20 gap-20 justify-center overflow-hidden"
+      class="container pages-fade flex items-center flex-col-reverse lg:flex-row mx-auto py-20 gap-20 justify-center overflow-hidden"
+      :class="
+        greetings?.offsetTop < scrollTrigger
+          ? 'pages-fade-done'
+          : 'pages-fade-bottom'
+      "
+      ref="greetings"
     >
       <!-- mobile 일 경우, 이미지가 밑으로. -->
-      <figure
-        class="pages-fade flex px-4 w-full lg:w-1/2"
-        :class="
-          image?.offsetTop < scrollTrigger
-            ? 'pages-fade-done'
-            : 'pages-fade-left'
-        "
-        ref="image"
-      >
-        <img class="w-full object-cover" src="https://placehold.co/512x765" />
-      </figure>
       <section
-        class="pages-fade flex flex-col w-full lg:w-1/2 lg:border-l lg:border-hw lg:pl-10"
-        :class="
-          infomation?.offsetTop < scrollTrigger
-            ? 'pages-fade-done'
-            : 'pages-fade-right'
-        "
-        ref="infomation"
+        class="flex flex-col w-full lg:w-1/2 lg:border-r lg:border-hw lg:pr-10"
       >
         <h2 class="text-2xl text-hw font-bold">CEO Message</h2>
         <h3 class="mt-10 text-6xl font-black space-y-2">
@@ -62,9 +50,14 @@ const infomation = ref() // 소개영역
           <br />
 
           <span class="text-4xl font-bold">Jeong Hwan Kim</span>
-          <br /><br />Chief Executive Officer <br />Hyoungwon ENG Co., Ltd
+          <img class="mt-5 w-80" src="/img/sign.jpg" /> <br /><br />Chief
+          Executive Officer <br />Hyoungwon ENG Co., Ltd
         </p>
       </section>
+
+      <figure class="flex px-4 w-full lg:w-1/2">
+        <img class="w-full object-cover" src="/img/ceo.jpg" />
+      </figure>
     </div>
   </div>
 </template>

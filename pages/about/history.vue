@@ -8,106 +8,111 @@ defineProps({
 })
 const infomation = ref() // 소개영역
 
+let isMobile = ref(false)
+
+onMounted(() => {
+  isMobile.value = window.innerWidth < 768
+  window.addEventListener("resize", () => {
+    isMobile.value = window.innerWidth < 768
+  })
+})
+
 // currentTab Value 를 바꿀 때 에러나서 일단 any 처리
 const historyList = {
   start: {
     title: "start",
     range: "2009 ~ 2020",
-    items: [
-      {
-        "2009": [
-          {
-            month: "12",
-            content: `Established HYOUNGWON ENG Co., Ltd`,
-          },
-        ],
-        "2010": [
-          {
-            month: "12",
-            content: `Acquired Mechanical Engineering Construction License`,
-          },
-        ],
-        "2015": [
-          {
-            month: "09",
-            content: `Enrolled XI C&A Subcontractor`,
-          },
-          {
-            month: "12",
-            content: `Acquired Fire Protection Service Business Registration`,
-          },
-        ],
+    items: {
+      "2009": [
+        {
+          month: "12",
+          content: `Established HYOUNGWON ENG Co., Ltd`,
+        },
+      ],
+      "2010": [
+        {
+          month: "12",
+          content: `Acquired Mechanical Engineering Construction License`,
+        },
+      ],
+      "2015": [
+        {
+          month: "9",
+          content: `Enrolled XI C&A Subcontractor`,
+        },
+        {
+          month: "12",
+          content: `Acquired Fire Protection Service Business Registration`,
+        },
+      ],
 
-        "2017": [
-          {
-            month: "03",
-            content: `Acquired ISO 9001 & 14001`,
-          },
-          {
-            month: "06",
-            content: `Acquired Tier 1 Gas Facilities Construction License`,
-          },
-        ],
+      "2017": [
+        {
+          month: "3",
+          content: `Acquired ISO 9001 & 14001`,
+        },
+        {
+          month: "6",
+          content: `Acquired Tier 1 Gas Facilities Construction License`,
+        },
+      ],
 
-        "2018": [
-          {
-            month: "07",
-            content: `Established Vietnam Corporation`,
-          },
-        ],
+      "2018": [
+        {
+          month: "7",
+          content: `Established Vietnam Corporation`,
+        },
+      ],
 
-        "2020": [
-          {
-            month: "12",
-            content: `Enrolled LG Display Subcontractor Established Poland Corporation`,
-          },
-        ],
-      },
-    ],
+      "2020": [
+        {
+          month: "12",
+          content: `Enrolled LG Display Subcontractor Established Poland Corporation`,
+        },
+      ],
+    },
   },
   present: {
     title: "present",
     range: "2021 ~",
-    items: [
-      {
-        "2021": [
-          {
-            month: "11",
-            content: `Sap Flow Measurement System install for Korea Apple Research Institute`,
-          },
-          {
-            month: "12",
-            content: `Acquired R&D Department’s Certificate Received 58th Day of Export 3M USD Export Tower Awards`,
-          },
-        ],
+    items: {
+      "2021": [
+        {
+          month: "11",
+          content: `Sap Flow Measurement System install for Korea Apple Research Institute`,
+        },
+        {
+          month: "12",
+          content: `Acquired R&D Department’s Certificate Received 58th Day of Export 3M USD Export Tower Awards`,
+        },
+      ],
 
-        "2022": [
-          {
-            month: "04",
-            content: `Acquired Business Innovation Small and Medium Business Certificate`,
-          },
-          {
-            month: "12",
-            content: `Awarded XI C&A’s outstanding(Mechanical) Subcontractor`,
-          },
-        ],
+      "2022": [
+        {
+          month: "4",
+          content: `Acquired Business Innovation Small and Medium Business Certificate`,
+        },
+        {
+          month: "12",
+          content: `Awarded XI C&A’s outstanding(Mechanical) Subcontractor`,
+        },
+      ],
 
-        "2023": [
-          {
-            month: "1",
-            content: `Registered as Korea Semiconductor Industry Association Member`,
-          },
-          {
-            month: "3",
-            content: `Established TX, US Corporation`,
-          },
-          {
-            month: "6",
-            content: `Established GA, US Corporation`,
-          },
-        ],
-      },
-    ],
+      "2023": [
+        {
+          month: "1",
+          content: `Registered as Korea Semiconductor Industry Association Member`,
+        },
+        {
+          month: "3",
+          content: `Established TX, US Corporation`,
+        },
+        {
+          month: "6",
+          content: `Established GA, US Corporation`,
+        },
+      ],
+    },
   },
 } as any
 
@@ -120,7 +125,7 @@ const handleClick = (event: MouseEvent) => {
 </script>
 
 <template>
-  <div class="container mx-auto py-20 justify-center overflow-hidden">
+  <div class="container mx-auto pt-20 mb-20 justify-center overflow-hidden">
     <section
       ref="infomation"
       class="pages-fade mt-20"
@@ -147,7 +152,7 @@ const handleClick = (event: MouseEvent) => {
             start
           </button>
         </span>
-        <span class="inline-block relative min-w-[100px my-12">
+        <span class="inline-block relative min-w-[100px] my-12">
           <button
             class="tab-button pt-14 leading-9 text-3xl inline-block"
             :class="
@@ -168,26 +173,36 @@ const handleClick = (event: MouseEvent) => {
         <div class="text-4xl">{{ currentTab.range }}</div>
       </div>
 
-      <div class="history-container container md:mx-auto mt-20 mb-2 w-14">
+      <div
+        class="history-container pl-2 md:p-0 container md:mx-auto mt-20 mb-2 w-14"
+      >
         <img src="/img/logo.png" alt="" />
       </div>
       <div class="container">
-        <div class="w-full h-20 items-center grid grid-cols-7">
-          <div class="col-start-3 col-end-4 text-end">
-            <h1 class="text-3xl">2023</h1>
+        <div
+          v-for="(item, index) in currentTab.items"
+          :dir="isMobile ? '' : index % 2 === 0 ? 'ltr' : 'rtl'"
+          class="flex flex-col space-y-5 md:space-y-0 justify-center py-3 pl-24 md:pl-0 md:items-center md:grid md:grid-cols-7"
+        >
+          <div
+            class="text-5xl md:text-3xl font-semibold md:col-start-2 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
+          >
+            {{ index }}
           </div>
-          <div class="col-start-4 col-end-5 flex">
-            <div
-              class="hidden md:block w-1/2 h-[0.5px] bg-black box-content"
-            ></div>
-          </div>
+          <div
+            class="hidden md:flex md:w-1/2 md:col-start-4 md:col-end-5 md:justify-center md:items-center bg-black h-[0.5px]"
+          ></div>
 
-          <div class="col-start-5 col-end-7 flex space-x-5 items-center">
-            <h1 class="text-3xl">12</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Dignissimos repellendus !
-            </p>
+          <div
+            v-for="content in item"
+            class="flex space-x-2 md:col-start-5 md:col-end-7 md:justify-start md:items-center md:space-x-6 rtl:space-x-0 md:space-y-4 rtl:mr-5 ltr:ml-5"
+          >
+            <div class="text-3xl min-w-[30px] rtl:ml-5">
+              {{ content.month }}
+            </div>
+            <div class="text-xl flex justify-center items-center text-gray-600">
+              {{ content.content }}
+            </div>
           </div>
         </div>
       </div>
@@ -251,7 +266,7 @@ const handleClick = (event: MouseEvent) => {
 
 @media (max-width: 768px) {
   .history-container::before {
-    left: 0.3rem;
+    left: 2rem;
   }
 }
 </style>
