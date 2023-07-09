@@ -69,7 +69,9 @@ const footerPath = [
           <section class="col-span-4 md:col-span-2">
             <h2 class="text-xl mb-5">OFFICES</h2>
             <p>Address ~~~~~ Houston, TX (HQ)</p>
-            <p>Address ~~~~~ Atlanata, GA (HQ)</p>
+            <p>
+              Address 1325 Satellite Blvd Suite 1202, Suwanee, GA 30024 (HQ)
+            </p>
           </section>
         </div>
         <div class="flex gap-10 mt-4 justify-end">
