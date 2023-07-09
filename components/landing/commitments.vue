@@ -26,7 +26,7 @@ const slideList = [
         Commitments
       </h2>
     </section>
-    <div class="container 2xl:px-0 px-5 mt-48 mx-auto relative">
+    <div class="container 2xl:px-0 px-5 mt-40 mx-auto relative">
       <Swiper
         class="commitments-swiper"
         :setWrapperSize="true"

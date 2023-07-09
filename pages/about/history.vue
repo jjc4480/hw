@@ -7,6 +7,7 @@ defineProps({
   },
 })
 const infomation = ref() // 소개영역
+const historyContainer = ref()
 
 let isMobile = ref(false)
 
@@ -20,7 +21,7 @@ onMounted(() => {
 // currentTab Value 를 바꿀 때 에러나서 일단 any 처리
 const historyList = {
   start: {
-    title: "start",
+    title: "Start",
     range: "2009 ~ 2020",
     items: {
       "2009": [
@@ -73,7 +74,7 @@ const historyList = {
     },
   },
   present: {
-    title: "present",
+    title: "Present",
     range: "2021 ~",
     items: {
       "2021": [
@@ -120,7 +121,19 @@ let currentTab = ref(historyList.start) // 현재 탭
 
 const handleClick = (event: MouseEvent) => {
   const target = event.target as HTMLButtonElement
-  currentTab.value = historyList[target.value]
+
+  if (target.value === currentTab.value.title) return
+
+  historyContainer.value.style.opacity = "0"
+  const buttons = document.querySelectorAll(".tab-button")
+
+  buttons.forEach((button) => button.classList.remove("active"))
+
+  target.classList.add("active")
+  setTimeout(() => {
+    currentTab.value = historyList[target.value.toLowerCase()]
+    historyContainer.value.style.opacity = "100"
+  }, 1000)
 }
 </script>
 
@@ -138,70 +151,73 @@ const handleClick = (event: MouseEvent) => {
       <h2 class="text-6xl mb-40 text-center">History</h2>
 
       <div
-        class="tab-select relative text-center flex w-3/4 justify-around mx-auto"
+        class="tab-select font-semibold drop-shadow-md relative text-center flex w-3/4 justify-around mx-auto"
       >
-        <span class="inline-block relative min-w-[100px my-12">
+        <span class="inline-block relative min-w-[100]px my-12">
           <button
-            class="tab-button pt-14 leading-9 text-3xl inline-block"
-            :class="
-              currentTab.title === historyList.start.title ? 'active' : ''
-            "
+            class="tab-button pt-14 leading-9 text-3xl active inline-block"
             @click="handleClick"
-            value="start"
+            :value="historyList.start.title"
           >
-            start
+            {{ historyList.start.title }}
           </button>
         </span>
         <span class="inline-block relative min-w-[100px] my-12">
           <button
             class="tab-button pt-14 leading-9 text-3xl inline-block"
-            :class="
-              currentTab.title === historyList.start.title ? '' : 'active'
-            "
             @click="handleClick"
-            value="present"
+            :value="historyList.present.title"
           >
-            present
+            {{ historyList.present.title }}
           </button>
         </span>
       </div>
 
       <div
-        class="bg-hw flex py-8 px-20 text-white flex-col items-center justify-center space-y-4"
+        class="transition-opacity duration-500 ease-in-out"
+        ref="historyContainer"
       >
-        <div class="text-3xl">{{ currentTab.title }}</div>
-        <div class="text-4xl">{{ currentTab.range }}</div>
-      </div>
-
-      <div
-        class="history-container pl-2 md:p-0 container md:mx-auto mt-20 mb-2 w-14"
-      >
-        <img src="/img/logo.png" alt="" />
-      </div>
-      <div class="container">
         <div
-          v-for="(item, index) in currentTab.items"
-          :dir="isMobile ? '' : index % 2 === 0 ? 'ltr' : 'rtl'"
-          class="flex flex-col space-y-5 md:space-y-0 mb-8 justify-center py-3 pl-24 md:pl-0 md:items-center md:grid md:grid-cols-7"
+          class="bg-hw drop-shadow-md flex py-8 px-20 text-white font-semibold flex-col items-center justify-center space-y-4"
         >
-          <div
-            class="text-5xl md:text-3xl font-semibold md:col-start-2 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
-          >
-            {{ index }}
-          </div>
-          <div
-            class="hidden md:flex md:w-1/2 md:col-start-4 md:col-end-5 md:justify-center md:items-center bg-black h-[0.5px]"
-          ></div>
+          <div class="text-3xl">{{ currentTab.title }}</div>
+          <div class="text-4xl">{{ currentTab.range }}</div>
+        </div>
 
+        <div
+          class="history-container pl-2 md:p-0 container md:mx-auto mt-20 mb-2 w-14"
+        >
+          <img src="/img/logo.png" alt="" />
+        </div>
+        <div class="container drop-shadow-md">
           <div
-            v-for="content in item"
-            class="flex space-x-2 md:col-start-5 md:col-end-7 md:justify-start md:items-center md:space-x-6 rtl:space-x-0 md:space-y-4 rtl:mr-5 ltr:ml-5"
+            v-for="(item, index) in currentTab.items"
+            :dir="isMobile ? '' : index % 2 === 0 ? 'ltr' : 'rtl'"
+            class="flex flex-col space-y-5 md:space-y-0 mb-8 justify-center py-3 pl-24 md:pl-0 md:items-center md:grid md:grid-cols-7"
           >
-            <div class="text-3xl md:min-w-[30px] min-w-[50px] rtl:ml-5">
-              {{ content.month }}
+            <div
+              class="text-5xl md:text-3xl font-semibold md:col-start-2 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
+            >
+              {{ index }}
             </div>
-            <div class="text-xl flex justify-center items-center text-gray-600">
-              {{ content.content }}
+            <div
+              class="hidden md:flex md:w-1/2 md:col-start-4 md:col-end-5 md:justify-center md:items-center bg-black h-[0.5px]"
+            ></div>
+
+            <div
+              v-for="content in item.reverse()"
+              class="flex space-x-2 md:col-start-5 md:col-end-7 md:justify-start md:items-center md:space-x-6 rtl:space-x-0 rtl:mr-5 ltr:ml-5"
+            >
+              <div class="my-4 flex">
+                <div class="text-3xl md:min-w-[30px] min-w-[50px] rtl:ml-5">
+                  {{ content.month }}
+                </div>
+                <div
+                  class="text-xl ltr:ml-6 flex justify-center items-center text-gray-600"
+                >
+                  {{ content.content }}
+                </div>
+              </div>
             </div>
           </div>
         </div>
