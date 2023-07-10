@@ -175,7 +175,7 @@ const handleClick = (event: MouseEvent) => {
       <h2 class="text-6xl mb-40 text-center">History</h2>
 
       <div
-        class="tab-select font-semibold drop-shadow-md relative text-center flex w-3/4 justify-around mx-auto"
+        class="tab-select font-semibold drop-shadow-md relative text-center flex w-2/4 justify-around mx-auto"
       >
         <span class="inline-block relative min-w-[100]px my-12">
           <button
