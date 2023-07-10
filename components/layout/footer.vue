@@ -70,7 +70,7 @@ const footerPath = [
             <h2 class="text-xl mb-5">OFFICES</h2>
             <p>Address ~~~~~ Houston, TX (HQ)</p>
             <p>
-              Address 1325 Satellite Blvd Suite 1202, Suwanee, GA 30024 (HQ)
+              Address 1325 Satellite Blvd Suite 1202,<br> Suwanee, GA 30024 (HQ)
             </p>
           </section>
         </div>

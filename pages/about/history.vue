@@ -24,16 +24,26 @@ const historyList = {
     title: "Start",
     range: "2009 ~ 2020",
     items: {
-      "2009": [
+      "2020": [
         {
           month: "12",
-          content: `Established HYOUNGWON ENG Co., Ltd`,
+          content: `Enrolled LG Display Subcontractor Established Poland Corporation`,
         },
       ],
-      "2010": [
+      "2018": [
         {
-          month: "12",
-          content: `Acquired Mechanical Engineering Construction License`,
+          month: "7",
+          content: `Established Vietnam Corporation`,
+        },
+      ],
+      "2017": [
+        {
+          month: "3",
+          content: `Acquired ISO 9001 & 14001`,
+        },
+        {
+          month: "6",
+          content: `Acquired Tier 1 Gas Facilities Construction License`,
         },
       ],
       "2015": [
@@ -46,29 +56,17 @@ const historyList = {
           content: `Acquired Fire Protection Service Business Registration`,
         },
       ],
-
-      "2017": [
-        {
-          month: "3",
-          content: `Acquired ISO 9001 & 14001`,
-        },
-        {
-          month: "6",
-          content: `Acquired Tier 1 Gas Facilities Construction License`,
-        },
-      ],
-
-      "2018": [
-        {
-          month: "7",
-          content: `Established Vietnam Corporation`,
-        },
-      ],
-
-      "2020": [
+      "2010": [
         {
           month: "12",
-          content: `Enrolled LG Display Subcontractor Established Poland Corporation`,
+          content: `Acquired Mechanical Engineering Construction License`,
+        },
+      ],
+
+      "2009": [
+        {
+          month: "12",
+          content: `Established HYOUNGWON ENG Co., Ltd`,
         },
       ],
     },
@@ -77,28 +75,6 @@ const historyList = {
     title: "Present",
     range: "2021 ~",
     items: {
-      "2021": [
-        {
-          month: "11",
-          content: `Sap Flow Measurement System install for Korea Apple Research Institute`,
-        },
-        {
-          month: "12",
-          content: `Acquired R&D Department’s Certificate Received 58th Day of Export 3M USD Export Tower Awards`,
-        },
-      ],
-
-      "2022": [
-        {
-          month: "4",
-          content: `Acquired Business Innovation Small and Medium Business Certificate`,
-        },
-        {
-          month: "12",
-          content: `Awarded XI C&A’s outstanding(Mechanical) Subcontractor`,
-        },
-      ],
-
       "2023": [
         {
           month: "1",
@@ -111,6 +87,26 @@ const historyList = {
         {
           month: "6",
           content: `Established GA, US Corporation`,
+        },
+      ],
+      "2022": [
+        {
+          month: "4",
+          content: `Acquired Business Innovation Small and Medium Business Certificate`,
+        },
+        {
+          month: "12",
+          content: `Awarded XI C&A’s outstanding(Mechanical) Subcontractor`,
+        },
+      ],
+      "2021": [
+        {
+          month: "11",
+          content: `Sap Flow Measurement System install for Korea Apple Research Institute`,
+        },
+        {
+          month: "12",
+          content: `Acquired R&D Department’s Certificate Received 58th Day of Export 3M USD Export Tower Awards`,
         },
       ],
     },
@@ -205,7 +201,7 @@ const handleClick = (event: MouseEvent) => {
             ></div>
 
             <div
-              v-for="content in item.reverse()"
+              v-for="content in item"
               class="flex space-x-2 md:col-start-5 md:col-end-7 md:justify-start md:items-center md:space-x-6 rtl:space-x-0 rtl:mr-5 ltr:ml-5"
             >
               <div class="my-4 flex">
