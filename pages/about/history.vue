@@ -23,83 +23,110 @@ const historyList = {
   start: {
     title: "Start",
     range: "2009 ~ 2020",
-    items: {
-      "2020": [
-        {
-          month: "12",
-          content: `Enrolled LG Display Subcontractor Established Poland Corporation`,
-        },
+    items: [
+      {
+        year : '2020',
+        history : [
+          {
+            month: "12",
+            content: `Enrolled LG Display Subcontractor Established Poland Corporation`,
+          },
+        ]
+      },
+      {
+        year : '2018',
+        history : [
+          {
+            month: "7",
+            content: `Established Vietnam Corporation`,
+          },
+        ]
+      },
+      {
+        year : '2017',
+        history : [
+          {
+            month: "3",
+            content: `Acquired ISO 9001 & 14001`,
+          },
+          {
+            month: "6",
+            content: `Acquired Tier 1 Gas Facilities Construction License`,
+          },
+        ]
+      },
+      {
+        year : '2015',
+        history : [
+          {
+            month: "9",
+            content: `Enrolled XI C&A Subcontractor`,
+          },
+          {
+            month: "12",
+            content: `Acquired Fire Protection Service Business Registration`,
+          },
+        ]
+      },
+      {
+        year : '2010',
+        history : [
+          {
+            month: "12",
+            content: `Acquired Mechanical Engineering Construction License`,
+          },
+        ]
+      },
+      {
+        year : '2009',
+        history : [
+          {
+            month: "12",
+            content: `Established HYOUNGWON ENG Co., Ltd`,
+          },
+        ]
+      }
+      
       ],
-      "2018": [
-        {
-          month: "7",
-          content: `Established Vietnam Corporation`,
-        },
-      ],
-      "2017": [
-        {
-          month: "3",
-          content: `Acquired ISO 9001 & 14001`,
-        },
-        {
-          month: "6",
-          content: `Acquired Tier 1 Gas Facilities Construction License`,
-        },
-      ],
-      "2015": [
-        {
-          month: "9",
-          content: `Enrolled XI C&A Subcontractor`,
-        },
-        {
-          month: "12",
-          content: `Acquired Fire Protection Service Business Registration`,
-        },
-      ],
-      "2010": [
-        {
-          month: "12",
-          content: `Acquired Mechanical Engineering Construction License`,
-        },
-      ],
-
-      "2009": [
-        {
-          month: "12",
-          content: `Established HYOUNGWON ENG Co., Ltd`,
-        },
-      ],
-    },
   },
   present: {
     title: "Present",
     range: "2021 ~",
-    items: {
-      "2023": [
-        {
-          month: "1",
-          content: `Registered as Korea Semiconductor Industry Association Member`,
-        },
-        {
-          month: "3",
-          content: `Established TX, US Corporation`,
-        },
-        {
-          month: "6",
-          content: `Established GA, US Corporation`,
-        },
-      ],
-      "2022": [
-        {
-          month: "4",
-          content: `Acquired Business Innovation Small and Medium Business Certificate`,
-        },
-        {
-          month: "12",
-          content: `Awarded XI C&A’s outstanding(Mechanical) Subcontractor`,
-        },
-      ],
-      "2021": [
+    items: [
+      {
+        year : '2023',
+        history : [
+          {
+            month: "1",
+            content: `Registered as Korea Semiconductor Industry Association Member`,
+          },
+          {
+            month: "3",
+            content: `Established TX, US Corporation`,
+          },
+          {
+            month: "6",
+            content: `Established GA, US Corporation`,
+          },
+        ]
+        
+      },
+      {
+        year : "2022",
+        history : [
+          {
+            month: "4",
+            content: `Acquired Business Innovation Small and Medium Business Certificate`,
+          },
+          {
+            month: "12",
+            content: `Awarded XI C&A’s outstanding(Mechanical) Subcontractor`,
+          },
+        ]
+      },
+      {
+        year : '2021',
+        history : [
         {
           month: "11",
           content: `Sap Flow Measurement System install for Korea Apple Research Institute`,
@@ -108,8 +135,9 @@ const historyList = {
           month: "12",
           content: `Acquired R&D Department’s Certificate Received 58th Day of Export 3M USD Export Tower Awards`,
         },
-      ],
-    },
+        ]
+      },
+    ]
   },
 } as any
 
@@ -147,7 +175,7 @@ const handleClick = (event: MouseEvent) => {
       <h2 class="text-6xl mb-40 text-center">History</h2>
 
       <div
-        class="tab-select font-semibold drop-shadow-md relative text-center flex w-3/4 justify-around mx-auto"
+        class="tab-select font-semibold drop-shadow-md relative text-center flex w-2/4 justify-around mx-auto"
       >
         <span class="inline-block relative min-w-[100]px my-12">
           <button
@@ -188,30 +216,30 @@ const handleClick = (event: MouseEvent) => {
         <div class="container drop-shadow-md">
           <div
             v-for="(item, index) in currentTab.items"
-            :dir="isMobile ? '' : index % 2 === 0 ? 'ltr' : 'rtl'"
+            :dir="isMobile ? '' : index % 2 === 0 ? 'rtl' : 'ltr'"
             class="flex flex-col space-y-5 md:space-y-0 mb-8 justify-center py-3 pl-24 md:pl-0 md:items-center md:grid md:grid-cols-7"
           >
             <div
-              class="text-5xl md:text-3xl font-semibold md:col-start-2 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
+              class="text-5xl md:text-3xl font-semibold md:col-start-1 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
             >
-              {{ index }}
+              {{ item.year }}
             </div>
             <div
               class="hidden md:flex md:w-1/2 md:col-start-4 md:col-end-5 md:justify-center md:items-center bg-black h-[0.5px]"
             ></div>
 
             <div
-              v-for="content in item"
+              v-for="value in item.history"
               class="flex space-x-2 md:col-start-5 md:col-end-7 md:justify-start md:items-center md:space-x-6 rtl:space-x-0 rtl:mr-5 ltr:ml-5"
             >
               <div class="my-4 flex">
                 <div class="text-3xl md:min-w-[30px] min-w-[50px] rtl:ml-5">
-                  {{ content.month }}
+                  {{ value.month }}
                 </div>
                 <div
-                  class="text-xl ltr:ml-6 flex justify-center items-center text-gray-600"
+                  class="text-lg ltr:ml-6 flex justify-center items-center text-gray-600"
                 >
-                  {{ content.content }}
+                  {{ value.content }}
                 </div>
               </div>
             </div>
