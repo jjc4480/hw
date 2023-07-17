@@ -3,48 +3,49 @@ import { Scrollbar } from "swiper"
 
 const slideList = [
   {
-    title: "Mechanical test",
-    src: "/capabilities/mechanical/feature_1.jpg",
+    title: "1",
+    src: "/capabilities/pipeline/feature_1.jpg",
     content:
       "test",
   },
   {
-    title: "Mechanical test",
-    src: "/capabilities/mechanical/feature_2.jpg",
+    title: "2",
+    src: "/capabilities/pipeline/feature_2.jpg",
     content:
       "test",
   },
   {
-    title: "Mechanical test",
-    src: "/capabilities/mechanical/feature_3.jpg",
+    title: "3",
+    src: "/capabilities/pipeline/feature_3.jpg",
     content:
       "test",
   },
   {
-    title: "Mechanical test",
-    src: "/capabilities/mechanical/feature_4.jpg",
+    title: "4",
+    src: "/capabilities/pipeline/feature_4.jpg",
     content:
       "test",
   },
+  
 ]
 </script>
 
 <template>
   <div>
-    <h2 class="text-6xl my-20 text-center">Mechanical</h2>
+    <h2 class="text-6xl my-20 text-center">Pipeline</h2>
     <div
-      class="capabilities-mechanical py-56 bg-fixed bg-center bg-cover"
+      class="capabilities-pipeline py-56 bg-fixed bg-center bg-cover"
     ></div>
     <section class="container mx-auto pt-[20vh]">
       <h2
         class="2xl:px-0 2xl:text-6xl text-4xl text-black font-black leading-snug"
       >
-      Mechanical
+        Pipeline
       </h2>
       <p
         class="2xl:px-0 px-5 mt-12 2xl:text-2xl text-lg text-black leading-tight"
       >
-   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugit, ea modi natus assumenda totam vero distinctio sed quia cumque nesciunt! Recusandae saepe molestiae possimus praesentium facere minima tempora dolorum
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim blanditiis porro, nulla illo mollitia nostrum vero, rerum sed, provident quas nobis deleniti illum corrupti reprehenderit neque id explicabo laborum a
       </p>
     </section>
     <div class="container mb-16 2xl:px-0 px-5 mt-2 mx-auto relative">
