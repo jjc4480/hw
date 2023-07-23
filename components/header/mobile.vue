@@ -46,12 +46,12 @@ watch(menuOpen, () => {
   <div class="relative">
     <button
       type="button"
-      class="nav-icon w-8 h-11 rotate-0 duration-500 cursor-pointer absolute -top-3 right-5 z-10"
+      class="absolute z-10 w-8 duration-500 rotate-0 cursor-pointer nav-icon h-11 -top-3 right-5"
       :class="{ open: menuOpen }"
       @click="menuOpen = !menuOpen"
     >
       <div
-        class="w-full top-0"
+        class="top-0 w-full"
         :class="[color === 'white' && !menuOpen ? 'bg-white' : 'bg-black']"
       ></div>
       <div
@@ -64,11 +64,11 @@ watch(menuOpen, () => {
       ></div>
     </button>
     <div
-      class="w-full h-screen bg-white fixed left-0 duration-300"
+      class="fixed left-0 w-full h-screen duration-300 bg-white"
       :class="[menuOpen ? 'top-0' : '-top-full']"
     >
       <div class="flex gap-5 p-10 border-b border-black">
-        <a class="fill-gray-400" href="/test">
+        <a class="fill-gray-400" href="/">
           <svg
             class="w-7 h-7"
             xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ watch(menuOpen, () => {
             />
           </svg>
         </a>
-        <a class="fill-gray-400" href="/test">
+        <a class="fill-gray-400" href="/">
           <svg
             class="w-7 h-7"
             xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@ watch(menuOpen, () => {
           v-for="(list, key) in pathList"
         >
           <button
-            class="flex w-full py-5 px-8 items-center justify-between text-xl font-bold border-b border-gray-300"
+            class="flex items-center justify-between w-full px-8 py-5 text-xl font-bold border-b border-gray-300"
             :class="
               accordionTarget == useLowcase(key) ? 'text-hw' : 'text-gray-500'
             "
@@ -133,7 +133,7 @@ watch(menuOpen, () => {
             </svg>
           </button>
           <ul
-            class="grid overflow-hidden px-5 gap-3 bg-gray-300/50 border-b border-gray-300 transition-all duration-300"
+            class="grid gap-3 px-5 overflow-hidden transition-all duration-300 border-b border-gray-300 bg-gray-300/50"
             :style="
               accordionTarget != useLowcase(key)
                 ? 'height: 0'
@@ -143,7 +143,7 @@ watch(menuOpen, () => {
             "
           >
             <li
-              class="first:pt-5 last:pb-5 pl-8 text-gray-600"
+              class="pl-8 text-gray-600 first:pt-5 last:pb-5"
               :class="{
                 'text-hw': route.path == `/${useLowcase(key)}/${child.path}`,
               }"

@@ -32,23 +32,23 @@ const slideList = [
 
 <template>
   <div>
-    <h2 class="text-6xl my-20 text-center">Pipeline</h2>
+    <h2 class="my-20 text-6xl text-center">Pipeline</h2>
     <div
-      class="capabilities-pipeline py-56 bg-fixed bg-center bg-cover"
+      class="py-56 bg-fixed bg-center bg-cover capabilities-pipeline"
     ></div>
     <section class="container mx-auto pt-[20vh]">
       <h2
-        class="2xl:px-0 2xl:text-6xl text-4xl text-black font-black leading-snug"
+        class="text-4xl font-black leading-snug text-black 2xl:px-0 2xl:text-6xl"
       >
         Pipeline
       </h2>
       <p
-        class="2xl:px-0 px-5 mt-12 2xl:text-2xl text-lg text-black leading-tight"
+        class="px-5 mt-12 text-lg leading-tight text-black 2xl:px-0 2xl:text-2xl"
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim blanditiis porro, nulla illo mollitia nostrum vero, rerum sed, provident quas nobis deleniti illum corrupti reprehenderit neque id explicabo laborum a
       </p>
     </section>
-    <div class="container mb-16 2xl:px-0 px-5 mt-2 mx-auto relative">
+    <div class="container relative px-5 mx-auto mt-2 mb-16 2xl:px-0">
       <Swiper
         class="featured-swiper"
         :setWrapperSize="true"
@@ -86,16 +86,16 @@ const slideList = [
       >
         <SwiperSlide v-for="slide in slideList" class="h-auto mb-10">
           <a
-            class="block h-full group transition-all duration-500 ease-in-out"
+            class="block h-full transition-all duration-500 ease-in-out group"
             href="#"
           >
             <figure class="flex flex-col h-full overflow-hidden">
               <img
-                class="object-fill group-hover:transform group-hover:scale-105 transition-all duration-500 ease-in-out"
+                class="object-fill h-full transition-all duration-500 ease-in-out group-hover:transform group-hover:scale-105"
                 :src="slide.src"
               />
               <figcaption
-                class="flex flex-auto py-8 items-end pl-4 border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
+                class="flex items-end flex-auto py-8 pl-4 transition-all duration-500 ease-in-out border-gray-700 group-hover:bg-gray-700 group-hover:text-white"
               >
                 <div class="flex flex-col items-start space-y-8">
                   <div class="text-xl">{{ slide.title }}</div>
