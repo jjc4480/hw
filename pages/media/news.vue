@@ -33,29 +33,9 @@ const newsList = [
     "
     ref="article"
   >
-    <div class="container mx-auto py-20 flex justify-center max-w-3xl">
-      <input
-        type="search"
-        class="border-b-2 w-3/4 h-14"
-        placeholder="검색어를 입력해주세요"
-      />
-      <button class="border-b-2 px-2" type="submit">
-        <svg
-          width="32"
-          height="32"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M15.755 14.255h-.79l-.28-.27a6.471 6.471 0 0 0 1.57-4.23 6.5 6.5 0 1 0-6.5 6.5c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99 1.49-1.49-4.99-5Zm-6 0c-2.49 0-4.5-2.01-4.5-4.5s2.01-4.5 4.5-4.5 4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5Z"
-          ></path>
-        </svg>
-      </button>
-    </div>
 
     <ul
-      class="container mb-20 grid xl:grid-cols-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5"
+      class="container my-20 grid xl:grid-cols-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5"
     >
       <li
         class="items-center group w-full bg-white hover:bg-gray-700 hover:text-white transition-colors duration-500 ease-in-out"

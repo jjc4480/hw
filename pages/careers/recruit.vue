@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const boardItems = [
+
+
+let posts = ref([
   {
     index: 1,
     tag: "공지사항",
@@ -17,38 +19,51 @@ const boardItems = [
     status: "마감",
   },
 ]
+)  // DB 개념이라고 보면 됨 todo들의 객체가 모여있는 배열
+   
+const serachText = ref('') // 하나의 변수(ref)를 만든다.
+
+const fileteredPosts = computed(() => { 
+  if (serachText.value) {       
+    return posts.value.filter((post) => { 
+      return post.title.includes(serachText.value)   
+    })
+  }
+  else { return posts.value } 
+})
 </script>
 
 <template>
   <div>
-    <h2 class="text-6xl my-20 text-center">Careers</h2>
+    <h2 class="my-20 text-6xl text-center">Careers</h2>
     <div
-      class="project-portfolio-image py-28 bg-fixed bg-center bg-cover"
+      class="bg-fixed bg-center bg-cover project-portfolio-image py-28"
     ></div>
 
-    <div class="container mx-auto py-20 flex justify-center max-w-3xl">
-      <input
+    <div class="container flex justify-center max-w-3xl py-20 mx-auto">
+        <input
         type="search"
-        class="border-b-2 w-3/4 h-14"
+        class="w-3/4 px-2 border-b-2 h-14"
+        v-model="serachText"
         placeholder="검색어를 입력해주세요"
-      />
-      <button class="border-b-2 px-2" type="submit">
-        <svg
+        />
+        <button class="px-2 border-b-2" type="submit">
+          <svg
           width="32"
           height="32"
           fill="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
+          >
+            <path
             d="M15.755 14.255h-.79l-.28-.27a6.471 6.471 0 0 0 1.57-4.23 6.5 6.5 0 1 0-6.5 6.5c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99 1.49-1.49-4.99-5Zm-6 0c-2.49 0-4.5-2.01-4.5-4.5s2.01-4.5 4.5-4.5 4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5Z"
-          ></path>
-        </svg>
-      </button>
+            ></path>
+          </svg>
+        </button>
     </div>
 
-    <div class="container mx-auto pb-20">
-      <table class="table-fixed w-full border-t-2 border-black">
+    <div class="container pb-20 mx-auto">
+      <table class="w-full border-t-2 border-black table-fixed">
         <thead class="hidden">
           <tr>
             <th>tag</th>
@@ -59,38 +74,39 @@ const boardItems = [
         <tbody>
           <tr
             class="border-b hover:bg-slate-100"
-            v-for="item in boardItems"
+            v-for="item in fileteredPosts"
             :key="item.index"
           >
-            <td class="py-8 w-9/12 p-4">
-              <div
+          
+            <td class="w-9/12 p-4 py-8">
+                <div
                 class="flex flex-col md:items-center md:flex-row md:space-x-5"
-              >
-                <div class="p-2 min-w-max w-20 bg-black text-white">
+                >
+                <div class="w-20 p-2 text-center text-white bg-black min-w-max">
                   {{ item.tag }}
                 </div>
-                <div class="text-lg">{{ item.title }}</div>
+                <NuxtLink :to="{ path : '/careers/recruitPost/'.concat(item.index.toString()), params : item}"><div class="text-lg">{{ item.title }}</div></NuxtLink>
               </div>
             </td>
-            <td class="py-8 w-3/12 text-slate-600 text-center">
-              <div class="flex flex-col lg:flex-row space-x-2">
+            <td class="w-3/12 py-8 text-center text-slate-600">
+              <div class="flex flex-col space-x-2 lg:flex-row">
                 <div>{{ item.regDate }} ~</div>
                 <div>{{ item.endDate }}</div>
               </div>
             </td>
-            <td class="py-8 w-2/12 p-4">
+            <td class="w-2/12 p-4 py-8">
               <div
-                class="p-2 min-w-max w-full text-center mx-auto bg-white text-slate-400 border border-slate-400"
+              class="w-full p-2 mx-auto text-center bg-white border min-w-max text-slate-400 border-slate-400"
               >
-                {{ item.status }}
-              </div>
-            </td>
-          </tr>
+              {{ item.status }}
+            </div>
+          </td>
+        </tr>
         </tbody>
       </table>
-      <div class="w-full py-16 flex justify-center">
+      <div class="flex justify-center w-full py-16">
         <div
-          class="mx-2 flex justify-center items-center hover:text-black cursor-pointer text-gray-400"
+          class="flex items-center justify-center mx-2 text-gray-400 cursor-pointer hover:text-black"
         >
           <svg
             width="32"
@@ -106,7 +122,7 @@ const boardItems = [
           </svg>
         </div>
         <div
-          class="mx-2 hover:text-black flex justify-center items-center cursor-pointer text-gray-400"
+          class="flex items-center justify-center mx-2 text-gray-400 cursor-pointer hover:text-black"
         >
           <svg
             width="32"
@@ -121,12 +137,12 @@ const boardItems = [
           </svg>
         </div>
         <div
-          class="mx-2 hover:text-black flex justify-center items-center cursor-pointer text-gray-400 w-10 text-center text-xl py-2 border-b-2 border-gray-400"
+          class="flex items-center justify-center w-10 py-2 mx-2 text-xl text-center text-gray-400 border-b-2 border-gray-400 cursor-pointer hover:text-black"
         >
           1
         </div>
         <div
-          class="mx-2 hover:text-black flex justify-center items-center cursor-pointer text-gray-400"
+          class="flex items-center justify-center mx-2 text-gray-400 cursor-pointer hover:text-black"
         >
           <svg
             width="32"
@@ -141,7 +157,7 @@ const boardItems = [
           </svg>
         </div>
         <div
-          class="mx-2 hover:text-black flex justify-center items-center cursor-pointer text-gray-400"
+          class="flex items-center justify-center mx-2 text-gray-400 cursor-pointer hover:text-black"
         >
           <svg
             width="32"

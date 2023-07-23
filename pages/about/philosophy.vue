@@ -28,16 +28,11 @@ const infomation = ref() // 소개영역
               : 'pages-fade-left'
           "
         >
-          <h3 class="mt-10 text-6xl font-black space-y-2">Quality</h3>
+          <h3 class="mt-10 text-6xl font-black space-y-2">Mission</h3>
           <p class="mt-16 text-xl">
-            Hyoungwon will ensure that all project ts are executed in accordance
-            with contract specifications and drawings, within the contractual
-            time frame, and in compliance with all legal requirements thus
-            providing good value and satisfaction to our client. We do this by
-            employing the best qualified employees and seeking out and using
-            reputable, state of the art equipment's and products. This will
-            produce a service that conforms to specified standards of quality,
-            reliability, and performance.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, deleniti veritatis alias excepturi, 
+            rerum sit dicta, quod ducimus in ullam necessitatibus architecto maiores reiciendis quas accusamus 
+            distinctio nisi temporibus voluptatum?
             <br />
           </p>
         </section>
@@ -74,14 +69,11 @@ const infomation = ref() // 소개영역
               : 'pages-fade-left'
           "
         >
-          <h3 class="mt-10 text-6xl font-black space-y-2">Health & Safety</h3>
+          <h3 class="mt-10 text-6xl font-black space-y-2">Vision</h3>
           <p class="mt-16 text-xl">
-            Hyoungwon is fully committed to encouraging a culture of openness
-            within our workforce regarding health and safety. Our policy is to
-            do all that is reasonably practicable to prevent personal injury and
-            damage to property and to protect everyone from foreseeable risks,
-            including the public, insofar as they interface with the Company or
-            our activities.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, deleniti veritatis alias excepturi, 
+            rerum sit dicta, quod ducimus in ullam necessitatibus architecto maiores reiciendis quas accusamus 
+            distinctio nisi temporibus voluptatum?
             <br />
           </p>
         </section>

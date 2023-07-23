@@ -84,7 +84,7 @@ const list = [
         <figure class="lg:w-[25%] w-full overflow-hidden">
           <img
             class="w-full h-full group-hover:scale-110 duration-500 object-cover object-center"
-            src="/img/helena-hertz-wWZzXlDpMog-unsplash.png"
+            src="/img/career.jpg"
           />
         </figure>
       </a>
