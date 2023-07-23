@@ -24,7 +24,7 @@ async function login () {
     error.value = loginData.error
   } else {
     // 로그인 성공
-    return navigateTo('/test')
+    return navigateTo('/')
   }
 }
 </script>

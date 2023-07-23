@@ -22,14 +22,14 @@ const footerPath = [
 
 <template>
   <footer>
-    <div class="bg-gray-600 text-white">
-      <div class="p-8 container mx-auto">
-        <div class="2xl:flex grid grid-cols-4 gap-6 justify-between">
+    <div class="text-white bg-gray-600">
+      <div class="container p-8 mx-auto">
+        <div class="grid justify-between grid-cols-4 gap-6 2xl:flex">
           <figure
-            class="flex md:border-r border-white pr-10 md:col-span-1 col-span-2 min-h-full"
+            class="flex min-h-full col-span-2 pr-10 border-white md:border-r md:col-span-1"
           >
             <img
-              class="lg:w-72 w-32 mx-auto my-auto relative"
+              class="relative w-32 mx-auto my-auto lg:w-72"
               src="/img/logo_footer.png"
             />
           </figure>
@@ -41,17 +41,17 @@ const footerPath = [
             <div>Future</div>
             <div>With Us</div>
           </h2>
-          <nav class="grid md:col-span-1 col-span-2">
+          <nav class="grid col-span-2 md:col-span-1">
             <!-- TODO 주소가 이게 맞나 몰?루 -->
             <a class="text-xl" v-for="link in footerPath" :href="link.path">
               {{ link.name }}
             </a>
           </nav>
           <section>
-            <h2 class="text-xl md:col-span-1 col-span-2 mb-5">
+            <h2 class="col-span-2 mb-5 text-xl md:col-span-1">
               <a href="/projects/portfolio">PROJECTS</a>
             </h2>
-            <h2 class="text-xl md:col-span-1 col-span-2">
+            <h2 class="col-span-2 text-xl md:col-span-1">
               <a href="/capabilities/mechanical">CAPABILITIES</a>
             </h2>
             <ul class="mt-3">
@@ -67,14 +67,14 @@ const footerPath = [
           </section>
           <div class="col-span-2"></div>
           <section class="col-span-4 md:col-span-2">
-            <h2 class="text-xl mb-5">OFFICES</h2>
+            <h2 class="mb-5 text-xl">OFFICES</h2>
             <p>~~~~~ Houston, TX (HQ)</p>
             <p>
               1325 Satellite Blvd Suite 1202,<br> Suwanee, GA 30024 (HQ)
             </p>
           </section>
         </div>
-        <div class="flex gap-10 mt-4 justify-end">
+        <div class="flex justify-end gap-10 mt-4">
           <a href="/">
             <!-- TODO 인스타주소 추가 -->
             <svg
@@ -115,15 +115,15 @@ const footerPath = [
     </div>
     <div class="bg-gray-700">
       <div
-        class="container lg:flex block mx-auto p-8 items-center justify-between text-lg text-white"
+        class="container items-center justify-between block p-8 mx-auto text-lg text-white lg:flex"
       >
         <p>Copyright © 2023 Hyoungwon USA, Inc. All Rights Reserved.</p>
         <div class="flex gap-10">
-          <a class="" href="/test" target="_blank">
+          <a class="" href="/" target="_blank">
             <!-- TODO: 약관추가 -->
             Terms of Service
           </a>
-          <a class="" href="/test" target="_blank">
+          <a class="" href="/" target="_blank">
             <!-- TODO: 개인정보보호 추가 -->
             Privacy Policy
           </a>

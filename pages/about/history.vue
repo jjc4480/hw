@@ -137,7 +137,7 @@ const historyList = {
         },
         {
           month: "12",
-          content: [`Acquired R&D Department’s Certificate`, `Received 58th Day of Export 3M USD` , `Export Tower Awards`],
+          content: [`Acquired R&D Department’s Certificate`, `Received 58th Day of Export 3M USD Export Tower Awards`],
         },
         ]
       },
