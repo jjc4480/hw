@@ -29,7 +29,7 @@ const historyList = {
         history : [
           {
             month: "12",
-            content: `Enrolled LG Display Subcontractor Established Poland Corporation`,
+            content: [`Enrolled LG Display Subcontractor Established Poland Corporation`],
           },
         ]
       },
@@ -38,7 +38,7 @@ const historyList = {
         history : [
           {
             month: "7",
-            content: `Established Vietnam Corporation`,
+            content: [`Established Vietnam Corporation`],
           },
         ]
       },
@@ -47,11 +47,11 @@ const historyList = {
         history : [
           {
             month: "3",
-            content: `Acquired ISO 9001 & 14001`,
+            content: [`Acquired ISO 9001 & 14001`],
           },
           {
             month: "6",
-            content: `Acquired Tier 1 Gas Facilities Construction License`,
+            content: [`Acquired Tier 1 Gas Facilities Construction License`],
           },
         ]
       },
@@ -60,11 +60,11 @@ const historyList = {
         history : [
           {
             month: "9",
-            content: `Enrolled XI C&A Subcontractor`,
+            content: [`Enrolled XI C&A Subcontractor`],
           },
           {
             month: "12",
-            content: `Acquired Fire Protection Service Business Registration`,
+            content: [`Acquired Fire Protection Service Business Registration`],
           },
         ]
       },
@@ -73,7 +73,7 @@ const historyList = {
         history : [
           {
             month: "12",
-            content: `Acquired Mechanical Engineering Construction License`,
+            content: [`Acquired Mechanical Engineering Construction License`],
           },
         ]
       },
@@ -82,7 +82,7 @@ const historyList = {
         history : [
           {
             month: "12",
-            content: `Established HYOUNGWON ENG Co., Ltd`,
+            content: [`Established HYOUNGWON ENG Co., Ltd`],
           },
         ]
       }
@@ -98,15 +98,19 @@ const historyList = {
         history : [
           {
             month: "1",
-            content: `Registered as Korea Semiconductor Industry Association Member`,
+            content: [`Registered as Korea Semiconductor Industry Association Member`],
           },
           {
             month: "3",
-            content: `Established TX, US Corporation`,
+            content: [`Established TX, US Corporation`],
+          },
+          {
+            month : "5",
+            content : [`Enrolled as Samsung ENG & Samsung C&T Corporation’s main Subcontractor`],
           },
           {
             month: "6",
-            content: `Established GA, US Corporation`,
+            content: [`Established GA, US Corporation`],
           },
         ]
         
@@ -116,11 +120,11 @@ const historyList = {
         history : [
           {
             month: "4",
-            content: `Acquired Business Innovation Small and Medium Business Certificate`,
+            content: [`Acquired Business Innovation Small and Medium Business Certificate`],
           },
           {
             month: "12",
-            content: `Awarded XI C&A’s outstanding(Mechanical) Subcontractor`,
+            content: [`Awarded XI C&A’s outstanding(Mechanical) Subcontractor`],
           },
         ]
       },
@@ -129,11 +133,11 @@ const historyList = {
         history : [
         {
           month: "11",
-          content: `Sap Flow Measurement System install for Korea Apple Research Institute`,
+          content: [`Sap Flow Measurement System install for Korea Apple Research Institute`],
         },
         {
           month: "12",
-          content: `Acquired R&D Department’s Certificate Received 58th Day of Export 3M USD Export Tower Awards`,
+          content: [`Acquired R&D Department’s Certificate`, `Received 58th Day of Export 3M USD` , `Export Tower Awards`],
         },
         ]
       },
@@ -162,24 +166,24 @@ const handleClick = (event: MouseEvent) => {
 </script>
 
 <template>
-  <div class="container mx-auto pt-20 mb-20 justify-center overflow-hidden">
+  <div class="container justify-center pt-20 mx-auto mb-20 overflow-hidden">
     <section
       ref="infomation"
-      class="pages-fade mt-20"
+      class="mt-20 pages-fade"
       :class="
         infomation?.offsetTop < scrollTrigger
           ? 'pages-fade-done'
           : 'pages-fade-right'
       "
     >
-      <h2 class="text-6xl mb-40 text-center">History</h2>
+      <h2 class="mb-40 text-6xl text-center">History</h2>
 
       <div
-        class="tab-select font-semibold drop-shadow-md relative text-center flex w-2/4 justify-around mx-auto"
+        class="relative flex justify-around w-2/4 mx-auto font-semibold text-center tab-select drop-shadow-md"
       >
         <span class="inline-block relative min-w-[100]px my-12">
           <button
-            class="tab-button pt-14 leading-9 text-3xl active inline-block"
+            class="inline-block text-3xl leading-9 tab-button pt-14 active"
             @click="handleClick"
             :value="historyList.start.title"
           >
@@ -188,7 +192,7 @@ const handleClick = (event: MouseEvent) => {
         </span>
         <span class="inline-block relative min-w-[100px] my-12">
           <button
-            class="tab-button pt-14 leading-9 text-3xl inline-block"
+            class="inline-block text-3xl leading-9 tab-button pt-14"
             @click="handleClick"
             :value="historyList.present.title"
           >
@@ -202,14 +206,14 @@ const handleClick = (event: MouseEvent) => {
         ref="historyContainer"
       >
         <div
-          class="bg-hw drop-shadow-md flex py-8 px-20 text-white font-semibold flex-col items-center justify-center space-y-4"
+          class="flex flex-col items-center justify-center px-20 py-8 space-y-4 font-semibold text-white bg-hw drop-shadow-md"
         >
           <div class="text-3xl">{{ currentTab.title }}</div>
           <div class="text-4xl">{{ currentTab.range }}</div>
         </div>
 
         <div
-          class="history-container pl-2 md:p-0 container md:mx-auto mt-20 mb-2 w-14"
+          class="container pl-2 mt-20 mb-2 history-container md:p-0 md:mx-auto w-14"
         >
           <img src="/img/logo.png" alt="" />
         </div>
@@ -217,29 +221,29 @@ const handleClick = (event: MouseEvent) => {
           <div
             v-for="(item, index) in currentTab.items"
             :dir="isMobile ? '' : index % 2 === 0 ? 'rtl' : 'ltr'"
-            class="flex flex-col space-y-5 md:space-y-0 mb-8 justify-center py-3 pl-24 md:pl-0 md:items-center md:grid md:grid-cols-7"
+            class="flex flex-col justify-center py-3 pl-24 mb-8 space-y-5 md:pl-0 md:items-center md:grid md:grid-cols-7"
           >
             <div
-              class="text-5xl md:text-3xl font-semibold md:col-start-1 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
+              class="text-5xl font-semibold md:text-3xl md:col-start-1 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
             >
               {{ item.year }}
             </div>
             <div
-              class="hidden md:flex md:w-1/2 md:col-start-4 md:col-end-5 md:justify-center md:items-center bg-black h-[0.5px]"
+              class="hidden h-[0.5px] bg-black md:flex md:w-1/2 md:col-start-4 md:col-end-5 md:justify-center md:items-center"
             ></div>
 
             <div
               v-for="value in item.history"
               class="flex space-x-2 md:col-start-5 md:col-end-7 md:justify-start md:items-center md:space-x-6 rtl:space-x-0 rtl:mr-5 ltr:ml-5"
             >
-              <div class="my-4 flex">
-                <div class="text-3xl md:min-w-[30px] min-w-[50px] rtl:ml-5">
+              <div class="flex my-4">
+                <div class="flex items-center text-3xl md:min-w-[30px] min-w-[50px] rtl:ml-5">
                   {{ value.month }}
                 </div>
                 <div
-                  class="text-lg ltr:ml-6 flex justify-center items-center text-gray-600"
+                  class="flex flex-col space-y-4 text-lg text-gray-600 ltr:ml-6"
                 >
-                  {{ value.content }}
+                  <div  v-for="words in value.content"  class="flex">{{ words }}</div>
                 </div>
               </div>
             </div>

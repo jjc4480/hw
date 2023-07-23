@@ -6,7 +6,7 @@ const footerPath = [
   },
   {
     name: "COMMITMENTS",
-    path: "/commitments/test",
+    path: "/commitments/qhse",
   },
   {
     name: "CAREERS",
@@ -68,14 +68,14 @@ const footerPath = [
           <div class="col-span-2"></div>
           <section class="col-span-4 md:col-span-2">
             <h2 class="text-xl mb-5">OFFICES</h2>
-            <p>Address ~~~~~ Houston, TX (HQ)</p>
+            <p>~~~~~ Houston, TX (HQ)</p>
             <p>
-              Address 1325 Satellite Blvd Suite 1202,<br> Suwanee, GA 30024 (HQ)
+              1325 Satellite Blvd Suite 1202,<br> Suwanee, GA 30024 (HQ)
             </p>
           </section>
         </div>
         <div class="flex gap-10 mt-4 justify-end">
-          <a href="/test">
+          <a href="/">
             <!-- TODO 인스타주소 추가 -->
             <svg
               class="w-7 h-7"
@@ -87,7 +87,7 @@ const footerPath = [
               />
             </svg>
           </a>
-          <a href="/test">
+          <a href="/">
             <!-- TODO 링크드인 추가 -->
             <svg
               class="w-7 h-7"
@@ -100,7 +100,6 @@ const footerPath = [
             </svg>
           </a>
           <a href="https://www.facebook.com/Hyoungwon.Inc/">
-            <!-- TODO 페이스북 추가 -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="w-7 h-7"
