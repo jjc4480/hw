@@ -59,7 +59,7 @@ const slideList = [
         :modules="[SwiperAutoplay, SwiperNavigation, Scrollbar]"
       >
         <SwiperSlide v-for="slide in slideList" class="h-auto mb-10">
-          <NuxtLink
+          <a
             class="block h-full group transition-all duration-500 ease-in-out"
             href="/commitments/qhse"
           >
@@ -74,7 +74,7 @@ const slideList = [
                 {{ slide.title }}
               </figcaption>
             </figure>
-          </NuxtLink>
+          </a>
         </SwiperSlide>
       </Swiper>
     </div>

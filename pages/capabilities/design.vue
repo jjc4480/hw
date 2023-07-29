@@ -31,7 +31,7 @@ const slideList = [
 
 <template>
   <div>
-    <h2 class="my-20 text-6xl text-center">Design</h2>
+    <h2 class="my-20 text-6xl font-black text-center">Design</h2>
     <div
       class="py-56 bg-fixed bg-center bg-cover capabilities-design"
     ></div>
@@ -84,7 +84,7 @@ const slideList = [
         }"
       >
         <SwiperSlide v-for="slide in slideList" class="h-auto mb-10">
-          <NuxtLink
+          <a
             class="block h-full transition-all duration-500 ease-in-out group"
             href="#"
           >
@@ -102,7 +102,7 @@ const slideList = [
                 </div>
               </figcaption>
             </figure>
-          </NuxtLink>
+          </a>
         </SwiperSlide>
         <div class="swiper-scrollbar" />
       </Swiper>

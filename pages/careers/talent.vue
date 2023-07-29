@@ -34,14 +34,14 @@ const list = [
     </h2>
 
     <ul
-      class="grid items-center justify-center  grid-cols-4 border-t-4 border-black"
+      class="grid items-center justify-center grid-cols-4 border-t-4 border-black"
     >
       <li v-for="item in list" class="flex col-span-4 gap-10 py-20 border-b xl:col-span-2">
         <div class="w-1/6">
           <img class="object-contain" :src="item.icon" />
         </div>
 
-        <div class="flex flex-col w-3/4 justify-center">
+        <div class="flex flex-col w-3/4 px-6 justify-center">
           <div class="flex mb-6 text-3xl font-bold" :class="[`text-${item.color}`]">{{ item.title }}</div>
 
           <div class="flex text-2xl">
@@ -52,7 +52,7 @@ const list = [
     </ul>
 
     <div class="my-16">
-      <NuxtLink
+      <a
         class="flex container justify-center lg:max-w-[100%] lg:h-auto h-64 mx-auto group duration-700 delay-75 relative"
         href="/careers/recruit"
       >
@@ -80,7 +80,7 @@ const list = [
             src="/img/career.jpg"
           />
         </figure>
-      </NuxtLink>
+      </a>
     </div>
   </div>
 </template>

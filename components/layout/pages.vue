@@ -34,13 +34,13 @@ onMounted(() => {
 <template>
   <div>
     <div class="overflow-hidden relative w-full h-full">
-      <div class="w-full h-full absolute z-1 left-0 top-0 bg-cover " :class="[isMount ? ['scale-110', 'duration-[3000ms]', 'transition-all'] : '', `${label.toLowerCase()}-navigation`]"></div>
+      <div class="w-full h-full absolute z-1 left-0 top-0 bg-cover " :class="[isMount ? ['scale-110', 'duration-[4000ms]', 'transition-all'] : '', `${label.toLowerCase()}-navigation`]"></div>
       <div
         class="pages-layout flex flex-col w-full h-[75vh] items-center "
       >
         <section class="flex flex-auto items-center pt-24">
           <h2
-            class="pages-fade  text-5xl text-white font-black duration-700"
+            class="pages-fade  text-5xl text-white font-black duration-1000"
             :class="isMount ? 'pages-fade-done' : 'pages-fade-bottom'"
           >
             {{ label }}

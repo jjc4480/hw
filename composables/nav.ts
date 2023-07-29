@@ -13,7 +13,10 @@ const nav = {
     { name: "Design", path: "design" },
     { name: "Pipeline", path: "pipeline" },
   ],
-  Commitments: [{ name: "QHSE", path: "qhse" }],
+  Commitments: [
+    { name: "QHSE", path: "qhse" }, 
+    { name: "Management", path: "management" },
+  ],
   Media: [{ name: "News", path: "news" }],
   Careers: [
     { name: "Talent", path: "talent" },
