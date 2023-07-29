@@ -50,7 +50,7 @@ const route = useRoute(); // 라우트 감지용
       "
     >
       <li>
-        <a
+        <NuxtLink
           class="py-1 block"
           v-for="list in pathList"
           :class="{
@@ -59,7 +59,7 @@ const route = useRoute(); // 라우트 감지용
           :href="`/${label.toLowerCase()}/${list.path}`"
         >
           {{ list.name }}
-        </a>
+        </NuxtLink>
       </li>
     </ul>
   </div>

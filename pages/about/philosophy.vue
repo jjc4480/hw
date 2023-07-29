@@ -15,29 +15,29 @@ const infomation = ref() // 소개영역
 <template>
   <div>
     <div
-      class="flex flex-col container items-center mx-auto py-20 gap-20 justify-center overflow-hidden"
+      class="container flex flex-col items-center justify-center gap-20 py-20 mx-auto overflow-hidden"
     >
       <div class="flex gap-20">
         <!-- mobile 일 경우, 이미지가 밑으로. -->
 
         <section
-          class="pages-fade flex flex-col w-1/2"
+          class="flex flex-col w-1/2 pages-fade break-keep"
           :class="
             image1?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
               : 'pages-fade-left'
           "
         >
-          <h3 class="mt-10 text-6xl font-black space-y-2">Mission</h3>
+          <h3 class="mt-10 space-y-2 text-6xl font-black">Mission</h3>
           <p class="mt-16 text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, deleniti veritatis alias excepturi, 
-            rerum sit dicta, quod ducimus in ullam necessitatibus architecto maiores reiciendis quas accusamus 
-            distinctio nisi temporibus voluptatum?
+            Our Core Value is benefiting oneself and others. We the “HYOUNGWON” cares employees, clients, and society. 
+            By benefiting oneself and others, we do believe that we can create and change the working atmosphere and environment around us.
+            Therefore, our mission is crystal clear. We grow together and build bright future together. 
             <br />
           </p>
         </section>
         <figure
-          class="pages-fade flex w-1/2"
+          class="flex w-1/2 pages-fade"
           :class="
             image1?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -45,13 +45,13 @@ const infomation = ref() // 소개영역
           "
           ref="image1"
         >
-          <img class="w-full object-cover" src="/img/Qhse1.jpg" />
+          <img class="object-cover w-full" src="/img/mission.jpg" />
         </figure>
       </div>
       <div class="flex gap-20">
         <!-- mobile 일 경우, 이미지가 밑으로. -->
         <figure
-          class="pages-fade flex w-1/2"
+          class="flex w-1/2 pages-fade"
           :class="
             image2?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -59,17 +59,17 @@ const infomation = ref() // 소개영역
           "
           ref="image2"
         >
-          <img class="w-full object-cover" src="/img/Qhse2.jpg" />
+          <img class="object-cover w-full" src="/img/Qhse2.jpg" />
         </figure>
         <section
-          class="pages-fade flex flex-col w-1/2"
+          class="flex flex-col w-1/2 pages-fade"
           :class="
             image2?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
               : 'pages-fade-left'
           "
         >
-          <h3 class="mt-10 text-6xl font-black space-y-2">Vision</h3>
+          <h3 class="mt-10 space-y-2 text-6xl font-black">Vision</h3>
           <p class="mt-16 text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, deleniti veritatis alias excepturi, 
             rerum sit dicta, quod ducimus in ullam necessitatibus architecto maiores reiciendis quas accusamus 

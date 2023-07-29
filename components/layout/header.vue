@@ -41,7 +41,7 @@ const color = computed(() => {
     <div
       class="container lg:max-w-[90%] flex gap-5 relative 2xl:items-start items-center 2xl:justify-start justify-between"
     >
-      <a class="flex w-96" href="/">
+      <NuxtLink class="flex w-96" href="/">
         <Transition name="header-small">
           <figure v-show="!store.header.nav" class="py-6 px-8 cursor-pointer">
             <ClientOnly>
@@ -65,7 +65,7 @@ const color = computed(() => {
             </ClientOnly>
           </figure>
         </Transition>
-      </a>
+      </NuxtLink>
 
       <Pc class="2xl:flex hidden" :color="color"></Pc>
 

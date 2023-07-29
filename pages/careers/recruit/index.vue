@@ -85,7 +85,7 @@ const fileteredPosts = computed(() => {
                 <div class="w-20 p-2 text-center text-white bg-black min-w-max">
                   {{ item.tag }}
                 </div>
-                <NuxtLink :to="{ path : '/careers/recruitPost/'.concat(item.index.toString()), params : item}"><div class="text-lg">{{ item.title }}</div></NuxtLink>
+                <NuxtLink :to="{ path : `/careers/recruit/${item.index}`, params : item}"><div class="text-lg">{{ item.title }}</div></NuxtLink>
               </div>
             </td>
             <td class="w-3/12 py-8 text-center text-slate-600">

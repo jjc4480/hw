@@ -1,93 +1,86 @@
 <script setup lang="ts">
 const list = [
   {
-    icon: "/img/icon-Mechanical.png",
-    title: "창의적인 인재",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    icon: "/img/talent_1.png",
+    title: "Creativity",
+    content: "People who change the world with creativity and innovation",
+    color : ''
   },
   {
-    icon: "/img/icon-Mechanical.png",
-    title: "창의적인 인재",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    icon: "/img/talent_2.png",
+    title: "Intergrity",
+    content: "People who fulfill his or her role and responsibilities with honesty and good behavior",
+    color : ''
   },
   {
-    icon: "/img/icon-Mechanical.png",
-    title: "창의적인 인재",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    icon: "/img/talent_3.png",
+    title: "Team Spirit",
+    content: "People who desire to work together and support each other",
+    color : ''
   },
   {
-    icon: "/img/icon-Mechanical.png",
-    title: "창의적인 인재",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    icon: "/img/talent_4.png",
+    title: "Passion",
+    content: "People who challenge the future with constant passion",
+    color : ''
   },
 ]
 </script>
 
 <template>
-  <div class="px-8 mx-auto container">
-    <h2 class="text-6xl mt-20 text-center">
-      Talent Lorem ipsum dolor sit amet
+  <div class="container px-8 mx-auto">
+    <h2 class="my-10 text-6xl font-extrabold leading-relaxed text-center">
+      <span class="text-hw">HYOUNGWON</span> is looking<br/>for talented people
     </h2>
-    <h2 class="font-bold text-6xl my-10 text-center">asdasdff</h2>
 
     <ul
-      class="flex items-center justify-center flex-wrap border-t-4 border-black pt-20"
+      class="grid items-center justify-center grid-cols-4 border-t-4 border-black"
     >
-      <li v-for="item in list" class="flex py-10 border-b">
-        <div class="w-24 mx-12">
-          <img :src="item.icon" />
+      <li v-for="item in list" class="flex col-span-4 py-20 border-b xl:col-span-2">
+        <div class="w-24">
+          <img width="200" :src="item.icon" />
         </div>
 
         <div class="flex flex-col">
-          <div class="flex font-bold text-3xl mb-6">{{ item.title }}</div>
+          <div class="flex mb-6 text-3xl font-bold" :class=item.color>{{ item.title }}</div>
 
-          <div class="flex text-lg">
+          <div class="flex text-2xl">
             {{ item.content }}
           </div>
         </div>
       </li>
     </ul>
 
-    <div class="">
-      <a
-        class="lg:flex container justify-center lg:max-w-[100%] lg:h-auto h-20 mx-auto group duration-700 hidden py-20 delay-75"
+    <div class="my-16">
+      <NuxtLink
+        class="flex container justify-center lg:max-w-[100%] lg:h-auto h-64 mx-auto group duration-700 delay-75 relative"
         href="/careers/recruit"
       >
         <section
-          class="lg:w-[55%] flex flex-col justify-center w-full lg:h-auto h-full lg:pl-16 pl-0 lg:bg-hw bg-black/50 z-10 text-center"
+          class="lg:w-[55%] py-8 flex flex-col justify-center w-full lg:h-auto h-full lg:pl-16 pl-0 top-0 left-0 lg:static absolute lg:bg-hw bg-black/50 z-10 text-center"
         >
           <h2
-            class="2xl:text-5xl text-3xl text-white font-black leading-snug lg:text-left text-center"
+            class="text-3xl font-black leading-snug text-center text-white 2xl:text-5xl lg:text-left"
           >
             Careers
           </h2>
           <p
-            class="mt-10 2xl:text-xl text-lg text-white leading-tight lg:text-left text-center"
+            class="mt-10 text-lg leading-tight text-center text-white 2xl:text-xl lg:text-left"
           >
             We embrace people of all backgrounds, experiences,<br />
             culture, styles and talents. Join us!
           </p>
-          <div class="lg:flex hidden mt-8">
+          <div class="mt-8 lg:flex">
             <span class="text-white 2xl:text-2xl lg:text-lg">View More</span>
-            <svg
-              class="w-8 h-8 ml-10 group-hover:ml-16 fill-white duration-150"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-              />
-            </svg>
           </div>
         </section>
         <figure class="lg:w-[25%] w-full overflow-hidden">
           <img
-            class="w-full h-full group-hover:scale-110 duration-500 object-cover object-center"
+            class="object-cover object-center w-full h-full duration-500 group-hover:scale-110"
             src="/img/career.jpg"
           />
         </figure>
-      </a>
+      </NuxtLink>
     </div>
   </div>
 </template>

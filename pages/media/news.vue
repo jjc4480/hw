@@ -41,7 +41,7 @@ const newsList = [
         class="items-center group w-full bg-white hover:bg-gray-700 hover:text-white transition-colors duration-500 ease-in-out"
         v-for="news in newsList"
       >
-        <a
+        <NuxtLink
           :href="news.src"
           class="relative px-10 pt-10 pb-0 h-96 flex overflow-hidden"
         >
@@ -57,7 +57,7 @@ const newsList = [
               alt="hyoungwon news"
             />
           </div>
-        </a>
+        </NuxtLink>
       </li>
     </ul>
   </div>
