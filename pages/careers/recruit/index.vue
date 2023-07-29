@@ -5,22 +5,14 @@ let posts = ref([
   {
     index: 1,
     tag: "공지사항",
-    title: "[형원이엔지] 경영관리부 (세무회계) 경력직 채용",
-    regDate: "2022-09-19",
-    endDate: "2022-12-31",
-    status: "마감",
-  },
-  {
-    index: 2,
-    tag: "공지사항",
-    title: "[형원이엔지] 경영관리부 (세무회계) 경력직 채용",
+    title: "[형원이엔지] 해외사업부 신규 채용(샘플)",
     regDate: "2022-09-19",
     endDate: "2022-12-31",
     status: "마감",
   },
 ]
 )  // DB 개념이라고 보면 됨 todo들의 객체가 모여있는 배열
-   
+
 const serachText = ref('') // 하나의 변수(ref)를 만든다.
 
 const fileteredPosts = computed(() => { 
@@ -36,10 +28,6 @@ const fileteredPosts = computed(() => {
 <template>
   <div>
     <h2 class="my-20 text-6xl text-center">Careers</h2>
-    <div
-      class="bg-fixed bg-center bg-cover project-portfolio-image py-28"
-    ></div>
-
     <div class="container flex justify-center max-w-3xl py-20 mx-auto">
         <input
         type="search"
@@ -85,7 +73,8 @@ const fileteredPosts = computed(() => {
                 <div class="w-20 p-2 text-center text-white bg-black min-w-max">
                   {{ item.tag }}
                 </div>
-                <NuxtLink :to="{ path : `/careers/recruit/${item.index}`, params : item}"><div class="text-lg">{{ item.title }}</div></NuxtLink>
+                <!-- <NuxtLink :to="{ path : `/careers/recruit/${item.index}`, params : item}"><div class="text-lg">{{ item.title }}</div></NuxtLink> -->
+                <div class="text-lg">{{ item.title }}</div>
               </div>
             </td>
             <td class="w-3/12 py-8 text-center text-slate-600">
