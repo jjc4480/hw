@@ -21,7 +21,7 @@ const store = useUiStore(); // ui store
       @mouseleave="store.headerNavToggle({ open: false })"
     >
       <nav v-for="(list, key) in pathList" :key="key">
-        <a
+        <NuxtLink
           class="block pb-8 px-8 text-xl font-bold duration-300"
           :class="[
             color == 'white' || store.header.nav
@@ -31,13 +31,13 @@ const store = useUiStore(); // ui store
           :href="`/${useLowcase(key)}/${list[0].path}`"
         >
           {{ key }}
-        </a>
+        </NuxtLink>
         <ul
           class="gnb-list grid text-center"
           :class="store.header.nav ? 'opacity-100' : 'opacity-0'"
         >
           <li v-for="child in list" :key="child.name">
-            <a
+            <NuxtLink
               class="block py-1 hover:font-block"
               :class="[
                 color == 'white' || store.header.nav
@@ -47,7 +47,7 @@ const store = useUiStore(); // ui store
               :href="`/${useLowcase(key)}/${child.path}`"
             >
               {{ child.name }}
-            </a>
+            </NuxtLink>
           </li>
         </ul>
       </nav>

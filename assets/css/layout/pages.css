@@ -1,30 +1,32 @@
 /* about page background image */
 .about-navigation {
-  background: url("/img/noah-buscher-x8ZStukS2PM-unsplash.jpg") center center
-    no-repeat;
+  background: url("/img/noah-buscher-x8ZStukS2PM-unsplash.jpg") center center no-repeat;
+  background-size : cover;
 }
 
 .projects-navigation {
   background: url("/img/projects.jpg") center center no-repeat;
+  background-size : cover;
 }
 
 .capabilities-navigation {
-  background: url("/img/jakub-pabis-vOtSZd_8Af4-unsplash.jpg") center center
-    no-repeat;
+  background: url("/img/jakub-pabis-vOtSZd_8Af4-unsplash.jpg") center center no-repeat;
+  background-size : cover;
 }
 
 .commitments-navigation {
-  background: url("/img/dean-brierley-yTyXzvRJCUQ-unsplash.jpg") center center
-    no-repeat;
+  background: url("/img/dean-brierley-yTyXzvRJCUQ-unsplash.jpg") center center no-repeat;
+  background-size : cover;
 }
 
 .media-navigation {
   background: url("/img/media.jpg") center center no-repeat;
+  background-size : cover;
 }
 
 .careers-navigation {
-  background: url("/img/hunters-race-MYbhN8KaaEc-unsplash.jpg") center center
-    no-repeat;
+  background: url("/img/hunters-race-MYbhN8KaaEc-unsplash.jpg") center center no-repeat;
+  background-size : cover;
 }
 
 /* 공통으로 사용되는 pages 컴포넌트의 nav active시 효과 */

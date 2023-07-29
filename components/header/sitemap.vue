@@ -63,12 +63,12 @@ watch(siteMap, (n, o) => {
           </h2>
           <ul class="lg:mt-20 mt-5 text-white hover:text-gray-400/50">
             <li class="overflow-hidden" v-for="child in list">
-              <a
+              <NuxtLink
                 class="block py-3 hover:text-white hover:font-block duration-300"
                 :href="`/${useLowcase(key)}/${child.path}`"
               >
                 {{ child.name }}
-              </a>
+              </NuxtLink>
             </li>
           </ul>
         </article>

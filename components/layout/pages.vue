@@ -33,20 +33,22 @@ onMounted(() => {
 
 <template>
   <div>
-    <div
-      class="pages-layout flex flex-col w-full h-[75vh] items-center"
-      :class="`${label.toLowerCase()}-navigation`"
-    >
-      <section class="flex flex-auto items-center pt-24">
-        <h2
-          class="pages-fade opacity-0 text-5xl text-white font-black delay-300 duration-700"
-          :class="isMount ? 'pages-fade-done' : 'pages-fade-bottom'"
-        >
-          {{ label }}
-        </h2>
-      </section>
-      <Pc class="2xl:flex hidden" :label="label"></Pc>
-      <Mobile class="2xl:hidden block" :label="label"></Mobile>
+    <div class="overflow-hidden relative w-full h-full">
+      <div class="w-full h-full absolute z-1 left-0 top-0 bg-cover " :class="[isMount ? ['scale-110', 'duration-[3000ms]', 'transition-all'] : '', `${label.toLowerCase()}-navigation`]"></div>
+      <div
+        class="pages-layout flex flex-col w-full h-[75vh] items-center "
+      >
+        <section class="flex flex-auto items-center pt-24">
+          <h2
+            class="pages-fade  text-5xl text-white font-black duration-700"
+            :class="isMount ? 'pages-fade-done' : 'pages-fade-bottom'"
+          >
+            {{ label }}
+          </h2>
+        </section>
+        <Pc class="2xl:flex hidden" :label="label"></Pc>
+        <Mobile class="2xl:hidden block" :label="label"></Mobile>
+      </div>
     </div>
     <ScrollTrigger :rate="0.6" @update-scroll="updateScroll">
       <NuxtPage :scrollTrigger="scrollTrigger" />

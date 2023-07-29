@@ -9,7 +9,7 @@ const store = useUiStore() // ui store
     :class="{ open: store.careers }"
   >
     <div class="pt-[20vh]">
-      <a
+      <NuxtLink
         class="flex container justify-center lg:max-w-[100%] lg:h-auto h-48 mx-auto group duration-700 translate-y-10 opacity-0 delay-75 relative"
         href="/careers/recruit"
       >
@@ -47,7 +47,7 @@ const store = useUiStore() // ui store
             src="/img/career.jpg"
           />
         </figure>
-      </a>
+      </NuxtLink>
     </div>
     <div
       class="careers-contact flex flex-auto items-center justify-center mt-20 py-20 overflow-hidden relative group"

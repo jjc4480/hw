@@ -84,7 +84,7 @@ const slideList = [
         }"
       >
         <SwiperSlide v-for="slide in slideList" class="h-auto mb-10">
-          <a
+          <NuxtLink
             class="block h-full transition-all duration-500 ease-in-out group"
             href="#"
           >
@@ -94,18 +94,20 @@ const slideList = [
                 :src="slide.src"
               />
               <figcaption
-                class="flex items-end flex-auto py-8 pl-4 transition-all duration-500 ease-in-out border-gray-700 group-hover:bg-gray-700 group-hover:text-white"
+                class="flex items-end flex-auto py-16 pl-4 transition-all duration-500 ease-in-out border-gray-700 group-hover:bg-gray-700 group-hover:text-white"
               >
-                <div class="flex flex-col items-start space-y-8">
+                <div class="flex flex-col items-start space-y-10">
                   <div class="text-xl">{{ slide.title }}</div>
                   <div class="project_content" v-html="slide.content"></div>
                 </div>
               </figcaption>
             </figure>
-          </a>
+          </NuxtLink>
         </SwiperSlide>
         <div class="swiper-scrollbar" />
       </Swiper>
+
+      <iframe class="w-full h-[50rem]" src="https://www.youtube.com/embed/YK_r9hCSjh0?controls=0" title="hyoungwon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </div>
 </template>
