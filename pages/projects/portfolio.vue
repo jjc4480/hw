@@ -47,7 +47,7 @@ const handleClick = (event: MouseEvent) => {
         title?.offsetTop < scrollTrigger ? 'pages-fade-done' : 'pages-fade-top'
       "
     >
-      <h2 class="mb-20 text-6xl text-center">portfolio</h2>
+      <h2 class="mb-20 text-6xl text-center font-black">portfolio</h2>
     </section>
   </div>
   <div class="py-56 bg-fixed bg-center bg-cover project-portfolio-image"></div>

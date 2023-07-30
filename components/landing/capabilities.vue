@@ -100,7 +100,7 @@ onMounted(() => {
             v-for="list in items"
             @mouseover="changeActive(list.title)"
           >
-            <NuxtLink
+            <a
               :href="list.href"
               :class="
                 ['LOGO', 'Comming soon'].includes(list.title)
@@ -123,7 +123,7 @@ onMounted(() => {
               >
                 {{ list.title == "LOGO" ? "" : list.title }}
               </span>
-            </NuxtLink>
+            </a>
           </li>
         </ul>
       </section>

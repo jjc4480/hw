@@ -176,7 +176,7 @@ const handleClick = (event: MouseEvent) => {
           : 'pages-fade-right'
       "
     >
-      <h2 class="mb-40 text-6xl text-center">History</h2>
+      <h2 class="mb-40 text-6xl text-center font-black">History</h2>
 
       <div
         class="relative flex justify-around w-2/4 mx-auto font-semibold text-center tab-select drop-shadow-md"
@@ -221,9 +221,9 @@ const handleClick = (event: MouseEvent) => {
           <div
             v-for="(item, index) in currentTab.items"
             :dir="isMobile ? '' : index % 2 === 0 ? 'rtl' : 'ltr'"
-            class="flex flex-col justify-center py-3 pl-24 mb-8 space-y-5 md:pl-0 md:items-center md:grid md:grid-cols-7"
+            class="flex flex-col justify-center py-3 pl-24 mb-8 space-y-2 md:pl-0 md:items-center md:grid md:grid-cols-7"
           >
-            <div
+            <div  
               class="text-5xl font-semibold md:text-3xl md:col-start-1 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
             >
               {{ item.year }}

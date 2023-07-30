@@ -17,9 +17,9 @@ const route = useRoute(); // 라우트 감지용
 </script>
 
 <template>
-  <div class="w-full text-center relative">
+  <div class="w-full text-center relative z-20 -top-12">
     <section
-      class="py-3 bg-hw/80 text-white relative"
+      class="py-3 bg-hw/60 text-white relative"
       @click="menuOpen = !menuOpen"
     >
       <h2>{{ label }}</h2>
@@ -50,7 +50,7 @@ const route = useRoute(); // 라우트 감지용
       "
     >
       <li>
-        <NuxtLink
+        <a
           class="py-1 block"
           v-for="list in pathList"
           :class="{
@@ -59,7 +59,7 @@ const route = useRoute(); // 라우트 감지용
           :href="`/${label.toLowerCase()}/${list.path}`"
         >
           {{ list.name }}
-        </NuxtLink>
+        </a>
       </li>
     </ul>
   </div>

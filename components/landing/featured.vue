@@ -160,7 +160,7 @@ const slideList = [
         }"
       >
         <SwiperSlide v-for="slide in slideList" class="h-auto mb-10">
-          <NuxtLink
+          <a
             class="block h-full group transition-all duration-500 ease-in-out"
             href="/projects/portfolio"
           >
@@ -178,7 +178,7 @@ const slideList = [
                 </div>
               </figcaption>
             </figure>
-          </NuxtLink>
+          </a>
         </SwiperSlide>
         <div class="swiper-scrollbar" />
       </Swiper>

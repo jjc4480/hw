@@ -17,11 +17,11 @@ const infomation = ref() // 소개영역
     <div
       class="flex flex-col container items-center mx-auto py-20 gap-20 justify-center overflow-hidden"
     >
-      <div class="flex gap-20">
+      <div class="flex flex-col-reverse md:flex-row gap-x-20 gap-y-10">
         <!-- mobile 일 경우, 이미지가 밑으로. -->
 
         <section
-          class="pages-fade flex flex-col w-1/2"
+          class="pages-fade flex flex-col w-full md:w-1/2"
           :class="
             image1?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -42,7 +42,7 @@ const infomation = ref() // 소개영역
           </p>
         </section>
         <figure
-          class="pages-fade flex w-1/2"
+          class="pages-fade flex w-full md:w-1/2"
           :class="
             image1?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -53,10 +53,10 @@ const infomation = ref() // 소개영역
           <img class="w-full object-cover" src="/img/Qhse1.jpg" />
         </figure>
       </div>
-      <div class="flex gap-20">
+      <div class="flex flex-col md:flex-row gap-x-20 gap-y-10">
         <!-- mobile 일 경우, 이미지가 밑으로. -->
         <figure
-          class="pages-fade flex w-1/2"
+          class="pages-fade flex w-full md:w-1/2"
           :class="
             image2?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -67,7 +67,7 @@ const infomation = ref() // 소개영역
           <img class="w-full object-cover" src="/img/Qhse2.jpg" />
         </figure>
         <section
-          class="pages-fade flex flex-col w-1/2"
+          class="pages-fade flex flex-col w-full  md:w-1/2"
           :class="
             image2?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -86,11 +86,11 @@ const infomation = ref() // 소개영역
           </p>
         </section>
       </div>
-      <div class="flex gap-20">
+      <div class="flex flex-col-reverse md:flex-row gap-x-20 gap-y-10">
         <!-- mobile 일 경우, 이미지가 밑으로. -->
 
         <section
-          class="pages-fade flex flex-col w-1/2"
+          class="pages-fade flex flex-col w-full md:w-1/2"
           :class="
             image3?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -108,7 +108,7 @@ const infomation = ref() // 소개영역
           </p>
         </section>
         <figure
-          class="pages-fade flex w-1/2"
+          class="pages-fade flex w-full md:w-1/2"
           :class="
             image3?.offsetTop < scrollTrigger
               ? 'pages-fade-done'

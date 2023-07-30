@@ -16,7 +16,7 @@ const pathList = useNavFinder(props.label); // path 리스트
 <template>
   <div class="w-[90vw] ml-auto gap-20 justify-center relative bg-hw/70">
     <nav class="flex mx-auto pr-[10vw]">
-      <NuxtLink
+      <a
         v-for="list in pathList"
         class="block w-52 py-6 text-2xl text-gray-400 text-center relative hover:text-white duration-300 before:absolute before:top-0 before:left-0 before:w-full before:h-1 before:bg-white before:transition-all before:duration-300 before:ease-in-out before:transform before:scale-x-0 hover:before:scale-x-100"
         :class="{
@@ -29,7 +29,7 @@ const pathList = useNavFinder(props.label); // path 리스트
           class="w-0 h-0 absolute top-1 left-2/4 -translate-x-1/2 border-l-8 border-l-transparent border-t-8 border-b-white border-r-8 border-r-transparent"
         >
         </span>
-      </NuxtLink>
+      </a>
     </nav>
   </div>
 </template>
