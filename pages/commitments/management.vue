@@ -15,8 +15,9 @@ const image1 = ref() // 이미지 영역
     <div
       class="flex flex-col container items-center mx-auto py-20 gap-20 justify-center overflow-hidden"
     >
-      <div class="flex gap-20">
+      <div class="flex h-screen gap-20">
         <section
+          ref="image1"
           class="pages-fade flex flex-col w-1/2"
           :class="
             image1?.offsetTop < scrollTrigger

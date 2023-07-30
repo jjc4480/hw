@@ -47,9 +47,9 @@ onMounted(() => {
           </h2>
         </section>
         <Pc class="2xl:flex hidden" :label="label"></Pc>
-        <Mobile class="2xl:hidden block" :label="label"></Mobile>
       </div>
     </div>
+    <Mobile class="2xl:hidden block" :label="label"></Mobile>
     <ScrollTrigger :rate="0.6" @update-scroll="updateScroll">
       <NuxtPage :scrollTrigger="scrollTrigger" />
     </ScrollTrigger>
