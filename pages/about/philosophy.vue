@@ -44,6 +44,16 @@ onMounted(() => {
       moveToScroll()
     }
   })
+
+  
+  window.addEventListener("keydown" , (e) => {
+    e.preventDefault();
+    // esc 경우 모달 닫아줌
+    if(e.key === "Escape") {
+      closeVisionModal()
+    }
+  })
+
 })
 
 
