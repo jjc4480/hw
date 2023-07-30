@@ -62,13 +62,13 @@ onMounted(() => {
 <template>
   <div class="relative" ref="wrapper">
     <div
-      class="container flex flex-col items-center justify-center gap-20 py-20 mx-auto overflow-hidden"
+      class="container flex flex-col items-center justify-center gap-x-20 gap-y-10 py-20 mx-auto overflow-hidden"
     >
-      <div class="flex gap-20">
+      <div class="flex flex-col-reverse md:flex-row items-center md:items-start  gap-x-20 gap-y-10">
         <!-- mobile 일 경우, 이미지가 밑으로. -->
 
         <section
-          class="flex flex-col w-1/2 pages-fade break-keep"
+          class="flex flex-col w-full md:w-1/2 pages-fade break-keep"
           :class="
             image1?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -84,7 +84,7 @@ onMounted(() => {
           </p>
         </section>
         <figure
-          class="flex w-1/2 pages-fade"
+          class="flex w-full  md:w-1/2 pages-fade"
           :class="
             image1?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -95,10 +95,10 @@ onMounted(() => {
           <img class="object-cover w-full" src="/img/mission.jpg" />
         </figure>
       </div>
-      <div class="flex gap-20">
+      <div class="flex flex-col md:flex-row items-center md:items-start  gap-x-20 gap-y-10">
         <!-- mobile 일 경우, 이미지가 밑으로. -->
         <figure
-          class="flex w-1/2 pages-fade"
+          class="flex w-full md:w-1/2 pages-fade"
           :class="
             image2?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -109,7 +109,7 @@ onMounted(() => {
           <img class="object-cover w-full" src="/img/Qhse2.jpg" />
         </figure>
         <section
-          class="flex flex-col w-1/2 pages-fade"
+          class="flex flex-col w-full md:w-1/2 pages-fade"
           :class="
             image2?.offsetTop < scrollTrigger
               ? 'pages-fade-done'
@@ -128,7 +128,7 @@ onMounted(() => {
           </p>
         </section>
       </div>
-      <div class="flex gap-20">
+      <div class="flex gap-x-20 gap-y-10">
         <!-- mobile 일 경우, 이미지가 밑으로. -->
       </div>
     </div>

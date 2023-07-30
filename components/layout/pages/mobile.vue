@@ -17,7 +17,7 @@ const route = useRoute(); // 라우트 감지용
 </script>
 
 <template>
-  <div class="w-full text-center relative -top-12">
+  <div class="w-full text-center relative z-20 -top-12">
     <section
       class="py-3 bg-hw/60 text-white relative"
       @click="menuOpen = !menuOpen"
