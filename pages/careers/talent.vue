@@ -4,25 +4,25 @@ const list = [
     icon: "/img/talent_1.png",
     title: "Creativity",
     content: "People who change the world with creativity and innovation",
-    color : ''
+    color : '#10446D'
   },
   {
     icon: "/img/talent_2.png",
     title: "Intergrity",
     content: "People who fulfill his or her role and responsibilities with honesty and good behavior",
-    color : ''
+    color : '#D4BD83'
   },
   {
     icon: "/img/talent_3.png",
     title: "Team Spirit",
     content: "People who desire to work together and support each other",
-    color : ''
+    color : '#B7A196'
   },
   {
     icon: "/img/talent_4.png",
     title: "Passion",
     content: "People who challenge the future with constant passion",
-    color : ''
+    color : '#9B1D20'
   },
 ]
 </script>
@@ -36,15 +36,15 @@ const list = [
     <ul
       class="grid items-center justify-center grid-cols-4 border-t-4 border-black"
     >
-      <li v-for="item in list" class="flex col-span-4 gap-10 py-20 border-b xl:col-span-2">
+      <li v-for="item in list" class="flex col-span-4 gap-10 py-10  lg:py-20 border-b xl:col-span-2">
         <div class="w-1/6">
           <img class="object-contain" :src="item.icon" />
         </div>
 
         <div class="flex flex-col w-3/4 px-6 justify-center">
-          <div class="flex mb-6 text-3xl font-bold" :class="[`text-${item.color}`]">{{ item.title }}</div>
+          <div class="flex mb-6 text-3xl font-bold" :style="`color : ${item.color}`">{{ item.title }}</div>
 
-          <div class="flex text-2xl">
+          <div class="flex h-24 text-2xl">
             {{ item.content }}
           </div>
         </div>

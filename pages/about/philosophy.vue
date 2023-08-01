@@ -106,7 +106,7 @@ onMounted(() => {
           "
           ref="image2"
         >
-          <img class="object-cover w-full" src="/img/Qhse2.jpg" />
+          <img class="object-cover w-full" src="/img/vision.jpg" />
         </figure>
         <section
           class="flex flex-col w-full md:w-1/2 pages-fade"
@@ -118,13 +118,11 @@ onMounted(() => {
         >
           <h3 class="mt-10 space-y-2 text-6xl font-black">Vision</h3>
           <p class="mt-16 text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, deleniti veritatis alias excepturi, 
-            rerum sit dicta, quod ducimus in ullam necessitatibus architecto maiores reiciendis quas accusamus 
-            distinctio nisi temporibus voluptatum?
-
-            
-            <br />
-            <button @click="openVisionModal" class="mt-5 bg-hw px-5 py-3 border rounded-full text-white shadow-lg animate-bounce hover:bg-cyan-600 transition-colors duration-500 ease-in-out"> Click Me!</button>
+            HYOUNGWON's vision is very intuitive. We are preparing for a quantum jump with a long-term goal.<br />
+            <button @click="openVisionModal" 
+              class="mt-5 bg-hw px-5 py-3 border rounded-full text-white shadow-lg animate-bounce hover:bg-cyan-600 transition-colors duration-500 ease-in-out">
+              Check our Vision
+            </button>
           </p>
         </section>
       </div>
@@ -132,7 +130,7 @@ onMounted(() => {
         <!-- mobile 일 경우, 이미지가 밑으로. -->
       </div>
     </div>
-    <div ref="visionModal" @wheel="handleWheel" class="top-0 left-0 absolute w-screen h-screen flex flex-col lg:flex-row transition-all duration-700 ease-in-out" :class="isOpenVisionModal ? 'opacity-100 z-10' : 'opacity-0 -z-10'">
+    <div ref="visionModal" @wheel="handleWheel" class="top-0 left-0 absolute select-none w-screen h-screen flex flex-col lg:flex-row transition-all duration-700 ease-in-out" :class="isOpenVisionModal ? 'opacity-100 z-10' : 'opacity-0 -z-10'">
       <button
           class="absolute top-10 right-10 z-20 flex w-10 h-10 items-center justify-center bg-white rounded-full group"
           type="button"
@@ -153,9 +151,9 @@ onMounted(() => {
         <div class="absolute bottom-0 w-full h-full backdrop-brightness-50 flex justify-center items-end">
           <div class="relative px-8 flex flex-col w-full">
             <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">SYSTEM</h3>
-            <div class="mt-5 text-4xl w-full h-full text-center font-semibold  bg-white text-cyan-950 py-10">
-              <p class="text-4xl w-full h-full">Establish System</p>
-              <p class="text-4xl w-full h-full">Procedure</p>
+            <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
+              <p>Establish System</p>
+              <p>Procedure</p>
             </div>
           </div>
         </div>
@@ -165,9 +163,9 @@ onMounted(() => {
         <div class="absolute bottom-0 w-full h-full backdrop-brightness-50 flex justify-center items-end">
           <div class="relative px-8 flex flex-col w-full">
             <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">EXPANSION</h3>
-            <div class="mt-5 text-4xl w-full h-full text-center font-semibold  bg-white text-cyan-950 py-10">
-              <p class="text-4xl w-full h-full">Expand Business</p>
-              <p class="text-4xl w-full h-full">Area</p>
+            <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
+              <p>Expand Business</p>
+              <p>Area</p>
             </div>
           </div>
         </div>
@@ -177,9 +175,9 @@ onMounted(() => {
         <div class="absolute bottom-0 w-full h-full backdrop-brightness-50 flex justify-center items-end">
           <div class="relative px-8 flex flex-col w-full">
             <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">ACTIVE</h3>
-            <div class="mt-5 text-4xl w-full h-full text-center font-semibold  bg-white text-cyan-950 py-10">
-              <p class="text-4xl w-full h-full">Create Active</p>
-              <p class="text-4xl w-full h-full">Working Environment</p>
+            <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
+              <p>Create Active</p>
+              <p>Working Environment</p>
             </div>
           </div>
         </div>
@@ -189,9 +187,9 @@ onMounted(() => {
         <div class="absolute bottom-0 w-full h-full backdrop-brightness-50 flex justify-center items-end">
           <div class="relative px-8 flex flex-col w-full">
             <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">2025</h3>
-            <div class="mt-5 text-4xl w-full h-full text-center font-semibold  bg-white text-cyan-950 py-10">
-              <p class="text-4xl w-full h-full">Reach Sales</p>
-              <p class="text-4xl w-full h-full">202.5B by 2025</p>
+            <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
+              <p>Reach Sales</p>
+              <p>202.5B by 2025</p>
             </div>
           </div>
         </div>
