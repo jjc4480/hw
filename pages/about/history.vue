@@ -221,7 +221,7 @@ const handleClick = (event: MouseEvent) => {
           <div
             v-for="(item, index) in currentTab.items"
             :dir="isMobile ? '' : index % 2 === 0 ? 'rtl' : 'ltr'"
-            class="flex flex-col justify-center py-3 pl-24 mb-8 space-y-2 md:pl-0 md:items-center md:grid md:grid-cols-7"
+            class="flex flex-col justify-center py-3 pl-24 mb-8 space-y-0 md:pl-0 md:items-center md:grid md:grid-cols-7"
           >
             <div  
               class="text-5xl font-semibold md:text-3xl md:col-start-1 md:col-end-4 ltr:text-right ltr:mr-5 rtl:ml-5 rtl:text-left"
@@ -241,7 +241,7 @@ const handleClick = (event: MouseEvent) => {
                   {{ value.month }}
                 </div>
                 <div
-                  class="flex flex-col space-y-4 text-lg text-gray-600 ltr:ml-6"
+                  class="flex flex-col justify-center space-y-4 text-lg text-gray-600 ltr:ml-6"
                 >
                   <div  v-for="words in value.content"  class="flex">{{ words }}</div>
                 </div>
