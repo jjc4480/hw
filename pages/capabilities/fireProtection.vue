@@ -35,7 +35,7 @@ const slideList = [
     <div
       class="py-56 bg-fixed bg-center bg-cover capabilities-fireProtection"
     ></div>
-    <section class="container mx-auto pt-[20vh]">
+    <section class="container mx-auto pt-[10vh]">
       <h2
         class="text-4xl font-black leading-snug text-black 2xl:px-0 2xl:text-6xl"
       >
@@ -83,7 +83,7 @@ const slideList = [
           el: '.swiper-scrollbar',
         }"
       >
-        <SwiperSlide v-for="slide in slideList" class="h-auto mb-10">
+        <SwiperSlide v-for="slide in slideList" class="h-auto my-10">
           <a
             class="block h-full transition-all duration-500 ease-in-out group"
             href="#"
@@ -93,14 +93,6 @@ const slideList = [
                 class="object-fill h-full transition-all duration-500 ease-in-out group-hover:transform group-hover:scale-105"
                 :src="slide.src"
               />
-              <figcaption
-                class="flex items-end flex-auto py-8 pl-4 transition-all duration-500 ease-in-out border-gray-700 group-hover:bg-gray-700 group-hover:text-white"
-              >
-                <div class="flex flex-col items-start space-y-8">
-                  <div class="text-xl">{{ slide.title }}</div>
-                  <div class="project_content" v-html="slide.content"></div>
-                </div>
-              </figcaption>
             </figure>
           </a>
         </SwiperSlide>
