@@ -95,7 +95,7 @@ onMounted(() => {
           <img class="object-cover w-full" src="/img/mission.jpg" />
         </figure>
       </div>
-      <div class="flex flex-col md:flex-row items-center md:items-start  gap-x-20 gap-y-10">
+      <div class="flex flex-col mt-20 md:flex-row items-center md:items-start  gap-x-20 gap-y-10">
         <!-- mobile 일 경우, 이미지가 밑으로. -->
         <figure
           class="flex w-full md:w-1/2 pages-fade"
