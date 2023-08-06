@@ -33,7 +33,7 @@ const slideList = [
   <div>
     <h2 class="my-20 text-6xl font-black text-center">Fire Protection</h2>
     <div
-      class="py-56 bg-fixed bg-center bg-cover capabilities-fireProtection"
+      class="py-40 bg-fixed bg-center bg-cover capabilities-fireProtection"
     ></div>
     <section class="container mx-auto pt-[10vh]">
       <h2

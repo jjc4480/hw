@@ -30,22 +30,23 @@ const image3 = ref()
               : 'pages-fade-left'
           "
         >
-          <h3 class="text-6xl font-black text-center">Management</h3>
-          <p class="text-2xl">
-            Hyungwon's management policy is as follows. <br />
-            Based on PDCA, we are committed to increasing customer satisfaction by adding our own system, TOS.
-          </p>
+          <h3 class="text-6xl font-black text-center">Quality Management</h3>
+          
           <figure class="mt-20">
             <img src="/img/pdca.png" alt="" />
           </figure>
           <p class="text-2xl">
-            A TOS system is a system that adds Training, Overlap, and Signal, which includes more specific and fractionized procedures during the Plan, Action, and Check phases, respectively.
+            <strong class="font-bold">HYOUNGWON</strong>'s Quality Management is as follows.
             <br /> <br />
-            Training allows you to plan while sharing and training case analysis results.
+            Based on PDCA, we are committed to increasing customer satisfaction by adding our own system, <strong class="text-[#9B1D20] font-bold">TOS</strong>.
+            <br /> <br /> 
+            A <strong class="text-[#9B1D20] font-bold">TOS</strong> system is a system that adds Training, Overlap, and Signal, which includes more specific and fractionized procedures during the Plan, Action, and Check phases, respectively.
             <br /> <br />
-            Overlap provides cross-checking based on the manual and specifies the manager of each task so that action can be performed.
+            <strong class="uppercase text-[#B7A196] font-bold">Training</strong> allows you to plan while sharing and training case analysis results.
             <br /> <br />
-            Signal extracts, analyzes, and improves repeated faults more than three times to complement the check.
+            <strong class="uppercase text-[#10446D] font-bold">Overlap</strong> provides cross-checking based on the manual and specifies the manager of each task so that action can be performed.
+            <br /> <br />
+            <strong class="uppercase text-[#008C95] font-bold">Signal</strong> extracts, analyzes, and improves repeated faults more than three times to complement the check.
           </p>
         </section>
       </div>
