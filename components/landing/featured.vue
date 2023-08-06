@@ -2,80 +2,12 @@
 import { Scrollbar } from "swiper"
 import { useUiStore } from "~/stores/ui"
 
+const projects = useProjects()
+
+
 const store = useUiStore()
 
-const slideList = [
-  // 슬라이드 아이템
-  // { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
-  // { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
-  // { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
-  // { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
-  // { title: 'LG Display - South Korea', src: 'https://placehold.co/1920x1080' },
-  // { title: 'LG Display - Vietnam', src: 'https://placehold.co/1440x900' },
-  // { title: 'LG Innotek - South Korea', src: 'https://placehold.co/1280x1024' },
-  // { title: 'SK Hynix - South Korea', src: 'https://placehold.co/1024x768' },
-  // 여기부터 진짜 나와야 하는 Items들. 해외 우선, 이후 최근년도순
-  {
-    title: "LG Display – H1,2 Project",
-    src: "/img/featured_1.jpg",
-    content:
-      "<span>Classification: EPC</span> <span>Location: Haiphong, Vietnam</span>  <span>Construction Period: 2018~2019</span>",
-  },
-  {
-    title: "LG Electronics",
-    src: "/img/featured_4.jpg",
-    content:
-      "<span>Classification: EPC</span> <span>Location: Incheon, South Korea</span> <span>Construction Period: 2017~2023</span>",
-  },
-  {
-    title: "LG Display - P8 & 9 Project",
-    src: "/img/featured_9.jpg",
-    content:
-      "<span>Classification: EPC</span> <span>Location: Paju, South Korea</span> <span>Construction Period: 2016~2022</span>",
-  },
-  {
-    title: "LG Display - P10 Project",
-    src: "/img/featured_10.jpg",
-    content:
-      "<span>Classification: EPC</span> <span>Location: Paju, South Korea</span> <span>Construction Period: 2017~2021</span>",
-  },
-  {
-    title: "LG Household & Health Care",
-    src: "/img/featured_2.png",
-    content:
-      "<span>Classification: EPC</span> <span>Location: Buyeo, South Korea</span> <span>Construction Period: 2018~2020</span>",
-  },
-  {
-    title: "LG Household & Health Care",
-    src: "/img/featured_3.png",
-    content:
-      "<span>Classification: EPC</span> <span>Location: Cheongju, South Korea</span> <span>Construction Period: 2017~2020</span>",
-  },
-  {
-    title: "LG Display - M2 Project",
-    src: "/img/featured_8.jpg",
-    content:
-      "<span>Classification: EPC</span> <span>Location: Paju, South Korea</span> <span>Construction Period: 2013, 2016~2017</span>",
-  },
-  {
-    title: "LG Innotek",
-    src: "/img/featured_5.jpg",
-    content:
-      "<span>Classification: EPC</span> <span>Location: Gumi, South Korea</span> <span>Construction Period: 2012~2014</span>",
-  },
-  {
-    title: "LG Display - CAPA UP Project",
-    src: "/img/featured_7.jpg",
-    content:
-      "<span>Classification: EPC</span> <span>Location: Gumi, South Korea</span> <span>Construction Period: 2012~2013</span>",
-  },
-  {
-    title: "LG Display - M5 Project",
-    src: "/img/featured_6.jpg",
-    content:
-      "<span>Classification: EPC</span> <span>Location: Gumi, South Korea</span> <span>Construction Period: 2011~2012</span>",
-  },
-]
+
 </script>
 
 <template>
@@ -159,7 +91,7 @@ const slideList = [
           el: '.swiper-scrollbar',
         }"
       >
-        <SwiperSlide v-for="slide in slideList" class="h-auto mb-10">
+        <SwiperSlide v-for="slide in projects" class="h-auto mb-10">
           <a
             class="block h-full group transition-all duration-500 ease-in-out"
             href="/projects/portfolio"

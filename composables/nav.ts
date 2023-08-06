@@ -15,7 +15,6 @@ const nav = {
   ],
   Commitments: [
     { name: "QHSE", path: "qhse" }, 
-    { name: "Management", path: "management" },
   ],
   Media: [{ name: "News", path: "news" }],
   Careers: [
