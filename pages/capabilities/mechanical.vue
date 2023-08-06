@@ -35,7 +35,7 @@ const slideList = [
     <div
       class="py-40 bg-fixed bg-center bg-cover capabilities-mechanical"
     ></div>
-    <section class="container mx-auto pt-[10vh]">
+    <section class="container mx-auto">
       <p
         class="px-5 mt-12 text-lg leading-tight text-black 2xl:px-0 2xl:text-2xl"
       >
