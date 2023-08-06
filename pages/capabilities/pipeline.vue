@@ -34,14 +34,9 @@ const slideList = [
   <div>
     <h2 class="my-20 text-6xl font-black text-center">Pipeline</h2>
     <div
-      class="py-56 bg-fixed bg-center bg-cover capabilities-pipeline"
+      class="py-40 bg-fixed bg-center bg-cover capabilities-pipeline"
     ></div>
-    <section class="container mx-auto pt-[10vh]">
-      <h2
-        class="text-4xl font-black leading-snug text-black 2xl:px-0 2xl:text-6xl"
-      >
-        Pipeline
-      </h2>
+    <section class="container mx-auto">
       <p
         class="px-5 mt-12 text-lg leading-tight text-black 2xl:px-0 2xl:text-2xl"
       >
