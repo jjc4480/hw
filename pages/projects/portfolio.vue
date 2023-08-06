@@ -7,24 +7,25 @@ defineProps({
   },
 })
 
+const projects = useProjects();
+
+const ongoings = computed(() => {
+  return projects.filter((project) => project.status === "ongoing");
+});
+
+const completes = computed(() => {
+  return projects .filter((project) => project.status !== "ongoing");
+});
+
+
 const data = {
   ongoing: {
     title: 'ongoing',
-    datas: [
-      {
-        title: 'ongoing title',
-        imageSrc: '/img/mission.jpg',
-      },
-    ],
+    datas: ongoings,
   },
   complete: {
     title: 'complete',
-    datas: [
-      {
-        title: 'complete title',
-        imageSrc: '/img/mission.jpg',
-      },
-    ],
+    datas: completes
   },
 } as any
 
@@ -34,7 +35,17 @@ const currentTab = ref(data.ongoing) // 선택될 박스
 
 const handleClick = (event: MouseEvent) => {
   const target = event.target as HTMLButtonElement
+  if (target.value === currentTab.value.title) return
+  content.value.style.transition = 'none'
+  content.value.style.opacity = '0'
+  content.value.classList.remove('pages-fade-done')
+  content.value.classList.add('pages-fade-left')
   currentTab.value = data[target.value]
+  setTimeout(() => {
+    content.value.style.opacity = '1'
+    content.value.style.transition = 'all 1s ease-in-out'
+    content.value.classList.remove('pages-fade-left')
+  }, 300)
 }
 </script>
 
@@ -94,7 +105,7 @@ const handleClick = (event: MouseEvent) => {
       "
     >
       <ul
-        class="container my-20 grid xl:grid-cols-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5"
+        class="container my-20 grid xl:grid-cols-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-52 sm:gap-y-32 "
       >
         <li
           class="items-center group w-full bg-white transition-colors duration-500 ease-in-out"
@@ -104,12 +115,12 @@ const handleClick = (event: MouseEvent) => {
           <div class="absolute top-0 right-0 left-0 w-full h-3/4 overflow-hidden">
             <img
             class="absolute w-full h-full bottom-0 left-0 object-cover group-hover:transform group-hover:scale-110 transition-all duration-500 ease-in-out"
-            :src="item.imageSrc"
+            :src="item.src"
             alt="hyoungwon portfolio"
             />
           </div>
           <div class="text-lg absolute z-2 flex w-full justify-between items-center px-10 bottom-0 left-0 h-1/5 font-semibold">
-            <span class="line-clamp-5 sm:line-clamp-2">
+            <span class="text-2xl pr-4">
               {{ item.title }}
             </span>
             <span class="font-medium text-sm text-yellow-800">

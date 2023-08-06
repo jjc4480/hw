@@ -6,10 +6,12 @@ defineProps({
     required: true,
   },
 })
+
+const management = ref()
 const image1 = ref() // 이미지 영역
 const image2 = ref()
 const image3 = ref()
-const infomation = ref() // 소개영역
+
 </script>
 
 <template>
@@ -17,6 +19,37 @@ const infomation = ref() // 소개영역
     <div
       class="flex flex-col container items-center mx-auto py-20 gap-20 justify-center overflow-hidden"
     >
+      
+      <div>
+        <section
+          ref="management"
+          class="pages-fade flex flex-col space-y-20 pb-20 "
+          :class="
+            management?.offsetTop < scrollTrigger
+              ? 'pages-fade-done'
+              : 'pages-fade-left'
+          "
+        >
+          <h3 class="text-6xl font-black text-center">Management</h3>
+          <p class="text-2xl">
+            Hyungwon's management policy is as follows. <br />
+            Based on PDCA, we are committed to increasing customer satisfaction by adding our own system, TOS.
+          </p>
+          <figure class="mt-20">
+            <img src="/img/pdca.png" alt="" />
+          </figure>
+          <p class="text-2xl">
+            A TOS system is a system that adds Training, Overlap, and Signal, which includes more specific and fractionized procedures during the Plan, Action, and Check phases, respectively.
+            <br /> <br />
+            Training allows you to plan while sharing and training case analysis results.
+            <br /> <br />
+            Overlap provides cross-checking based on the manual and specifies the manager of each task so that action can be performed.
+            <br /> <br />
+            Signal extracts, analyzes, and improves repeated faults more than three times to complement the check.
+          </p>
+        </section>
+      </div>
+
       <div class="flex flex-col-reverse md:flex-row gap-x-20 gap-y-10">
         <!-- mobile 일 경우, 이미지가 밑으로. -->
 
