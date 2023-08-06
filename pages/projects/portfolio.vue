@@ -27,11 +27,15 @@ const data = {
     title: 'complete',
     datas: completes
   },
+  total : {
+    title : 'total',
+    datas : projects
+  }
 } as any
 
 const title = ref() // 임시용
 const content = ref() // 임시용
-const currentTab = ref(data.ongoing) // 선택될 박스
+const currentTab = ref(data.total) // 선택될 박스
 
 const handleClick = (event: MouseEvent) => {
   const target = event.target as HTMLButtonElement
@@ -50,7 +54,7 @@ const handleClick = (event: MouseEvent) => {
 </script>
 
 <template>
-  <div class="container justify-center py-20 mx-auto  overflow-hidden">
+  <div class="container justify-center pt-20 mx-auto  overflow-hidden">
     <section
       ref="title"
       class="mt-20 pages-fade"
@@ -61,7 +65,6 @@ const handleClick = (event: MouseEvent) => {
       <h2 class="mb-20 text-6xl text-center font-black">Portfolio</h2>
     </section>
   </div>
-  <div class="py-56 bg-fixed bg-center bg-cover project-portfolio-image"></div>
   <div
     class="container justify-center items-center gap-20 py-20 mx-auto overflow-hidden"
   >
@@ -69,7 +72,21 @@ const handleClick = (event: MouseEvent) => {
       <li>
         <button
           @click="handleClick"
-          class="py-6 px-8 text-2xl"
+          class="py-6 px-8 text-2xl capitalize"
+          :class="
+            currentTab.title === 'total'
+              ? 'bg-white border-t-2 border-t-black border'
+              : 'bg-gray-300'
+          "
+          :value="data.total.title"
+        >
+          {{ data.total.title }}
+        </button>
+      </li>
+      <li>
+        <button
+          @click="handleClick"
+          class="py-6 px-8 text-2xl capitalize"
           :class="
             currentTab.title === 'ongoing'
               ? 'bg-white border-t-2 border-t-black border'
@@ -82,15 +99,15 @@ const handleClick = (event: MouseEvent) => {
       </li>
       <li>
         <button
-          @click="handleClick"
-          class="py-6 px-8 text-2xl"
-          :class="
-            currentTab.title !== 'ongoing'
-              ? 'bg-white border-t-2 border-t-black border'
-              : 'bg-gray-300'
-          "
+        @click="handleClick"
+        class="py-6 px-8 text-2xl capitalize"
+        :class="
+            currentTab.title === 'complete'
+            ? 'bg-white border-t-2 border-t-black border'
+            : 'bg-gray-300'
+            "
           :value="data.complete.title"
-        >
+          >
           {{ data.complete.title }}
         </button>
       </li>
@@ -123,8 +140,8 @@ const handleClick = (event: MouseEvent) => {
             <span class="text-2xl pr-4">
               {{ item.title }}
             </span>
-            <span class="font-medium text-sm text-yellow-800">
-              {{ currentTab.title }}
+            <span class="font-medium text-sm text-yellow-800 capitalize">
+              {{ item.status }}
             </span>
           </div>
         </div>
