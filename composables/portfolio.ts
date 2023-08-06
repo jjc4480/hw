@@ -12,7 +12,7 @@ const projects = [
         src: "/img/featured_4.jpg",
         status : 'ongoing',
         content:
-            "<span>Classification:</span> <span>Location: Incheon, South Korea</span> <span>Construction Period: 2017~2023</span>",
+            "<span>Classification:</span> <span>Location: Incheon, South Korea</span> <span>Construction Period: 2017~</span>",
     },
     {
         title: "LG Display - P8 & 9 Project",
@@ -26,7 +26,7 @@ const projects = [
         src: "/img/featured_10.jpg",
         status : 'ongoing',
         content:
-            "<span>Classification:</span> <span>Location: Paju, South Korea</span> <span>Construction Period: 2017~2021</span>",
+            "<span>Classification:</span> <span>Location: Paju, South Korea</span> <span>Construction Period: 2017~</span>",
     },
     {
         title: "LG Household & Health Care",
