@@ -36,7 +36,7 @@ const image3 = ref()
             <img src="/img/pdca.png" alt="" />
           </figure>
           <p class="text-2xl">
-            <strong class="font-bold">HYOUNGWON</strong>'s Quality Management is as follows.
+            <strong class="font-bold">HYOUNGWON</strong>'s Quality Management System is as follows.
             <br /> <br />
             Based on PDCA, we are committed to increasing customer satisfaction by adding our own system, <strong class="text-[#9B1D20] font-bold">TOS</strong>.
             <br /> <br /> 

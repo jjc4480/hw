@@ -66,13 +66,13 @@ const handleClick = (event: MouseEvent) => {
     </section>
   </div>
   <div
-    class="container justify-center items-center gap-20 py-20 mx-auto overflow-hidden"
+    class="container justify-center items-center gap-20 pb-20 mx-auto overflow-hidden"
   >
-    <ul class="flex w-full items-center justify-center">
+    <ul class="flex w-full items-center justify-center [&_li_button]:transition-all [&_li_button]:duration-700 ">
       <li>
         <button
           @click="handleClick"
-          class="py-6 px-8 text-2xl capitalize"
+          class="py-6 px-8 text-xl font-semibold capitalize"
           :class="
             currentTab.title === 'total'
               ? 'bg-white border-t-2 border-t-black border'
@@ -86,7 +86,7 @@ const handleClick = (event: MouseEvent) => {
       <li>
         <button
           @click="handleClick"
-          class="py-6 px-8 text-2xl capitalize"
+          class="py-6 px-8 text-xl font-semibold capitalize"
           :class="
             currentTab.title === 'ongoing'
               ? 'bg-white border-t-2 border-t-black border'
@@ -100,7 +100,7 @@ const handleClick = (event: MouseEvent) => {
       <li>
         <button
         @click="handleClick"
-        class="py-6 px-8 text-2xl capitalize"
+        class="py-6 px-8 text-xl font-semibold capitalize"
         :class="
             currentTab.title === 'complete'
             ? 'bg-white border-t-2 border-t-black border'
