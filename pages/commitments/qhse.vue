@@ -57,7 +57,7 @@ const image3 = ref()
         <section
           class="pages-fade flex flex-col w-full md:w-1/2"
           :class="
-            image1?.offsetTop < scrollTrigger
+            image1?.offsetTop - 500 < scrollTrigger
               ? 'pages-fade-done'
               : 'pages-fade-left'
           "
@@ -78,7 +78,7 @@ const image3 = ref()
         <figure
           class="pages-fade flex w-full md:w-1/2"
           :class="
-            image1?.offsetTop < scrollTrigger
+            image1?.offsetTop - 500 < scrollTrigger
               ? 'pages-fade-done'
               : 'pages-fade-right'
           "

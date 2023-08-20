@@ -76,8 +76,9 @@ onMounted(() => {
           "
         >
           <h3 class="mt-10 space-y-2 text-6xl font-black">Mission</h3>
-          <p class="mt-16 text-xl">
-            Our Core Value is benefiting oneself and others. We the “HYOUNGWON” cares employees, clients, and society. 
+          <h6 class="text-2xl my-10 ">Our Core Value is <strong class="text-[#9B1D20] font-bold">"Benefiting Oneself and Others".</strong> </h6>
+          <p class="text-xl">  
+            We the <strong class="text-hw font-bold">"HYOUNGWON"</strong> care employees, clients, and society. 
             By benefiting oneself and others, we do believe that we can create and change the working atmosphere and environment around us.
             Therefore, our mission is crystal clear. We grow together and build bright future together. 
             <br />
