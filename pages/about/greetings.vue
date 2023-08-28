@@ -10,7 +10,7 @@ const greetings = ref() // 이미지 영역
 </script>
 
 <template>
-  <div>
+  <div class="font-pre">
     <div
       class="container pages-fade flex items-center flex-col-reverse lg:flex-row mx-auto py-20 gap-20 justify-center overflow-hidden"
       :class="

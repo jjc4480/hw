@@ -10,6 +10,9 @@ export default <Config>{
         },
       },
     },
+    fontFamily: {
+      pre : [ "Pretendard" ]
+    }
   },
   plugins: [],
 };
