@@ -47,7 +47,7 @@ const infomation = ref() // 소개영역
       <div class="grid grid-cols-2 xl:grid-cols-5 pt-16 border-t-2 border-black gap-5 ">
         <div class="flex items-center xl:justify-center justify-stretch w-full lg:w-1/2 xl:w-full mx-auto  ">
           <div
-            class="rounded-[50%] border-[#009CA6] w-20 border-[6px] h-20"
+            class="rounded-[50%] border-[#009CA6] w-20 border-[10px] h-20"
           ></div>
           <div class="flex flex-col ml-4 text-left">
             <span class="flex">HW Light Sea Green</span>
@@ -56,7 +56,7 @@ const infomation = ref() // 소개영역
         </div>
         <div class="flex items-center xl:justify-center justify-stretch w-full lg:w-1/2 xl:w-full mx-auto  ">
           <div
-            class="rounded-[50%] border-[#008C95] w-20 border-[6px] h-20"
+            class="rounded-[50%] border-[#008C95] w-20 border-[10px] h-20"
           ></div>
           <div class="flex flex-col ml-4 text-left">
             <span class="flex">HW Teal</span>
@@ -65,7 +65,7 @@ const infomation = ref() // 소개영역
         </div>
         <div class="flex items-center xl:justify-center justify-stretch w-full lg:w-1/2 xl:w-full mx-auto  ">
           <div
-            class="rounded-[50%] border-[#10446D] w-20 border-[6px] h-20"
+            class="rounded-[50%] border-[#10446D] w-20 border-[10px] h-20"
           ></div>
           <div class="flex flex-col ml-4 text-left">
             <span class="flex">HW Midnight Blue</span>
@@ -74,7 +74,7 @@ const infomation = ref() // 소개영역
         </div>
         <div class="flex items-center xl:justify-center justify-stretch w-full lg:w-1/2 xl:w-full mx-auto  ">
           <div
-            class="rounded-[50%] border-[#2D2926] w-20 border-[6px] h-20"
+            class="rounded-[50%] border-[#2D2926] w-20 border-[10px] h-20"
           ></div>
           <div class="flex flex-col ml-4 text-left">
             <span class="flex">HW Black</span>
@@ -83,7 +83,7 @@ const infomation = ref() // 소개영역
         </div>
         <div class="flex items-center xl:justify-center justify-stretch w-full lg:w-1/2 xl:w-full mx-auto  ">
           <div
-            class="rounded-[50%] border-[#3F4444] w-20 border-[6px] h-20"
+            class="rounded-[50%] border-[#3F4444] w-20 border-[10px] h-20"
           ></div>
           <div class="flex flex-col ml-4 text-left">
             <span class="flex">HW Dark Gray</span>
