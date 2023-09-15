@@ -65,6 +65,11 @@ const store = useUiStore() // ui store
           <li>Fax : 888-888-8888</li>
           <li>Email : sadfa@asdfasdf.com</li>
         </ul>
+        <ul class="block md:flex gap-10 mt-10 text-xl">
+          <li>Tel : 888-888-8888</li>
+          <li>Fax : 888-888-8888</li>
+          <li>Email : hw@test.com</li>
+        </ul>
       </section>
     </div>
   </div>

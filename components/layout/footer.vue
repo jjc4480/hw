@@ -68,9 +68,9 @@ const footerPath = [
           <div class="col-span-2"></div>
           <section class="col-span-4 md:col-span-2">
             <h2 class="mb-5 text-xl">OFFICES</h2>
-            <p>Coming Soon. Taylor, TX (HQ)</p>
-            <p>
-              1325 Satellite Blvd Suite 1202,<br> Suwanee, GA 30024 (HQ)
+            <p class="">201 N. Heatherwilde, Suite 501,<br>Pflugerville, TX 78660 (HQ)</p>
+            <p class="mt-2">
+              1325 Satellite Blvd Suite 1202,<br>Suwanee, GA 30024 (HQ)
             </p>
           </section>
         </div>
