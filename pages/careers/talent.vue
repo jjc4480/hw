@@ -8,7 +8,7 @@ const list = [
   },
   {
     icon: "/img/talent_2.png",
-    title: "Intergrity",
+    title: "Integrity",
     content: "People who fulfill his or her role and responsibilities with honesty and good behavior",
     color : '#D4BD83'
   },
@@ -72,6 +72,16 @@ const list = [
           </p>
           <div class="mt-8 lg:flex">
             <span class="text-white 2xl:text-2xl lg:text-lg">View More</span>
+            <svg
+              class="w-8 h-8 ml-10 group-hover:ml-16 fill-white duration-150"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              />
+            </svg>
           </div>
         </section>
         <figure class="lg:w-[25%] w-full overflow-hidden">
