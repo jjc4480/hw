@@ -62,7 +62,7 @@ const handleClick = (event: MouseEvent) => {
         title?.offsetTop < scrollTrigger ? 'pages-fade-done' : 'pages-fade-top'
       "
     >
-      <h2 class="mb-20 text-6xl text-center font-black">Portfolio</h2>
+      <h2 class="mb-20 text-6xl text-center font-black">포트폴리오</h2>
     </section>
   </div>
   <div
@@ -80,7 +80,7 @@ const handleClick = (event: MouseEvent) => {
           "
           :value="data.total.title"
         >
-          {{ data.total.title }}
+          전체
         </button>
       </li>
       <li>
@@ -94,7 +94,7 @@ const handleClick = (event: MouseEvent) => {
           "
           :value="data.ongoing.title"
         >
-          {{ data.ongoing.title }}
+          진행 중
         </button>
       </li>
       <li>
@@ -108,7 +108,7 @@ const handleClick = (event: MouseEvent) => {
             "
           :value="data.complete.title"
           >
-          {{ data.complete.title }}
+          완료
         </button>
       </li>
     </ul>
@@ -140,8 +140,8 @@ const handleClick = (event: MouseEvent) => {
             <span class="text-2xl pr-4">
               {{ item.title }}
             </span>
-            <span class="font-medium text-sm text-yellow-800 capitalize">
-              {{ item.status }}
+            <span class="font-medium text-sm whitespace-pre text-yellow-800 capitalize">
+              {{ item.koStatus }}
             </span>
           </div>
         </div>

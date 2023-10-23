@@ -19,13 +19,12 @@ const store = useUiStore() // ui store
           <h2
             class="2xl:text-5xl text-3xl text-white font-black leading-snug lg:text-left text-center"
           >
-            Careers
+            Recruitment
           </h2>
           <p
             class="mt-10 2xl:text-xl text-lg text-white leading-tight lg:text-left text-center"
           >
-            We embrace people of all backgrounds, experiences,<br />
-            culture, styles and talents. Join us!
+            형원이엔지와 함께 나아갈 긍정적이고 창의적인 인재를 기다립니다.
           </p>
           <div class="lg:flex hidden mt-8">
             <span class="text-white 2xl:text-2xl lg:text-lg">View More</span>
@@ -59,15 +58,10 @@ const store = useUiStore() // ui store
         class="careers-contact-us text-center text-white duration-700 translate-y-10 opacity-0 delay-500"
       >
         <h2 class="text-6xl font-black leading-snug">Contact Us</h2>
-        <p class="mt-4 text-xl leading-tight">Address</p>
+        <p class="mt-4 text-xl leading-tight">경기도 파주시 경의로 1204, 월드타워 10차 10층 1007호 ㈜형원이엔지​</p>
         <ul class="block md:flex gap-10 mt-10 text-xl">
-          <li>Tel : 888-888-8888</li>
-          <li>Fax : 888-888-8888</li>
-          <li>Email : hw@test.com</li>
-        </ul>
-        <ul class="block md:flex gap-10 mt-10 text-xl">
-          <li>Tel : 888-888-8888</li>
-          <li>Fax : 888-888-8888</li>
+          <li>Tel : 031-934-0455</li>
+          <li>Fax : 031-934-0488</li>
           <li>Email : hw@test.com</li>
         </ul>
       </section>

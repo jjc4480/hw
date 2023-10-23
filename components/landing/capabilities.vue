@@ -6,31 +6,31 @@ const store = useUiStore()
 const items = [
   // 박스 리스트
   {
-    title: "Mechanical",
+    title: "하이테크",
     image: "/img/Mechanical.jpg",
     icon: "img/icon-Mechanical.png",
     href: "/capabilities/mechanical",
   },
   {
-    title: "Fire Protection",
+    title: "소방설비",
     image: "/img/FireProtection.jpg",
     icon: "img/icon-FireProtection.png",
     href: "/capabilities/fireProtection",
   },
   {
-    title: "Design",
+    title: "설계",
     image: "/img/TechnologyDesign.jpg",
     icon: "img/icon-TechnologyDesign.png",
     href: "/capabilities/design",
   },
   {
-    title: "Pipeline",
+    title: "Turn-key",
     image: "/img/Plumbing.jpg",
     icon: "img/icon-Plumbing.png",
     href: "/capabilities/pipeline",
   },
   {
-    title: "Comming soon",
+    title: "신사업",
     image: "/img/sven-mieke-fteR0e2BzKo-unsplash.jpg",
     icon: "",
   },

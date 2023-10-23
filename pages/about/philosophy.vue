@@ -75,7 +75,7 @@ onMounted(() => {
               : 'pages-fade-left'
           "
         >
-          <h3 class="mt-10 space-y-2 text-6xl font-black">Mission</h3>
+          <h3 class="mt-10 space-y-2 text-6xl font-black">경영이념</h3>
           <h6 class="text-2xl my-10 ">Our Core Value is <strong class="text-[#9B1D20] font-bold">"Benefiting Oneself and Others".</strong> </h6>
           <p class="text-xl">  
             We the <strong class="text-hw font-bold">"HYOUNGWON"</strong> care employees, clients, and society. 
@@ -117,12 +117,12 @@ onMounted(() => {
               : 'pages-fade-left'
           "
         >
-          <h3 class="mt-10 space-y-2 text-6xl font-black">Vision</h3>
+          <h3 class="mt-10 space-y-2 text-6xl font-black">비전</h3>
           <p class="mt-16 text-xl">
             HYOUNGWON's vision is very intuitive. We are preparing for a quantum jump with a long-term goal.<br />
             <button @click="openVisionModal" 
               class="mt-5 bg-hw px-5 py-3 border rounded-full text-white shadow-lg animate-bounce hover:bg-cyan-600 transition-colors duration-500 ease-in-out">
-              Check our Vision
+              Vision
             </button>
           </p>
         </section>
@@ -153,8 +153,7 @@ onMounted(() => {
           <div class="relative px-8 flex flex-col w-full">
             <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">SYSTEM</h3>
             <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
-              <p>Establish System</p>
-              <p>Procedure</p>
+              <p>체계적 업무절차 확립​</p>
             </div>
           </div>
         </div>
@@ -165,8 +164,8 @@ onMounted(() => {
           <div class="relative px-8 flex flex-col w-full">
             <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">EXPANSION</h3>
             <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
-              <p>Expand Business</p>
-              <p>Area</p>
+              <p>사업영역 & ​</p>
+              <p>개인 업무역량 확장​ </p>
             </div>
           </div>
         </div>
@@ -177,8 +176,7 @@ onMounted(() => {
           <div class="relative px-8 flex flex-col w-full">
             <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">ACTIVE</h3>
             <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
-              <p>Create Active</p>
-              <p>Working Environment</p>
+              <p>자기 주도적 업무 문화​</p>
             </div>
           </div>
         </div>
@@ -189,8 +187,8 @@ onMounted(() => {
           <div class="relative px-8 flex flex-col w-full">
             <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">2025</h3>
             <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
-              <p>Reach Sales</p>
-              <p>202.5B by 2025</p>
+              <p>2025년도 매출액</p>
+              <p>2025억 달성</p>
             </div>
           </div>
         </div>

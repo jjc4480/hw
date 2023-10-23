@@ -26,32 +26,21 @@ const greetings = ref() // 이미지 영역
       >
         <h2 class="text-2xl text-hw font-bold">CEO Message</h2>
         <h3 class="mt-10 text-6xl font-black space-y-2">
-          <div>Build Bright</div>
-          <div>Future With Us</div>
+          <div>“임직원의 능력과 경험을 바탕으로</div>
+          <div>앞으로 끊임없이 변화와 혁신을 이끌어 내는 기업이 되겠습니다.”​</div>
         </h3>
-        <p class="mt-16 text-xl">
-          Dear Colleagues and Community Partners, <br /><br />Hyoungwon ENG Co.,
-          Ltd has a strong history of commitment to excellence and performance
-          in meeting our employee, customer, and investor expectations. We are
-          committed to the highest ethical standards for safety, integrity,
-          excellence, accountability, and respect in all our business dealings.
-          <br /><br />
+        <p class="mt-16 text-xl ">
+형원이엔지는 지난 2009년 고객의 가치를 최우선으로 실현하며 변화와 혁신을 이끌겠다는 목표로 출발하였습니다.​ <br /><br />
+LG Display M5 Project 수행을 시작으로 반도체, 디스플레이 등에 필수적인 Utility System (Ultra High Purity Gas/Chemical/N2/CDA/PCW/P-VAC/H-VAC), P-Drain, Exhaust Duct 등의 초석을 다진 강한 기업입니다.​<br /><br />
+현재 LG Display, LG 이노텍, LG전자, SK hynix를 포함한 반도체/디스플레이/UTILITY 기계설비, 소방설비 공정에서 프로젝트를 성공적으로 수행하며 기술력과 사업 관리 능력을 내세워 경쟁력 있는 전문 건설 회사로 인증 받고 있습니다.​<br /><br />
+​철저한 Risk 분석을 통해 사업과 시장의 다각화와 다변화 등에 힘쓰며 설비 분야에서 경쟁력 있는 회사로 거듭나기​
+위해 노력하고 있습니다.​<br /><br />
 
-          Starting with the LG Display M5 Project, we have laid the strong
-          foundation for the Utility System (Ultra High Purity
-          Gas/Chemical/N2/CDA/PCW/P-VAC/H-VAC), P-Drain, and Exhaust Duct. By
-          successfully carrying out projects in semiconductor, display, utility,
-          and fire protection in LG Display, LG Innotek, LG Electronics, and SK
-          Hynix, we are becoming a professional construction company recognized
-          for our technology and business management capabilities. <br /><br />
-          We pursue excellence for ourselves, for our company and for the
-          community each day. We build with honesty because we are built on
-          honesty. Build a bright future with us. <br /><br />Sincerely,<br />
-          <br />
-
-          <span class="text-4xl font-bold">Jeong Hwan Kim</span>
-          <img class="mt-5 w-80" src="/img/sign.jpg" /> <br /><br />Chief
-          Executive Officer <br />Hyoungwon ENG Co., Ltd
+형원이엔지의 구성원 각각은 이 분야의 최고 기술자이며, 당장의 이익보다 미래를 내다보는 경영과 고객 만족을 위한 지속적인 노력을 다하고 있습니다.​<br /><br />감사합니다.<br /><br />
+          <div class="flex ml-auto items-center justify-center">
+            <span class="text-4xl font-bold">대 표 이 사</span>
+            <img class="w-80" src="/img/sign.jpg" />
+          </div>
         </p>
       </section>
 

@@ -30,7 +30,7 @@ const image3 = ref()
               : 'pages-fade-left'
           "
         >
-          <h3 class="text-6xl font-black text-center">Quality Management</h3>
+          <h3 class="text-6xl font-black text-center">품질 경영</h3>
           
           <figure class="mt-20">
             <img src="/img/pdca.png" alt="" />
@@ -62,7 +62,7 @@ const image3 = ref()
               : 'pages-fade-left'
           "
         >
-          <h3 class="mt-10 text-6xl font-black space-y-2">Quality</h3>
+          <h3 class="mt-10 text-6xl font-black space-y-2">품질</h3>
           <p class="mt-16 text-xl">
             Hyoungwon will ensure that all project ts are executed in accordance
             with contract specifications and drawings, within the contractual
@@ -108,7 +108,7 @@ const image3 = ref()
               : 'pages-fade-left'
           "
         >
-          <h3 class="mt-10 text-6xl font-black space-y-2">Health & Safety</h3>
+          <h3 class="mt-10 text-6xl font-black space-y-2">안전 & 보건</h3>
           <p class="mt-16 text-xl">
             Hyoungwon is fully committed to encouraging a culture of openness
             within our workforce regarding health and safety. Our policy is to
@@ -131,7 +131,7 @@ const image3 = ref()
               : 'pages-fade-left'
           "
         >
-          <h3 class="mt-10 text-6xl font-black space-y-2">Environmental</h3>
+          <h3 class="mt-10 text-6xl font-black space-y-2">환경</h3>
           <p class="mt-16 text-xl">
             Hyungwon's environmental policy is very intuitive. We will do
             everything we can to protect the environment and find better ways to

@@ -30,16 +30,12 @@ const infomation = ref() // 소개영역
         </div>
         <figcaption class="xl:border-l-2 xl:pl-20 xl:border-black">
           <h3 class="text-4xl font-bold">
-            This is HYOUNGWON BI with a firm philosophy and modern sensibility.
+            확고한 철학과 모던한 감성의 형원 BI 입니다.
           </h3>
           <p class="mt-12 text-2xl">
-            H, which expresses the shape of the chain, expresses technical
-            firmness and completeness. At the same time, it's about being safe,
-            trusting with customers, and continuing strong and lasting
-            relationships. <br />
-            <br />The color combination of Light Sea Green and Midnight Blue is
-            a brand image that can show customers trust, confidence, stability
-            and integrity.
+            체인 모양을 표현한 H는 기술적인 단단함과 완성도를 표현합니다. 동시에 안전함, 고객과의 신뢰 그리고 강인하며 지속적인 관계를 이어가겠다는 의미를 담고 있습니다.<br />
+            <br />
+            Light Sea Green과 Midnight Blue의 색상 조합은 고객들에게 신뢰, 확신, 안정감 그리고 진실성을 보여줄 수 있는 브랜드 이미지입니다.
           </p>
         </figcaption>
       </figure>
