@@ -5,7 +5,7 @@ import PagesLayout from '@/components/layout/pages.vue'
 <template>
   <div>
     <PagesLayout
-      label="Media"
+      label="Recruit"
     ></PagesLayout>
   </div>
 </template>

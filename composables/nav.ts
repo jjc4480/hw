@@ -6,6 +6,7 @@ const nav = {
     { name: "연혁", path: "history" },
     { name: "QHSE", path: "qhse" }, 
     { name: "BI", path: "bi" },
+    { name: "인증현황", path: "certification" },
   ],
   Projects: [{ name: "포트폴리오", path: "portfolio" }],
   Business: [
@@ -13,6 +14,7 @@ const nav = {
     { name: "소방설비", path: "fireProtection" },
     { name: "설계", path: "design" },
     { name: "Turn-key", path: "pipeline" },
+    { name: "사업실적", path: "result"}
   ],
   News : [{ name: "미디어", path: "news" }],
   Recruit: [

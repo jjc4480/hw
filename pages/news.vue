@@ -5,7 +5,7 @@ import PagesLayout from '@/components/layout/pages.vue'
 <template>
   <div>
     <PagesLayout
-      label="Commitments"
+      label="News"
     ></PagesLayout>
   </div>
 </template>

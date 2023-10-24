@@ -27,7 +27,7 @@ const fileteredPosts = computed(() => {
 
 <template>
   <div>
-    <h2 class="my-20 text-6xl text-center font-black">Careers</h2>
+    <h2 class="my-20 text-6xl text-center font-black">채용공고</h2>
     <div class="container flex justify-center max-w-3xl py-20 mx-auto">
         <input
         type="search"
