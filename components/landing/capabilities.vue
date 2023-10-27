@@ -30,7 +30,7 @@ const items = [
     href: "/capabilities/pipeline",
   },
   {
-    title: "Comming soon",
+    title: "Coming soon",
     image: "/img/sven-mieke-fteR0e2BzKo-unsplash.jpg",
     icon: "",
   },
