@@ -31,7 +31,7 @@ const slideList = [
 
 <template>
   <div>
-    <h2 class="my-20 text-6xl font-black text-center">Design</h2>
+    <h2 class="my-20 text-6xl font-black text-center">설계​</h2>
     <div
       class="py-40 bg-fixed bg-center bg-cover capabilities-design"
     ></div>

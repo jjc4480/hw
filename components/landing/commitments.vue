@@ -4,12 +4,7 @@ import { useUiStore } from "~/stores/ui"
 
 const store = useUiStore()
 
-const slideList = [
-  // 슬라이드 아이템
-  { title: "Quality", src: "/img/Qhse1.jpg" },
-  { title: "Health & Safety", src: "/img/Qhse2.jpg" },
-  { title: "Environmental", src: "/img/Qhse3.jpg" },
-]
+const slideList = useNews();
 </script>
 
 <template>
@@ -30,7 +25,7 @@ const slideList = [
       <Swiper
         class="commitments-swiper"
         :setWrapperSize="true"
-        :slidesPerView="3"
+        :slidesPerView="1"
         :autoplay="{
           delay: 8000,
           disableOnInteraction: true,
@@ -40,7 +35,7 @@ const slideList = [
         }"
         :breakpoints="{
           '320': {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
           },
           '768': {
@@ -48,7 +43,7 @@ const slideList = [
             spaceBetween: 20,
           },
           '1024': {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 40,
           },
         }"
@@ -58,23 +53,26 @@ const slideList = [
         }"
         :modules="[SwiperAutoplay, SwiperNavigation, Scrollbar]"
       >
-        <SwiperSlide v-for="slide in slideList" class="h-auto mb-10">
+        <SwiperSlide v-for="news in slideList" class="items-center group w-full bg-transparent hover:bg-gray-700 hover:text-white transition-colors duration-500 ease-in-out" >
           <a
-            class="block h-full group transition-all duration-500 ease-in-out"
-            href="/commitments/qhse"
+            :href="news.src"
+            class="relative px-10 pt-10 pb-0 h-[30rem] flex overflow-hidden"
           >
-            <figure class="flex flex-col h-full overflow-hidden">
+          <figure>
+            <div class="absolute bottom-0 right-0 left-0 w-full h-3/5">
               <img
-                class="h-full group-hover:transform group-hover:scale-105 transition-all duration-500 ease-in-out"
-                :src="slide.src"
+              class="absolute w-full h-full bottom-0 left-0 object-cover group-hover:transform group-hover:scale-110 transition-all duration-500 ease-in-out"
+              :src="news.imageSrc"
+              alt="hyoungwon news"
               />
-              <figcaption
-                class="flex flex-auto p-5 text-2xl items-end justify-center border-gray-700 group-hover:bg-gray-700 group-hover:text-white transition-all duration-500 ease-in-out"
-              >
-                {{ slide.title }}
-              </figcaption>
-            </figure>
-          </a>
+            </div>
+            <figcaption class="text-lg h-1/2 font-semibold">
+              <p class="line-clamp-5 min-h-full sm:line-clamp-2">
+                {{ news.title }}
+              </p>
+            </figcaption>
+          </figure>
+        </a>
         </SwiperSlide>
       </Swiper>
     </div>

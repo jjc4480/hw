@@ -31,7 +31,7 @@ const slideList = [
 
 <template>
   <div>
-    <h2 class="my-20 text-6xl font-black text-center">Fire Protection</h2>
+    <h2 class="my-20 text-6xl font-black text-center">소방설비 사업부​</h2>
     <div
       class="py-40 bg-fixed bg-center bg-cover capabilities-fireProtection"
     ></div>
@@ -39,7 +39,7 @@ const slideList = [
       <p
         class="px-5 mt-12 text-lg leading-tight text-black 2xl:px-0 2xl:text-2xl"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id asperiores officiis quidem atque ipsam iusto porro eveniet esse laudantium dicta rerum, a consequatur quaerat veritatis, quisquam, maiores deserunt necessitatibus veniam.
+        반도체, 디스플레이 및 전지산업 분야 Clean room 소방 설비 설계 및 시공분야를 수행하고 있으며 Clean room에 최적화된 소방설비 구축을 제공합니다.​
       </p>
     </section>
     <div class="container relative px-5 mx-auto mt-2 mb-16 2xl:px-0">

@@ -31,7 +31,7 @@ const slideList = [
 
 <template>
   <div>
-    <h2 class="my-20 font-black text-6xl text-center">Mechanical Engineering</h2>
+    <h2 class="my-20 font-black text-6xl text-center">하이테크 사업부​</h2>
     <div
       class="py-40 bg-fixed bg-center bg-cover capabilities-mechanical"
     ></div>
@@ -39,7 +39,7 @@ const slideList = [
       <p
         class="px-5 mt-12 text-lg leading-tight text-black 2xl:px-0 2xl:text-2xl"
       >
-   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugit, ea modi natus assumenda totam vero distinctio sed quia cumque nesciunt! Recusandae saepe molestiae possimus praesentium facere minima tempora dolorum
+        반도체, 디스플레이 및 바이오산업 분야에 있어서 고순도, Toxic, Chemical 배관 및 Utility System 의 설계 및 시공분야를 수행하고 있으며 Clean Room 공사에 있어 가장 경제적인 토탈 솔루션을 제공합니다.​
       </p>
     </section>
     <div class="container relative px-5 mx-auto mt-2 mb-16 2xl:px-0">

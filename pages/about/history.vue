@@ -29,7 +29,7 @@ const historyList = {
         history : [
           {
             month: "12",
-            content: [`Enrolled LG Display Subcontractor Established Poland Corporation`],
+            content: [`LG 디스플레이 협력업체 등록`, `폴란드 현지 법인 형원폴란드 설립`],
           },
         ]
       },
@@ -38,7 +38,7 @@ const historyList = {
         history : [
           {
             month: "7",
-            content: [`Established Vietnam Corporation`],
+            content: [`베트남 현지 법인 형원비나 설립`],
           },
         ]
       },
@@ -47,11 +47,11 @@ const historyList = {
         history : [
           {
             month: "3",
-            content: [`Acquired ISO 9001 & 14001`],
+            content: [`품질경영시스템(ISO 9001) 획득`, `환경경영시스템(ISO 14001) 획득`],
           },
           {
             month: "6",
-            content: [`Acquired Tier 1 Gas Facilities Construction License`],
+            content: [`가스시설시공업 제1종면허 취득`],
           },
         ]
       },
@@ -60,11 +60,11 @@ const historyList = {
         history : [
           {
             month: "9",
-            content: [`Enrolled XI C&A Subcontractor`],
+            content: [`㈜ 서브원(현.S&I건설) 협력업체 등록`],
           },
           {
             month: "12",
-            content: [`Acquired Fire Protection Service Business Registration`],
+            content: [`전문소방시설공사업 면허 취득`],
           },
         ]
       },
@@ -72,8 +72,8 @@ const historyList = {
         year : '2010',
         history : [
           {
-            month: "12",
-            content: [`Acquired Mechanical Engineering Construction License`],
+            month: "11",
+            content: [`기계설비공사업 면허 취득`],
           },
         ]
       },
@@ -82,7 +82,7 @@ const historyList = {
         history : [
           {
             month: "12",
-            content: [`Established HYOUNGWON ENG Co., Ltd`],
+            content: [`㈜ 형원이엔지 설립`],
           },
         ]
       }
@@ -94,37 +94,15 @@ const historyList = {
     range: "2021 ~",
     items: [
       {
-        year : '2023',
-        history : [
-          {
-            month: "1",
-            content: [`Registered as Korea Semiconductor Industry Association Member`],
-          },
-          {
-            month: "3",
-            content: [`Established TX, US Corporation`],
-          },
-          {
-            month : "5",
-            content : [`Enrolled as Samsung ENG & Samsung C&T Corporation’s main Subcontractor`],
-          },
-          {
-            month: "6",
-            content: [`Established GA, US Corporation`],
-          },
-        ]
-        
-      },
-      {
         year : "2022",
         history : [
           {
             month: "4",
-            content: [`Acquired Business Innovation Small and Medium Business Certificate`],
+            content: [`경영혁신형 중소기업 확인서 취득`],
           },
           {
-            month: "12",
-            content: [`Awarded XI C&A’s outstanding(Mechanical) Subcontractor`],
+            month: "10",
+            content: [`안전보건경영시스템(ISO 45001) 인증서 취득`]
           },
         ]
       },
@@ -133,11 +111,11 @@ const historyList = {
         history : [
         {
           month: "11",
-          content: [`Sap Flow Measurement System install for Korea Apple Research Institute`],
+          content: [`대표이사 김정환 취임`, `원예연구소 사과시험장 수액흐름 측정시스템 설치`],
         },
         {
           month: "12",
-          content: [`Acquired R&D Department’s Certificate`, `Received 58th Day of Export 3M USD Export Tower Awards`],
+          content: [`연구개발전담부서 인정서 취득`, `58회 수출의 날 300만불달성 수출의 탑 수상`],
         },
         ]
       },
