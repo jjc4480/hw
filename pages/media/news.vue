@@ -43,14 +43,14 @@ const newsList = [
       >
         <a
           :href="news.src"
-          class="relative px-10 pt-10 pb-0 h-96 flex overflow-hidden"
+          class="relative px-10 pt-10 pb-0 h-[34rem] flex overflow-hidden"
         >
-          <div class="text-lg h-1/2 font-semibold">
+          <div class="text-lg h-2/5 font-semibold">
             <p class="line-clamp-5 min-h-full sm:line-clamp-2">
               {{ news.title }}
             </p>
           </div>
-          <div class="absolute bottom-0 right-0 left-0 w-full h-1/2">
+          <div class="absolute bottom-0 right-0 left-0 w-full h-3/5">
             <img
               class="absolute w-full h-full bottom-0 left-0 object-cover group-hover:transform group-hover:scale-110 transition-all duration-500 ease-in-out"
               :src="news.imageSrc"

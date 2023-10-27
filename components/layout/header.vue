@@ -9,6 +9,17 @@ import Mobile from "@/components/header/mobile.vue"
 const store = useUiStore() // ui store
 const route = useRoute() // 라우트 감지용
 
+const innerWidth = ref(0) // 브라우저 너비
+
+onMounted(() => {
+  
+  innerWidth.value = window.innerWidth
+
+  window.addEventListener("resize", () => {
+    innerWidth.value = window.innerWidth
+  })
+})
+
 useHeadSafe({
   // '/' 라면 HOME을 반환하고, 아니라면 / 앞의 문자열만 대문자로 반환
   title: route.path === "/" ? "HOME" : route.path.split("/")[1].toUpperCase(),
@@ -29,11 +40,12 @@ const color = computed(() => {
 
 <template>
   <header
-    class="gnb w-full pb-16 flex justify-center top-0 left-0 z-40 duration-500 2xl:pt-10"
+    class="w-full pb-16 flex justify-center top-0 left-0 z-40 duration-500 2xl:pt-10"
     :class="[
       {
         open: store.header.nav,
         'opacity-0': store.header.hidden,
+        'gnb duration-500' : innerWidth > 640,
       },
       route.path == '/' ? 'fixed' : 'absolute',
     ]"
