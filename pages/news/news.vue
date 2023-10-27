@@ -33,7 +33,7 @@ const newsList = useNews() // 뉴스 리스트
       >
         <a
           :href="news.src"
-          class="relative px-10 pt-10 pb-0 h-[30rem] flex overflow-hidden"
+          class="relative px-10 pt-10 pb-0 h-[34rem] flex overflow-hidden"
         >
           <figure>
             
@@ -44,7 +44,7 @@ const newsList = useNews() // 뉴스 리스트
               alt="hyoungwon news"
               />
             </div>
-            <figcaption class="text-lg h-1/2 font-semibold">
+            <figcaption class="text-lg h-2/5 font-semibold">
               <p class="line-clamp-5 min-h-full sm:line-clamp-2">
                 {{ news.title }}
               </p>

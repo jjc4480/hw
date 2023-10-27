@@ -30,7 +30,11 @@ const items = [
     href: "/capabilities/pipeline",
   },
   {
+<<<<<<< HEAD
     title: "신사업",
+=======
+    title: "Coming soon",
+>>>>>>> f8fecba0bcf79a562008bf64afbcf90a78d6fb05
     image: "/img/sven-mieke-fteR0e2BzKo-unsplash.jpg",
     icon: "",
   },
