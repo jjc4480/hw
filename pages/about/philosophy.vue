@@ -7,193 +7,103 @@ defineProps({
   },
 })
 
-const image1 = ref() // 이미지 영역
-const image2 = ref()
+const phil1 = ref() 
+const phil2 = ref() 
 
-const isOpenVisionModal = ref(false) // 모달창 여부
-const visionModal = ref();
-const wrapper = ref();
-
-const openVisionModal = () => {
-  isOpenVisionModal.value = true
-  // scroll 도 모달로 이동
-  moveToScroll()
-}
-
-const moveToScroll = () => {
-  setTimeout(()=> {
-    window.scrollTo({
-        top: wrapper.value?.offsetTop,
-        behavior: "smooth",
-    })
-  }, 50)
-}
-
-const closeVisionModal = () => {
-  isOpenVisionModal.value = false
-}
-
-const handleWheel = (event : MouseEvent) => {
-  event.preventDefault();
-}
-
-// resize
-onMounted(() => {
-  window.addEventListener("resize", () => {
-    if(isOpenVisionModal.value) {
-      moveToScroll()
-    }
-  })
-
-  
-  window.addEventListener("keydown" , (e) => {
-    e.preventDefault();
-    // esc 경우 모달 닫아줌
-    if(e.key === "Escape") {
-      closeVisionModal()
-    }
-  })
-
-})
 
 
 </script>
 
 <template>
-  <div class="relative" ref="wrapper">
     <div
-      class="container flex flex-col items-center justify-center gap-x-20 gap-y-10 py-20 mx-auto overflow-hidden"
+      class="container flex flex-col items-center justify-center gap-x-20 py-20 mx-auto overflow-hidden"
     >
-      <div class="flex flex-col-reverse md:flex-row items-center md:items-start  gap-x-20 gap-y-10">
-        <!-- mobile 일 경우, 이미지가 밑으로. -->
+      <section 
+        ref="phil1"
+        class="flex flex-col justify-center items-center space-y-6 pages-fade" 
+        :class="
+          phil1?.offsetTop < scrollTrigger
+            ? 'pages-fade-done'
+            : 'pages-fade-bottom'
+        "
+      >
+        <h1 class="text-5xl font-bold">
+          경영이념
+        </h1>
+        
+        <h2 class="text-3xl font-bold">
+          自利利他 (자리이타)
+        </h2>
+        
+        <p class="text-xl"> 
+          형원이엔지는 남을 이롭게 함으로써 내가 이롭게 된다는 자리이타의 정신을 기반으로 
+          이해관계자들 및 지역사회와 동반 성장하기를 소망합니다. 
+        </p>
+      </section>
 
-        <section
-          class="flex flex-col w-full md:w-1/2 pages-fade break-keep"
-          :class="
-            image1?.offsetTop < scrollTrigger
-              ? 'pages-fade-done'
-              : 'pages-fade-left'
-          "
-        >
-          <h3 class="mt-10 space-y-2 text-6xl font-black">경영이념</h3>
-          <h6 class="text-2xl my-10 ">Our Core Value is <strong class="text-[#9B1D20] font-bold">"Benefiting Oneself and Others".</strong> </h6>
-          <p class="text-xl">  
-            We the <strong class="text-hw font-bold">"HYOUNGWON"</strong> care employees, clients, and society. 
-            By benefiting oneself and others, we do believe that we can create and change the working atmosphere and environment around us.
-            Therefore, our mission is crystal clear. We grow together and build bright future together. 
-            <br />
-          </p>
-        </section>
-        <figure
-          class="flex w-full  md:w-1/2 pages-fade"
-          :class="
-            image1?.offsetTop < scrollTrigger
-              ? 'pages-fade-done'
-              : 'pages-fade-right'
-          "
-          ref="image1"
-        >
-          <img class="object-cover w-full" src="/img/mission.jpg" />
-        </figure>
-      </div>
-      <div class="flex flex-col mt-20 md:flex-row items-center md:items-start  gap-x-20 gap-y-10">
-        <!-- mobile 일 경우, 이미지가 밑으로. -->
-        <figure
-          class="flex w-full md:w-1/2 pages-fade"
-          :class="
-            image2?.offsetTop < scrollTrigger
-              ? 'pages-fade-done'
-              : 'pages-fade-right'
-          "
-          ref="image2"
-        >
-          <img class="object-cover w-full" src="/img/vision.jpg" />
-        </figure>
-        <section
-          class="flex flex-col w-full md:w-1/2 pages-fade"
-          :class="
-            image2?.offsetTop < scrollTrigger
-              ? 'pages-fade-done'
-              : 'pages-fade-left'
-          "
-        >
-          <h3 class="mt-10 space-y-2 text-6xl font-black">비전</h3>
-          <p class="mt-16 text-xl">
-            HYOUNGWON's vision is very intuitive. We are preparing for a quantum jump with a long-term goal.<br />
-            <button @click="openVisionModal" 
-              class="mt-5 bg-hw px-5 py-3 border rounded-full text-white shadow-lg animate-bounce hover:bg-cyan-600 transition-colors duration-500 ease-in-out">
-              Vision
-            </button>
-          </p>
-        </section>
-      </div>
-      <div class="flex gap-x-20 gap-y-10">
-        <!-- mobile 일 경우, 이미지가 밑으로. -->
-      </div>
+      <section 
+        ref="phil2"
+        class="flex flex-col items-center justify-center mt-16 space-y-6 pages-fade"
+        :class="
+          phil2?.offsetTop < scrollTrigger
+            ? 'pages-fade-done'
+            : 'pages-fade-bottom'"
+      >
+
+        <h1 class="text-5xl font-bold">
+          비전
+        </h1>
+        
+        <h2 class="text-3xl font-bold">
+          SEA 2025
+        </h2>
+        
+        <ul class="grid grid-cols-4 space-x-10 text-4xl w-full items-center justify-around" >
+          <li class="flex flex-col space-y-4 col-span-1 min-h-full">
+            <div class="flex flex-col justify-center items-center relative">
+              <div class="bg-gray-200 w-32 h-32 rounded-full"></div>
+              <div class="absolute">S</div>
+            </div>
+            <div class="flex flex-col items-center justify-center text-xl space-y-2 text-center">
+              <p class="font-bold">System</p>
+              <p>체계적 업무절차를 확립하고 </p>
+            </div>
+          </li>
+          
+          <li class="flex flex-col space-y-4 col-span-1 min-h-full">
+            <div class="flex flex-col justify-center items-center relative">
+              <div class="bg-gray-200 w-32 h-32 rounded-full"></div>
+              <div class="absolute">E</div>
+            </div>
+            <div class="flex flex-col items-center justify-center text-xl space-y-2 text-center">
+              <p class="font-bold">Expansion</p>
+              <p>사업영역 및 개인 업무역량을 확장하며</p>
+            </div>
+          </li>
+          
+          <li class="flex flex-col space-y-4 col-span-1 min-h-full">
+            <div class="flex flex-col justify-center items-center relative">
+              <div class="bg-gray-200 w-32 h-32 rounded-full"></div>
+              <div class="absolute">A</div>
+            </div>
+            <div class="flex flex-col items-center justify-center text-xl space-y-2 text-center">
+              <p class="font-bold">Active</p>
+              <p>자기주도적인 업무 문화를 구축하여</p>
+            </div>
+          </li>
+          
+          <li class="flex flex-col space-y-4 col-span-1 min-h-full">
+            <div class="flex flex-col justify-center items-center relative">
+              <div class="bg-gray-200 w-32 h-32 rounded-full"></div>
+              <div class="absolute">2025</div>
+            </div>
+            <div class="flex flex-col items-center justify-center text-xl space-y-2 text-center">
+              <p class="font-bold">System</p>
+              <p>2025년 매출액 2025억을 달성하겠습니다.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+        
     </div>
-    <div ref="visionModal" @wheel="handleWheel" class="top-0 left-0 absolute select-none w-screen h-screen flex flex-col lg:flex-row transition-all duration-700 ease-in-out" :class="isOpenVisionModal ? 'opacity-100 z-10' : 'opacity-0 -z-10'">
-      <button
-          class="absolute top-10 right-10 z-20 flex w-10 h-10 items-center justify-center bg-white rounded-full group"
-          type="button"
-          @click="closeVisionModal"
-        >
-          <svg
-            class="w-4 h-4 group-hover:rotate-180 transition-all duration-300"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
-            />
-          </svg>
-      </button>
-      <div class="w-full lg:w-1/4 h-1/4 lg:h-full relative overflow-hidden group">
-        <div class="bg-center bg-cover w-full h-full transition-all duration-700 ease-in-out group-hover:scale-110 bg-[url('/img/vision_1.jpg')]"></div>
-        <div class="absolute bottom-0 w-full h-full backdrop-brightness-50 flex justify-center items-end">
-          <div class="relative px-8 flex flex-col w-full">
-            <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">SYSTEM</h3>
-            <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
-              <p>체계적 업무절차 확립​</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full lg:w-1/4 h-1/4 lg:h-full relative overflow-hidden group">
-        <div class="bg-center bg-cover w-full h-full transition-all duration-700 ease-in-out group-hover:scale-110 bg-[url('/img/vision_2.jpg')]"></div>
-        <div class="absolute bottom-0 w-full h-full backdrop-brightness-50 flex justify-center items-end">
-          <div class="relative px-8 flex flex-col w-full">
-            <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">EXPANSION</h3>
-            <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
-              <p>사업영역 & ​</p>
-              <p>개인 업무역량 확장​ </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full lg:w-1/4 h-1/4 lg:h-full relative overflow-hidden group">
-        <div class="bg-center bg-cover w-full h-full transition-all duration-700 ease-in-out group-hover:scale-110 bg-[url('/img/vision_3.jpg')]"></div>
-        <div class="absolute bottom-0 w-full h-full backdrop-brightness-50 flex justify-center items-end">
-          <div class="relative px-8 flex flex-col w-full">
-            <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">ACTIVE</h3>
-            <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
-              <p>자기 주도적 업무 문화​</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full lg:w-1/4 h-1/4 lg:h-full relative overflow-hidden group">
-        <div class="bg-center bg-cover w-full h-full transition-all duration-700 ease-in-out group-hover:scale-110 bg-[url('/img/vision_4.jpg')]"></div>
-        <div class="absolute bottom-0 w-full h-full backdrop-brightness-50 flex justify-center items-end">
-          <div class="relative px-8 flex flex-col w-full">
-            <h3 class="absolute top-[-2rem] text-6xl font-extrabold text-white">2025</h3>
-            <div class="mt-5 text-3xl w-full px-2 text-center font-semibold h-32 lg:h-48 flex items-center justify-center flex-col bg-white text-cyan-950 py-10">
-              <p>2025년도 매출액</p>
-              <p>2025억 달성</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-    </div>
-  </div>
 </template>

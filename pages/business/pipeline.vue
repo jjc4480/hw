@@ -4,25 +4,49 @@ import { Scrollbar } from "swiper"
 const slideList = [
   {
     title: "1",
-    src: "/capabilities/pipeline/feature_1.jpg",
+    src: "/capabilities/pipeline/1.png",
     content:
       "test",
   },
   {
     title: "2",
-    src: "/capabilities/pipeline/feature_2.jpg",
+    src: "/capabilities/pipeline/2.png",
     content:
       "test",
   },
   {
     title: "3",
-    src: "/capabilities/pipeline/feature_3.jpg",
+    src: "/capabilities/pipeline/3.png",
     content:
       "test",
   },
   {
     title: "4",
-    src: "/capabilities/pipeline/feature_4.jpg",
+    src: "/capabilities/pipeline/4.png",
+    content:
+      "test",
+  },
+  {
+    title: "5",
+    src: "/capabilities/pipeline/5.png",
+    content:
+      "test",
+  },
+  {
+    title: "6",
+    src: "/capabilities/pipeline/6.png",
+    content:
+      "test",
+  },
+  {
+    title: "7",
+    src: "/capabilities/pipeline/7.png",
+    content:
+      "test",
+  },
+  {
+    title: "8",
+    src: "/capabilities/pipeline/8.png",
     content:
       "test",
   },
@@ -31,14 +55,11 @@ const slideList = [
 </script>
 
 <template>
-  <div>
-    <h2 class="my-20 text-6xl font-black text-center">Turn-key</h2>
-    <div
-      class="py-40 bg-fixed bg-center bg-cover capabilities-pipeline"
-    ></div>
-    <section class="container mx-auto">
+  <div class="container mx-auto">
+    <h2 class="my-20 text-6xl font-black text-center">EPC</h2>
+    <section>
       <p
-        class="px-5 mt-12 text-lg leading-tight text-black 2xl:px-0 2xl:text-2xl"
+        class="px-5 mt-12 text-lg leading-tight text-black 2xl:px-0 2xl:text-2xl text-center"
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim blanditiis porro, nulla illo mollitia nostrum vero, rerum sed, provident quas nobis deleniti illum corrupti reprehenderit neque id explicabo laborum a
       </p>

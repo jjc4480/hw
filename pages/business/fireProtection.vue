@@ -4,25 +4,49 @@ import { Scrollbar } from "swiper"
 const slideList = [
   {
     title: "test",
-    src: "/capabilities/fireProtection/feature_1.jpg",
+    src: "/capabilities/fireProtection/feature_1.png",
     content:
       "test",
   },
   {
     title: "test",
-    src: "/capabilities/fireProtection/feature_2.jpg",
+    src: "/capabilities/fireProtection/feature_2.png",
     content:
       "test",
   },
   {
     title: "test",
-    src: "/capabilities/fireProtection/feature_3.jpg",
+    src: "/capabilities/fireProtection/feature_3.png",
     content:
       "test",
   },
   {
     title: "test",
-    src: "/capabilities/fireProtection/feature_4.jpg",
+    src: "/capabilities/fireProtection/feature_4.png",
+    content:
+      "test",
+  },
+  {
+    title: "test",
+    src: "/capabilities/fireProtection/feature_5.png",
+    content:
+      "test",
+  },
+  {
+    title: "test",
+    src: "/capabilities/fireProtection/feature_6.png",
+    content:
+      "test",
+  },
+  {
+    title: "test",
+    src: "/capabilities/fireProtection/feature_7.png",
+    content:
+      "test",
+  },
+  {
+    title: "test",
+    src: "/capabilities/fireProtection/feature_8.png",
     content:
       "test",
   },
@@ -30,14 +54,11 @@ const slideList = [
 </script>
 
 <template>
-  <div>
+  <div class="container mx-auto">
     <h2 class="my-20 text-6xl font-black text-center">소방설비 사업부​</h2>
-    <div
-      class="py-40 bg-fixed bg-center bg-cover capabilities-fireProtection"
-    ></div>
-    <section class="container mx-auto">
+    <section>
       <p
-        class="px-5 mt-12 text-lg leading-tight text-black 2xl:px-0 2xl:text-2xl"
+        class="px-5 mt-12 text-lg leading-tight text-black 2xl:px-0 2xl:text-2xl text-center"
       >
         반도체, 디스플레이 및 전지산업 분야 Clean room 소방 설비 설계 및 시공분야를 수행하고 있으며 Clean room에 최적화된 소방설비 구축을 제공합니다.​
       </p>

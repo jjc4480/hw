@@ -25,8 +25,8 @@ const infomation = ref() // 소개영역
       </h2>
       <figure class="flex flex-col xl:flex-row gap-20 pb-16">
         <div class="flex w-full flex-col h-fit my-auto space-y-20 items-center">
-          <img class="w-3/5 flex" src="/img/logo_header_large_b.png" />
-          <img class="w-3/5 flex" src="/img/logo_header_b.png" />
+          <img class="w-3/5 flex" src="/bi/large.png" />
+          <img class="w-3/5 flex" src="/bi/small.png" />
         </div>
         <figcaption class="xl:border-l-2 xl:pl-20 xl:border-black">
           <h3 class="text-4xl font-bold">
