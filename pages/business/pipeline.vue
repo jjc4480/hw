@@ -65,56 +65,29 @@ const slideList = [
       </p>
     </section>
     <div class="container relative px-5 mx-auto mt-2 mb-16 2xl:px-0">
-      <Swiper
-        class="featured-swiper"
-        :setWrapperSize="true"
-        :slidesPerView="3"
-        :autoplay="{
-          delay: 8000,
-          disableOnInteraction: true,
-        }"
-        :pagination="{
-          clickable: true,
-        }"
-        :breakpoints="{
-          '320': {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          '768': {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          '1024': {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-        }"
-        :navigation="{
-          nextEl: '.featured-swiper-next',
-          prevEl: '.featured-swiper-prev',
-        }"
-        :modules="[SwiperAutoplay, SwiperNavigation, Scrollbar]"
-        :scrollbar="{
-          draggable: true,
-          el: '.swiper-scrollbar',
-        }"
+      <ul
+        class="container my-20 grid xl:grid-cols-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-52 sm:gap-y-32 "
       >
-        <SwiperSlide v-for="slide in slideList" class="h-auto my-10">
-          <a
-            class="block h-full transition-all duration-500 ease-in-out group"
-            href="#"
-          >
-            <figure class="flex flex-col h-full overflow-hidden">
-              <img
-                class="object-fill h-full transition-all duration-500 ease-in-out group-hover:transform group-hover:scale-105"
-                :src="slide.src"
-              />
-            </figure>
-          </a>
-        </SwiperSlide>
-        <div class="swiper-scrollbar" />
-      </Swiper>
+        <li
+          class="items-center group w-full bg-white transition-colors duration-500 ease-in-out"
+          v-for="item in slideList"
+        >
+        <div  class="relative px-10 pt-10 pb-0 h-96 flex overflow-hidden">
+          <div class="absolute top-0 right-0 left-0 w-full h-3/4 overflow-hidden">
+            <img
+            class="absolute w-full h-full bottom-0 left-0 object-cover group-hover:transform group-hover:scale-110 transition-all duration-500 ease-in-out"
+            :src="item.src"
+            alt="hyoungwon portfolio"
+            />
+          </div>
+          <div class="text-lg absolute z-2 flex w-full justify-between items-center px-10 bottom-0 left-0 h-1/5 font-semibold">
+            <span class="text-2xl pr-4 w-full text-center">
+              {{ item.content }}
+            </span>
+          </div>
+        </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>

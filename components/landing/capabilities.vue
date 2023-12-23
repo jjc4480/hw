@@ -24,7 +24,7 @@ const items = [
     href: "/capabilities/design",
   },
   {
-    title: "Turn-key",
+    title: "EPC",
     image: "/img/Plumbing.jpg",
     icon: "img/icon-Plumbing.png",
     href: "/capabilities/pipeline",

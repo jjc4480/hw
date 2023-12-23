@@ -94,6 +94,27 @@ const historyList = {
     range: "2021 ~",
     items: [
       {
+        year : "2023",
+        history : [
+          {
+            month: "1",
+            content: [`한국 반도체 산업협회 회원사(설비) 등록`],
+          },
+          {
+            month: "3",
+            content: [`미국 텍사스 현지법인 설립`],
+          },
+          {
+            month: "5",
+            content: [`삼성물산&삼성엔지니어링 주력 협력회사 등록`],
+          },
+          {
+            month: "6",
+            content: [`미국 조지아 현지법인 설립`],
+          },
+        ]
+      },
+      {
         year : "2022",
         history : [
           {
@@ -103,6 +124,10 @@ const historyList = {
           {
             month: "10",
             content: [`안전보건경영시스템(ISO 45001) 인증서 취득`]
+          },
+          {
+            month: "12",
+            content: [`자이씨앤에이(주) 우수(기계분야)협력사 선정`]
           },
         ]
       },

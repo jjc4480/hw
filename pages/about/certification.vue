@@ -10,16 +10,75 @@ defineProps({
 
 let article = ref() // 이미지 영역
 
+
+
+
+
+
+// 8개의 certification
+
+/* 
+
+  아래의 title을 가진 8개의 인증서
+
+  [안전보건경영시스템(ISO 45001)
+
+  ,건설업등록증
+
+,건설업등록증-가스시설시공업제1종
+
+,소방시설업등록증
+
+,연구개발전담부서 인정서
+
+,경영혁신형 중고기업(메인비즈)확인서
+
+,ISO9001
+
+,ISO14001 ]
+
+*/
 let certifications = ref([
   {
     index: 1,
-    title: "인증현황1",
-    regDate: "2022-09-19",
-    endDate: "2022-12-31",
-    status: "마감",
-    src : '#',
-    imageSrc : '/media/news1.jpg',
+    title: "안전보건경영시스템(ISO 45001)",
+    imageSrc : '/certifications/1.jpg',
   },
+  {
+    index: 2,
+    title: "건설업등록증",
+    imageSrc : '/certifications/2.jpg',
+  },
+  {
+    index: 3,
+    title: "건설업등록증-가스시설시공업제1종",
+    imageSrc : '/certifications/3.jpg',
+  },
+  {
+    index: 4,
+    title: "소방시설업등록증",
+    imageSrc : '/certifications/4.jpg',
+  },
+  {
+    index: 5,
+    title: "연구개발전담부서 인정서",
+    imageSrc : '/certifications/5.jpg',
+  },
+  {
+    index: 6,
+    title: "경영혁신형 중고기업(메인비즈)확인서",
+    imageSrc : '/certifications/6.jpg',
+  },
+  {
+    index: 7,
+    title: "ISO9001",
+    imageSrc : '/certifications/7.jpg',
+  },
+  {
+    index: 8,
+    title: "ISO14001",
+    imageSrc : '/certifications/8.jpg',
+  }
 ]
 )  // DB 개념이라고 보면 됨 todo들의 객체가 모여있는 배열
 
@@ -38,7 +97,7 @@ const fileteredCertifications = computed(() => {
 <template>
   <div>
     <h2 class="my-20 text-6xl text-center font-black">인증현황</h2>
-    <div class="container flex justify-center max-w-3xl py-20 mx-auto">
+    <!-- <div class="container flex justify-center max-w-3xl py-20 mx-auto">
         <input
         type="search"
         class="w-3/4 px-2 border-b-2 h-14"
@@ -58,7 +117,7 @@ const fileteredCertifications = computed(() => {
             ></path>
           </svg>
         </button>
-    </div>
+    </div> -->
 
     <div
     class="pages-fade container flex w-full h-full bg-transparent mx-auto flex-col items-center"
@@ -71,16 +130,13 @@ const fileteredCertifications = computed(() => {
   >
 
     <ul
-      class="container my-20 grid xl:grid-cols-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5"
+      class="container my-20 grid xl:grid-cols-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14"
     >
       <li
         class="items-center group w-full bg-transparent hover:bg-gray-700 hover:text-white transition-colors duration-500 ease-in-out"
         v-for="certification in fileteredCertifications"
       >
-        <a
-          :href="certification.src"
-          class="relative px-10 pt-10 pb-0 h-[30rem] flex overflow-hidden"
-        >
+        <div class="relative px-10 pt-10 pb-0 h-[36rem] flex overflow-hidden">
           
           <div class="absolute top-0 right-0 left-0 w-full h-4/5">
             <img
@@ -89,12 +145,12 @@ const fileteredCertifications = computed(() => {
               alt="hyoungwon news"
             />
           </div>
-          <div class="text-lg absolute -bottom-10  h-1/5 font-semibold">
+          <div class="text-lg absolute -bottom-12  h-1/5 font-semibold">
             <p class="line-clamp-5 min-h-full sm:line-clamp-2">
               {{ certification.title }}
             </p>
           </div>
-        </a>
+        </div>
       </li>
     </ul>
   </div>

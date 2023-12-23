@@ -1,117 +1,13 @@
 <script setup lang="ts">
 
-let posts = ref([
-    {   index : 1,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 안산시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 2,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 안산시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 3,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 안산시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 4,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 안산시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 5,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 안산시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 6,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 포천시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 7,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 안산시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 8,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 안산시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 9,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 안산시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 10,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 수원시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 11,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 안산시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 12,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 의정부시',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
-    {   index : 13,
-        year: 2021,
-        company : '회사명',
-        location: '경기도 안산시 단원구',
-        content: '안산시 단원구 고잔동 681-1번지',
-        category: '건축',
-        etc: '주택',
-    },
+const businessResult = useBusinessResult();
 
-])
+let posts = ref(businessResult) 
 
 let currentPage = ref(1) // 현재 페이지
-let postsPerPage = ref(10) // 한 페이지에 보여줄 게시글 수
+let postsPerPage = ref(15) // 한 페이지에 보여줄 게시글 수
 let totalPosts = ref(posts.value.length) // 전체 게시글 수
-let totalPage = ref(10) // 전체 페이지 수
+let totalPage = ref() // 전체 페이지 수
 
 const handlePageChange = (page: number) => {
     if(page < 1) page = 1
@@ -135,7 +31,7 @@ const fileteredPosts = computed(() => {
     totalPage.value = Math.ceil(totalPosts.value / postsPerPage.value)
     if (serachText.value) {    
         return posts.value.filter((post) => { 
-            return post.year.toString().includes(serachText.value) || post.location.includes(serachText.value) || post.content.includes(serachText.value) || post.category.includes(serachText.value) || post.etc.includes(serachText.value)
+            return post.year.toString().includes(serachText.value) || post.location.includes(serachText.value) || post.description.includes(serachText.value) || post.category.includes(serachText.value) || post.etc.includes(serachText.value)
         }).slice(startIndex, endIndex)
     }
     else { return posts.value.slice(startIndex, endIndex) }
@@ -145,30 +41,30 @@ const fileteredPosts = computed(() => {
 <template>
   <div>
     
-    <h2 class="my-10 text-6xl text-center font-black">사업실적</h2>
-    <h4 class="my-10 text-3xl text-center font-semibold">㈜형원이엔지의 주요 사업실적을 소개합니다.</h4>
+    <h2 class="my-10 text-6xl font-black text-center">사업실적</h2>
+    <h4 class="my-10 text-3xl font-semibold text-center">㈜형원이엔지의 주요 사업실적을 소개합니다.</h4>
     <div class="container pb-20 mx-auto">
       <table class="w-full border-t-2 border-black table-fixed">
         <thead>
           <tr class="[&>th]:py-3">
-            <th>연도</th>
-            <th>발주처</th>
-            <th>위치</th>
+            <th width="10%">연도</th>
+            <th width="10%">발주처</th>
+            <th width="10%">위치</th>
             <th>공 사 내 용</th>
-            <th>구분</th>
-            <th>비고</th>
+            <th width="10%">구분</th>
+            <th width="10%">비고</th>
           </tr>
         </thead>
         <tbody>
           <tr
             class="border-b hover:bg-slate-100 [&>td]:py-3 [&>td]:px-2 text-center"
-            v-for="item in fileteredPosts"
-            :key="item.index"
+            v-for="(item, index) in fileteredPosts"
+            :key="index"
           >
             <td>{{ item.year }}</td>
             <td>{{ item.company }}</td>
             <td>{{ item.location }}</td>
-            <td>{{ item.content }}</td>
+            <td>{{ item.description }}</td>
             <td>{{ item.category }}</td>
             <td>{{ item.etc }}</td>
         </tr>
