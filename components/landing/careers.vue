@@ -59,15 +59,14 @@ const store = useUiStore() // ui store
         class="careers-contact-us text-center text-white duration-700 translate-y-10 opacity-0 delay-500"
       >
         <h2 class="text-6xl font-black leading-snug">Contact Us</h2>
-        <p class="mt-4 text-xl leading-tight">Address</p>
-        <ul class="block md:flex gap-10 mt-10 text-xl">
-          <li>Tel : 888-888-8888</li>
-          <li>Fax : 888-888-8888</li>
-          <li>Email : hw@test.com</li>
+        <p class="mt-4 text-2xl font-bold leading-tight">GA Office</p>
+        <ul class="block md:flex gap-10 mt-4 text-xl">
+          <li>Tel : 470-292-3378</li>
+          <li>Email : haesung@hyoungwon.com </li>
         </ul>
-        <ul class="block md:flex gap-10 mt-10 text-xl">
+        <p class="mt-6 text-2xl font-bold leading-tight">TX Office</p>
+        <ul class="block md:flex gap-10 mt-4 text-xl">
           <li>Tel : 888-888-8888</li>
-          <li>Fax : 888-888-8888</li>
           <li>Email : hw@test.com</li>
         </ul>
       </section>
